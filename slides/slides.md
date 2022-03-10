@@ -7,9 +7,9 @@ theme: mono
 
 # Git Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
-![](assets/git.png)
+![](assets/git.png){ height=50% width=50% }
 
-[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){ height=128pxpx width=128px }
+[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/)
 
 # Architecture
 
