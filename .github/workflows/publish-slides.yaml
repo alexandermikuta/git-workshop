@@ -16,7 +16,7 @@ jobs:
           curl -LO https://raw.githubusercontent.com/arnehilmann/markdeck/master/markdeck
           chmod a+x markdeck
           ./markdeck once
-          cp -R images deck/images
+          cp -R assets deck/assets
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
