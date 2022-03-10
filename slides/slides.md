@@ -19,11 +19,11 @@ themes: mytheme
 # pdf_size: 1024x768
 ---
 
-# Github-Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+# Git Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
-collaborative slide editing made easy
+the distributed source control
 
-![](fab fa-git)
+<img src="assets/git.png style="vertical-align:middle; box-shadow:none;"/>
 
 <small> Alexander Mikuta • 2022</small>
 
@@ -400,8 +400,6 @@ collaborative slide editing made easy
 ![](fab fa-css3)
 ![](fab fa-js-square)
 
-![](assets/img/buddy-egyptian.svg)
-
 # {x=0 y=0 scale=2 skipon="reveal" id=overview}
 
 # markdeck {skipon="impress" bgcss=sea-gradient .light-on-dark}
@@ -413,4 +411,3 @@ collaborative slide editing made easy
 ![](fab fa-html5)
 ![](fab fa-css3)
 ![](fab fa-js-square)
-<img src="assets/img/buddy-egyptian.svg" style="height:120px; vertical-align:middle; box-shadow:none;"/>
