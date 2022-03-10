@@ -2,11 +2,12 @@
 
 # Git Workshop {#git-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-the distributed source control
+the distributed version control system
 
-\<img src="assets/git.png style="vertical-align:middle; box-shadow:none;\"/\>
-
+![Git](assets/git.png)
 `<small>`{=html} Alexander Mikuta • 2022`</small>`{=html}
+
+[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/)
 
 <!-- section 1 -->
 
@@ -29,7 +30,7 @@ cool
 
 <!-- section 3 -->
 
-# cool looking {#cool-looking .light-on-dark bg="white;assets/img/paperclip.gif" rx="-1" ry="0"}
+# cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
 leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
@@ -37,48 +38,13 @@ revealjs • impressjs
 
 <!-- section 4 -->
 
-# graphical
-
-content as markdown`</br>`{=html}
-`<small>`{=html}
-incl unicode ♥
-emojis 😎
-font-awesome
-![](fas%20fa-desktop)
-`</small>`{=html}
-
-images as asciiart`</br>`{=html}
-`<small>`{=html}charts, diagrams, graphs, math, ...`</small>`{=html}
+# easy {#easy rx="0" ry="-1"}
 
 <!-- section 5 -->
 
-# easy {#easy rx="0" ry="-1"}
-
-completely text-based`</br>`{=html}
-`<small>`{=html}use your preferred editor/IDE`</small>`{=html}
-
-auto-reload
-►
-fast feedback
-
-<!-- section 6 -->
-
-# robust
-
-modify and present your slides`<br/>`{=html} *without* `<br/>`{=html}internet uplink
-
-[![](fas%20fa-wifi%20fa-stack-1x)
-![](fas%20fa-slash%20fa-stack-1x)]{.fa-stack .fa-1x}
-
-<!-- section 7 -->
-
 # collaborative {#collaborative rx="1" ry="0"}
 
-presentation-as-code
-
-use your normal version control system
-
-<!-- section 8 -->
+<!-- section 6 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -144,7 +110,7 @@ use your normal version control system
 +-----------------------------+
 ```
 
-<!-- section 9 -->
+<!-- section 7 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -182,7 +148,7 @@ use your normal version control system
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 10 -->
+<!-- section 8 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -231,7 +197,7 @@ use your normal version control system
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 11 -->
+<!-- section 9 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -261,7 +227,7 @@ use your normal version control system
   v1 *------------------* v2
 ```
 
-<!-- section 12 -->
+<!-- section 10 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -277,7 +243,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 13 -->
+<!-- section 11 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -299,7 +265,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 14 -->
+<!-- section 12 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -327,7 +293,7 @@ digraph G {
 }
 ```
 
-<!-- section 15 -->
+<!-- section 13 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
@@ -385,20 +351,6 @@ digraph G {
 }
 ```
 
-<!-- section 16 -->
-
-#  {#section .flush-right bg="White;themes/mytheme/img/wordcloud.svg" rx="1" ry="0"}
-
-[`https://github.com/arnehilmann/markdeck`{.render_qr}](https://github.com/arnehilmann/markdeck)
-
-<!-- section 17 -->
+<!-- section 14 -->
 
 # markdeck {#markdeck-2 .light-on-dark skipon="impress" bgcss="sea-gradient"}
-
-collaborative slide editing made easy
-
-![](fab%20fa-markdown)
-![](fab%20fa-docker)
-![](fab%20fa-html5)
-![](fab%20fa-css3)
-![](fab%20fa-js-square)
