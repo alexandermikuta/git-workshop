@@ -19,20 +19,33 @@ themes: mytheme
 # pdf_size: 1024x768
 ---
 
-# Git Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+# ![Git](assets/git.png) Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
 the distributed version control system
-
-![Git](assets/git.png)
 <small> Alexander Mikuta • 2022</small>
 
 [`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/)
 
 # features {rx=1 bgcss=sea-gradient .light-on-dark}
 
-converts markdown to complex</br> HTML5 slides
-
-should run on all \*nix platforms,</br> windows<small>?</small> and MacOS
+```{.nohighlight style="width: 40%; height: 100%; font-size: 40%;"}
+gitGraph:
+options
+{
+    "nodeSpacing": 150,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+```
 
 # features, contd. {rx=0 ry=1}
 
