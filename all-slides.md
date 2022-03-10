@@ -1,6 +1,6 @@
 <!-- section 0 -->
 
-# ![Git](assets/git.png) Workshop {#git-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# ![Git](assets/git.png){.light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 the distributed version control system
 `<small>`{=html} Alexander Mikuta • 2022`</small>`{=html}
@@ -9,26 +9,29 @@ the distributed version control system
 
 <!-- section 1 -->
 
-# features {#features .light-on-dark rx="1" bgcss="sea-gradient"}
+# Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
-``` {.nohighlight style="width: 40%; height: 100%; font-size: 40%;"}
-gitGraph:
-options
-{
-    "nodeSpacing": 150,
-    "nodeRadius": 10
-}
-end
-commit
-branch newbranch
-checkout newbranch
-commit
-commit
-checkout master
-commit
-commit
-merge newbranch
-```
+Often used branching strategies with Git are:
+
+-   GitFlow
+-   GithubFlow
+-   Trunk-Based Development
+
+## GitFlow
+
+![GitFlow](assets/gitflow.webp)
+
+<!-- subsection 1 / 1 -->
+
+## Github-Flow
+
+![GithubFlow](assets/githubflow.webp)
+
+<!-- subsection 1 / 2 -->
+
+## Trunk-Based-Development
+
+![Trunk-Based-Development](assets/trunk-based-development.jpg)
 
 <!-- section 2 -->
 
