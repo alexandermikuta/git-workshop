@@ -1,11 +1,13 @@
 <!-- section 0 -->
 
-# ![Git](assets/git.png){.light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# ![Git](assets/git.png) {#git .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 the distributed version control system
 `<small>`{=html} Alexander Mikuta • 2022`</small>`{=html}
 
 [`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/)
+
+------------------------------------------------------------------------
 
 <!-- section 1 -->
 
@@ -17,9 +19,13 @@ Often used branching strategies with Git are:
 -   GithubFlow
 -   Trunk-Based Development
 
+------------------------------------------------------------------------
+
 ## GitFlow
 
 ![GitFlow](assets/gitflow.webp)
+
+------------------------------------------------------------------------
 
 <!-- subsection 1 / 1 -->
 
@@ -31,7 +37,11 @@ Often used branching strategies with Git are:
 
 ## Trunk-Based-Development
 
+------------------------------------------------------------------------
+
 ![Trunk-Based-Development](assets/trunk-based-development.jpg)
+
+------------------------------------------------------------------------
 
 <!-- section 2 -->
 
