@@ -7,7 +7,7 @@ title: markdeck example
 # highlight_style: grayscale
 highlight_style: github-gist
 asciinema: true
-themes: example
+themes: mytheme
 # themes: mono
 
 # slideNumber: true
