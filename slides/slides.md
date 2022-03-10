@@ -1,26 +1,9 @@
 ---
 title: Github-Workshop
-# variant: reveal
-# variant: impress
-pdf: github-workshop.pdf
-standalone: github-workshop.html
-# highlight_style: grayscale
 highlight_style: github-gist
 asciinema: true
 themes: mytheme
-
-slideNumber: true
-autoSlide: 5000
-controls: true
-controlsTutorial: true
-controlsLayout: edges
-pdf_size: 1189x841
-pdf_size: 1024x768
 ---
-
-# Content {skipon="impress" bgcss=sea-gradient .light-on-dark}
-
-{:toc}
 
 # Git Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
