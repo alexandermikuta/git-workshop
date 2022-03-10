@@ -16,8 +16,13 @@
   font-weight: 400;
   src: url("fonts/Raleway-Regular.ttf") format("truetype"); }
 
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  font-family: "EB Garamond Bold", serif; }
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif; }
 
 .reveal div {
   font-family: "Raleway", sans-serif; }

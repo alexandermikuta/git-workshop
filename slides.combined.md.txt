@@ -23,14 +23,14 @@ themes: mytheme
 
 ![](assets/git.png)
 
-[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){ height=50% width=50% }
+[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){ height=128pxpx width=128px }
 
 # Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
-Often used branching strategies with Git are:
-
 - GitFlow
+
 - GithubFlow
+
 - Trunk-Based Development
 
 # GitFlow
