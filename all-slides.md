@@ -8,6 +8,19 @@
 
 <!-- section 1 -->
 
+# Architecture
+
+The history in Git is formed from the commit objects and creates a directed acyclic graph
+![directed acyclic graph](assets/directed_acyclic_graph.png)
+
+The history can be displayed with:
+
+``` {.bash}
+git log --decorate --graph --oneline --all
+```
+
+<!-- section 2 -->
+
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
 -   GitFlow
@@ -16,25 +29,25 @@
 
 -   Trunk-Based Development
 
-<!-- section 2 -->
+<!-- section 3 -->
 
 # GitFlow
 
 ![](assets/gitflow.webp)
 
-<!-- section 3 -->
+<!-- section 4 -->
 
 # Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 4 -->
+<!-- section 5 -->
 
 # Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
-<!-- section 5 -->
+<!-- section 6 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -42,7 +55,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 6 -->
+<!-- section 7 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -76,7 +89,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 7 -->
+<!-- section 8 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -96,7 +109,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 8 -->
+<!-- section 9 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -121,7 +134,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 9 -->
+<!-- section 10 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -137,7 +150,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 10 -->
+<!-- section 11 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -146,7 +159,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 11 -->
+<!-- section 12 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -158,7 +171,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 12 -->
+<!-- section 13 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -173,7 +186,7 @@ digraph G {
 }
 ```
 
-<!-- section 13 -->
+<!-- section 14 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
