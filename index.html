@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+
+    <title>markdeck example</title>
+
+    <meta name="description" content="markdeck example" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="assets/framework/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="assets/framework/reveal.js/css/theme/simple.css" />
+    <link rel="shortcut icon" href="assets/css/theme/favicon.ico" />
+
+    <link rel="stylesheet" href="assets/markdeck/styles/github-gist.css" />
+
+        <link rel="stylesheet" type="text/css" href="assets/3rdparty/asciinema-player.css" />
+    
+            <link rel="stylesheet" href="themes/example/css/slides.css" />
+        
+    <link rel="stylesheet" href="assets/markdeck/css/markdeck.revealjs.css" />
+    <link rel="stylesheet" href="assets/css/slides.css" />
+
+    <script>
+        window.pdf_render = window.location.search.match(/render=pdf/gi) != null;
+        if (window.pdf_render) {
+            document.write('<link rel="stylesheet" href="assets/css/render-pdf.css" type="text/css">');
+        }
+    </script>
+
+    <link href="assets/css/rerendering.css" rel="stylesheet"></link>
+
+
+</head>
+<body>
+
+
+    <div class="rerendering-message"><h1>R E R E N D E R I N G</h1></div>
+        <div class="markdeck-logo"><a href="https://github.com/arnehilmann/markdeck">powered by markdeck</a></div>
+    
+    <div class="header"></div>
+    <div class="footer"></div>
+
+    <div class="reveal markdeck">
+        <div class="slides">
+
+<section id="markdeck" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
+<h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">markdeck</h1>
+<p>collaborative slide editing made easy</p>
+<p><i class='fab fa-markdown'></i>
+<i class='fab fa-docker'></i>
+<i class='fab fa-html5'></i>
+<i class='fab fa-css3'></i>
+<i class='fab fa-js-square'></i></p>
+<p><small> arne@hilmann.de • 2020</small></p>
+<p><a href="https://github.com/arnehilmann/markdeck"><i class='fab fa-github'></i></a>
+<a href="https://hub.docker.com/r/arne/markdeck-pandoc/"><i class='fab fa-docker'></i></a>
+<a href="email:arne@hilmann.de"><i class='fas fa-envelope'></i></a></p>
+</section>
+<section id="features" class="level1 light-on-dark" data-rx="1" data-bgcss="sea-gradient" data-state="sea-gradient">
+<h1 class="light-on-dark" data-rx="1" data-bgcss="sea-gradient" data-state="sea-gradient">features</h1>
+<p>converts markdown to complex</br> HTML5 slides</p>
+<p>should run on all *nix platforms,</br> windows<small>?</small> and MacOS</p>
+</section>
+<section id="features-contd." class="level1" data-rx="0" data-ry="1">
+<h1 data-rx="0" data-ry="1">features, contd.</h1>
+<p>cool
+• graphical
+• easy
+• robust
+• collaborative
+• adaptable</p>
+</section>
+<section id="cool-looking" class="level1 light-on-dark" data-bg="white;assets/img/paperclip.gif" data-rx="-1" data-ry="0" data-background="white" data-background-image="assets/img/paperclip.gif">
+<h1 class="light-on-dark" data-bg="white;assets/img/paperclip.gif" data-rx="-1" data-ry="0" data-background="white" data-background-image="assets/img/paperclip.gif">cool looking</h1>
+<p>leverages battle-proven</br>HTML5 presentation frameworks:</p>
+<p>revealjs • impressjs</p>
+</section>
+<section id="graphical" class="level1">
+<h1>graphical</h1>
+<p>content as markdown</br>
+<small>
+incl unicode <img src="assets/markdeck/emojis/2665.png" class="emoji" alt="♥" />
+emojis <img src="assets/markdeck/emojis/1f60e.png" class="emoji" alt="😎" />
+font-awesome
+<i class='fas fa-desktop'></i>
+</small></p>
+<p>images as asciiart</br>
+<small>charts, diagrams, graphs, math, …</small></p>
+</section>
+<section id="easy" class="level1" data-rx="0" data-ry="-1">
+<h1 data-rx="0" data-ry="-1">easy</h1>
+<p>completely text-based</br>
+<small>use your preferred editor/IDE</small></p>
+<p>auto-reload
+►
+fast feedback</p>
+</section>
+<section id="robust" class="level1">
+<h1>robust</h1>
+<p>modify and present your slides<br/> <em>without</em> <br/>internet uplink</p>
+<p><span class="fa-stack fa-1x"><i class='fas fa-wifi fa-stack-1x'></i>
+<i class='fas fa-slash fa-stack-1x'></i></span></p>
+</section>
+<section id="collaborative" class="level1" data-rx="1" data-ry="0">
+<h1 data-rx="1" data-ry="0">collaborative</h1>
+<p>presentation-as-code</p>
+<p>use your normal version control system</p>
+</section>
+<section id="adaptable" class="level1">
+<h1>adaptable</h1>
+<p>you can always fall back to</br>plain HTML/CSS</p>
+</section>
+<section id="code-highlighted" class="level1">
+<h1>code, highlighted</h1>
+<pre class="java"><code>public class Example {
+    public static final void main(String[] args) {
+        // foo
+        System.out.println(&quot;Hello World&quot;);
+    }
+}</code></pre>
+</section>
+<section id="asciiart-ditaa" class="level1 ltr" data-rx="0" data-ry="1">
+<h1 class="ltr" data-rx="0" data-ry="1">asciiart (ditaa)</h1>
+<pre class="nohighlight" style="width: 40%; height: 100%; font-size: 40%;"><code>+-----------------------------+
+| Node A                      |
+|                             |
+| +----------+   +----------+ |
+| |          |   |          | |
+| | Frontend |   | Foo      | |
+| |          |   |          | |
+| |          |   | {s}      | |
+| +-----+----+   +----------+ |
+|       ^                     |
+|       |                     |
+|       \-service-\           |
+|                 |           |
++-----------------|-----------+
+                  |
++-----------------|-----------+
+| Node B          |           |
+|       /---------/           |
+|       |                     |
+|       v                     |
+| +-----+----+   +=---------+ |
+| |          |   |          | |
+| | Frontend |   | Bar      | |
+| |          |   |          | |
+| |          |   | {s}      | |
+| +----------+   +----------+ |
++-----------------------------+</code></pre>
+<p>►</p>
+<div class="rendered render_ditaa">
+<p><img src="rendered/render_ditaa-4bad7e76dd3ebe55f922ac8d7e1958a30ddab805.png" alt="" /></p>
+</div>
+</section>
+<section id="asciiart-a2s" class="level1 ltr">
+<h1 class="ltr">asciiart (a2s)</h1>
+<pre class="nohighlight" style="width: 40%;"><code>#--------------------.
+|[0]                 |
+| .---# .---# #---.  |
+| |[1]| |[1]| |[1]|  |
+| #---&#39; #---&#39; &#39;---#  |
+|   ^     ^     ^    |
+#---+-----+-----+----#
+|   |     |     |    |
+|   a     2 sketch   |
+&#39;--------------------#
+
+[0]: {&quot;fill&quot;: &quot;#933&quot;}
+[1]: {&quot;fill&quot;: &quot;#bbb&quot;,&quot;a2s:delref&quot;:true,&quot;a2s:type&quot;:&quot;storage&quot;}</code></pre>
+<p>►</p>
+<div class="rendered render_a2s">
+<p><svg xmlns="http://www.w3.org/2000/svg" width="208" height="192" version="1.1">
+    <defs>
+        <marker id="jjlvu6z8f9-iPointer" fill="#000" markerHeight="7" markerUnits="strokeWidth" markerWidth="8" orient="auto" refX="5" refY="5" viewBox="0 0 10 10">
+            <path d="M 10 0 L 10 10 L 0 5 z"/>
+        </marker>
+        <marker id="jjlvu6z8f9-Pointer" fill="#000" markerHeight="7" markerUnits="strokeWidth" markerWidth="8" orient="auto" refX="5" refY="5" viewBox="0 0 10 10">
+            <path d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+        <filter id="jjlvu6z8f9-dsFilterNoBlur" width="150%" height="150%">
+            <feOffset dx="3" dy="3" in="SourceGraphic" result="offOut"/>
+            <feColorMatrix in="offOut" result="matrixOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"/>
+            <feBlend in="SourceGraphic" in2="matrixOut" mode="normal"/>
+        </filter>
+        <filter id="jjlvu6z8f9-dsFilter" width="150%" height="150%">
+            <feOffset dx="3" dy="3" in="SourceGraphic" result="offOut"/>
+            <feColorMatrix in="offOut" result="matrixOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"/>
+            <feGaussianBlur in="matrixOut" result="blurOut" stdDeviation="3"/>
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+        </filter>
+    </defs>
+    <g id="jjlvu6z8f9-boxes" fill="none" stroke="#000" stroke-width="2">
+        <g id="jjlvu6z8f9-group0">
+            <path id="jjlvu6z8f9-path0" fill="#933" d="M 4.5 8 L 183.5 8 Q 193.5 8 193.5 18 L 193.5 104 L 4.5 104 Z" filter="url(#jjlvu6z8f9-dsFilter)"/>
+        </g>
+        <g id="jjlvu6z8f9-group1">
+            <path id="jjlvu6z8f9-path1" fill="#bbb" d="M 22.5 46.4 L 22.5 72 A 18 4.8 0 0 0 58.5 72 V 46.4 A 18 4.8 0 0 0 22.5 46.4 Z" filter="url(#jjlvu6z8f9-dsFilter)"/>
+            <path id="jjlvu6z8f9-path1" d="M 22.5 46.4 A 18 4.8 0 0 0 58.5 46.4"/>
+        </g>
+        <g id="jjlvu6z8f9-group1">
+            <path id="jjlvu6z8f9-path1" fill="#bbb" d="M 76.5 46.4 L 76.5 72 A 18 4.8 0 0 0 112.5 72 V 46.4 A 18 4.8 0 0 0 76.5 46.4 Z" filter="url(#jjlvu6z8f9-dsFilter)"/>
+            <path id="jjlvu6z8f9-path1" d="M 76.5 46.4 A 18 4.8 0 0 0 112.5 46.4"/>
+        </g>
+        <g id="jjlvu6z8f9-group1">
+            <path id="jjlvu6z8f9-path1" fill="#bbb" d="M 130.5 46.4 L 130.5 72 A 18 4.8 0 0 0 166.5 72 V 46.4 A 18 4.8 0 0 0 130.5 46.4 Z" filter="url(#jjlvu6z8f9-dsFilter)"/>
+            <path id="jjlvu6z8f9-path1" d="M 130.5 46.4 A 18 4.8 0 0 0 166.5 46.4"/>
+        </g>
+        <g id="jjlvu6z8f9-group14">
+            <path id="jjlvu6z8f9-path14" fill="#fff" d="M 4.5 104 L 193.5 104 L 193.5 152 L 14.5 152 Q 4.5 152 4.5 142 Z" filter="url(#jjlvu6z8f9-dsFilter)"/>
+            <text id="jjlvu6z8f9-text0" x="35.1" y="140.8" fill="#000" stroke="none" font-family="Consolas,Monaco,Anonymous Pro,Anonymous,Bitstream Sans Mono,monospace" font-size="15.2">
+                a
+            </text>
+            <text id="jjlvu6z8f9-text1" x="89.1" y="140.8" fill="#000" stroke="none" font-family="Consolas,Monaco,Anonymous Pro,Anonymous,Bitstream Sans Mono,monospace" font-size="15.2">
+                2
+            </text>
+            <text id="jjlvu6z8f9-text2" x="107.1" y="140.8" fill="#000" stroke="none" font-family="Consolas,Monaco,Anonymous Pro,Anonymous,Bitstream Sans Mono,monospace" font-size="15.2">
+                sketch
+            </text>
+        </g>
+    </g>
+    <g id="jjlvu6z8f9-lines" fill="none" stroke="#000" stroke-width="2">
+        <g id="jjlvu6z8f9-group74">
+            <path id="jjlvu6z8f9-path74" marker-start="url(#jjlvu6z8f9-iPointer)" d="M 40.5 88 L 40.5 104 L 40.5 120"/>
+        </g>
+        <g id="jjlvu6z8f9-group146">
+            <path id="jjlvu6z8f9-path146" marker-start="url(#jjlvu6z8f9-iPointer)" d="M 94.5 88 L 94.5 104 L 94.5 120"/>
+        </g>
+        <g id="jjlvu6z8f9-group218">
+            <path id="jjlvu6z8f9-path218" marker-start="url(#jjlvu6z8f9-iPointer)" d="M 148.5 88 L 148.5 104 L 148.5 120"/>
+        </g>
+    </g>
+</svg>
+</p>
+</div>
+</section>
+<section id="asciiart-sketchy" class="level1 ltr">
+<h1 class="ltr">asciiart (sketchy)</h1>
+<pre class="nohighlight" style="width: 45%;"><code>#=----------------------------#
+|[0]                          |
+| Node                        |
+|                             |
+| #----------#   #----------# |
+| |          |   |[1]       | |
+| | front    |   | foo      | |
+| |          |   |          | |
+| |  ^       |   |          | |
+| |  |       |   |          | |
+| #--|-------#   #----------# |
+|    |                ^       |
+|    |                |       |
+|    &#39;-- service    --&#39;       |
+|                             |
+#-----------------------------#
+[0]: {&quot;fill&quot;:&quot;#fff&quot;,&quot;fillStyle&quot;:&quot;solid&quot;,&quot;a2s:delref&quot;:true}
+[1]: {&quot;fill&quot;:&quot;#eee&quot;,&quot;fillStyle&quot;:&quot;solid&quot;,&quot;a2s:delref&quot;:true}</code></pre>
+<p>►</p>
+<div class="rendered render_a2sketch">
+<p><svg xmlns="http://www.w3.org/2000/svg" width="289" height="304" version="1.1">
+    <path fill="#fff" d="M6.093316724512261 40.5957914116676 L276.54067137126765 40.739645026053765 L277.08538850002003 281.80859741358 L3.1891141920204973 279.1456999379625 L6.7454656627651275 37.350968775735964"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="M2.614603014671593 37.42002298401785 M4.121894284765126 38.83723666938664 C68.95790477141188 38.14757008570489, 133.83997739343522 39.14282435784961, 276.50057386544034 40.33839885284206 M3.725269009971671 39.39620153690539 C91.30931609334101 36.6968224370332, 179.03958846617675 38.00669805628412, 274.6930632908497 39.485628046014895 M274.22942422778215 39.69746813613298 C269.7123550999938 121.94950788100432, 273.46121329962756 203.51168894108568, 272.624545985143 279.4248227651212 M273.38187517807035 41.06455045571883 C274.8416088605568 131.07803875153166, 274.2274593328861 220.58000120764893, 274.1781367511703 280.70904317791303 M272.33494347232795 280.7945463497682 C203.44583856729645 278.5263160366407, 133.32079500972648 281.5912081081947, 2.632926062519814 281.2801229610722 M275.1046652694909 280.6957584046528 C195.64935066202187 281.5057590627748, 118.87686104871527 282.0598703268249, 3.4562875062102103 280.4492852469055 M2.4794463076699014 279.34969736366344 C2.1832353447820583 200.53213799153508, 1.1446555512250238 116.95873773088962, 3.218406431986212 40.41530501078522 M3.570159497218051 280.53235233163304 C7.661530197594537 211.37692572238117, 6.6111844833576825 141.12003672563674, 4.293623307595067 39.42225724143501"/>
+    <path fill="#eee" d="M159.20585921732726 101.39954811286516 L253.9850979214185 101.91622342507654 L258.67403923522943 201.23017913681105 L154.82259258637458 198.59887990280987 L158.8697112336631 102.0461710784759"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="M160.0883788552397 104.70839969398367C193.7881686660793 107.32401967662719 228.4755314667631 103.58119860402749 256.10018132248223 104.94735699922748M157.96260711801733 102.70940565423307C193.15082324360756 106.24385739197065 228.93615780320653 104.53116507686183 255.97985778427065 104.36711928833537M257.63027371846255 104.7443925964537C255.52654849088094 134.16381504433883 255.36219829925093 159.88159137418515 255.16655184411246 199.24162288010922M257.33255346524675 104.23331070033274C257.32824841315653 126.64498057890232 257.68627730146164 148.3771659708133 257.1767851381075 200.97674726151962M259.1340205184686 200.50980187245295C230.69827177720725 203.08137268152478 210.9103364494309 197.66920416169796 156.05884003815373 199.04701672166266M256.18213283106235 199.6846655379124C219.30475932200522 199.84950999401934 180.56838340950756 199.1671318342467 157.56205771722526 201.3016769160291M154.70487570061013 198.08025837548922C158.08196284494625 168.4079779021543 159.45647242228952 135.20121362059 158.15538847886054 101.20173729255184M157.5308653975866 201.39149536636796C157.2726862733725 171.8612564607778 158.65797918485038 142.67026867787573 156.7451621023625 105.34820749416176M42.47768613084787 198.7620655108725C31.417338922641648 200.86817502868837 24.814217998805105 202.1246744803289 24.855117495523483 198.0792757313131M39.9591114930752 200.9363239473667C34.887013398209454 200.41909996503722 31.778104680707184 199.34130034207575 23.732590407972694 199.7704519252788M21.371937201189574 197.6480331214516C23.575744739390327 173.90618172199174 23.97767985480762 143.88167330330035 20.809732262090392 103.16435296654M21.910061277256773 199.766080729261C23.0714207280072 174.70797904680802 22.67489575383892 151.08454091608382 22.691664659771412 102.83129045948917M24.10927678122898 104.84841394989526C47.98583907457528 104.34306478892394 75.56682469626094 103.64337539773987 119.4201343034787 105.414216061568M22.1008940717506 102.8802140609235C45.75596492268068 105.48903451569727 66.89156756020056 103.6130062372185 122.83734301143431 104.9438893273411M120.26482108962372 103.13428896535079C123.34453385355746 143.6633261793453 120.51683645992068 180.57155361778132 122.7392911019223 199.91559669798806M121.79762200776887 104.87531935820516C123.8126726107837 125.97491871851089 123.61364255106031 150.060344056159 120.66574429279561 199.2657910250695M120.2770507963869 198.73867279298867C101.85195657400727 197.57136780024047 77.03665208488455 200.95077905671022 57.39129090586012 200.9785598103641M122.40374894221623 199.56497904399052C105.91758168779415 200.27813186202798 89.35287302947411 199.33485773640345 58.30546745444808 199.80078736746447M47.76707468241839 166.24048267823963C48.78321145299571 195.6951246390234 47.49855911793722 219.03805588339236 48.60009337932352 236.2892659848716M48.78751920156428 167.12109179369654C48.82014095874092 188.11041808279106 48.89599234011566 206.06336795158913 50.41868810389788 237.2685841570088M49.5 238C47.21053768217971 247.3215780336303 51.55389973212963 249.2590879480784 59.64539493191478 245.86432918067038M47.09769493746353 236.19211740899482C47.873949850841804 246.02663907979638 52.76840537844336 246.619275831383 60.934587844742275 249.10004098724679M60.53803953774972 247.17123623448452C62.26258882933471 247.831562450125 63.46641246216197 247.34989685968534 68.47521917310573 247.27305435352523M59.01373376378237 247.54858991240792C61.911757963562486 248.19878407856706 64.5109254049859 248.118719459588 67.84473599614044 248.55168987418634M185.43989073046424 248.99865017364647C187.47314968114864 247.35459745236656 189.6987319303371 247.5664799639843 193.25486397442612 247.73451767211895M183.98691206500794 248.44063915904727C186.2641061218655 248.36824592025783 189.34662601583878 248.06172937141534 192.7015894755017 248.44485571147098M192.5 248C196.56688959930784 245.59166348075814 202.4888464658972 242.56414980817485 202.4829541230327 238.81465541788876M193.21248374608257 246.93143007527834C196.94844059108826 249.08594695388982 204.6668374226192 245.50070141323974 202.27622510065464 235.59393059260475M200.12427663192594 239.64160846991143C202.47284673345922 235.14691612305432 201.93193769060372 225.48977026815336 203.780549468167 216.672218413667M203.62963024642795 236.81107686695321C203.7869261878623 231.40364976116052 202.05097482718853 223.8848584662046 201.5888880003782 214.62318704137428"/>
+    <defs xmlns="http://www.w3.org/2000/svg">
+        <marker id="undefined-undefined-undefined-id39jbsbpjg-iPointer-900g8pms3wl" fill="#000" markerHeight="7" markerUnits="strokeWidth" markerWidth="8" orient="auto" refX="5" refY="5" viewBox="0 0 10 10">
+            <path d="M 10 0 L 10 10 L 0 5 z"/>
+        </marker>
+        <marker id="undefined-undefined-undefined-id39jbsbpjg-Pointer-900g8pms3wl" fill="#000" markerHeight="7" markerUnits="strokeWidth" markerWidth="8" orient="auto" refX="5" refY="5" viewBox="0 0 10 10">
+            <path d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+        <filter id="undefined-undefined-undefined-id39jbsbpjg-dsFilterNoBlur" width="150%" height="150%">
+            <feOffset dx="3" dy="3" in="SourceGraphic" result="offOut"/>
+            <feColorMatrix in="offOut" result="matrixOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"/>
+            <feBlend in="SourceGraphic" in2="matrixOut" mode="normal"/>
+        </filter>
+        <filter id="undefined-undefined-undefined-id39jbsbpjg-dsFilter" width="150%" height="150%">
+            <feOffset dx="3" dy="3" in="SourceGraphic" result="offOut"/>
+            <feColorMatrix in="offOut" result="matrixOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"/>
+            <feGaussianBlur in="matrixOut" result="blurOut" stdDeviation="3"/>
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+        </filter>
+    </defs>
+    ??
+    <text id="undefined-undefined-id39jbsbpjg-text0" x="17.1" y="76.8" fill="#000" stroke="none" font-family="xkcd Script" font-size="120%">
+        Node
+    </text>
+    <text id="undefined-undefined-id39jbsbpjg-text1" x="26.1" y="140.8" fill="#000" stroke="none" font-family="xkcd Script" font-size="120%">
+        front
+    </text>
+    <text id="undefined-undefined-id39jbsbpjg-text3" x="80.1" y="252.8" fill="#000" stroke="none" font-family="xkcd Script" font-size="120%">
+        service
+    </text>
+    <text id="undefined-undefined-id39jbsbpjg-text2" x="170.1" y="140.8" fill="#000" stroke="none" font-family="xkcd Script" font-size="120%">
+        foo
+    </text>
+</svg>
+</p>
+</div>
+</section>
+<section id="asciiart-svgbob" class="level1 ltr" data-rx="-1" data-ry="0">
+<h1 class="ltr" data-rx="-1" data-ry="0">asciiart (svgbob)</h1>
+<pre class="nohighlight" style="width: 40%; height: 100%;"><code>        P *
+           \
+            \
+       v0    \       v3
+         *----\-----*
+        /      v X   \
+       /        o     \
+      /                \
+  v1 *------------------* v2</code></pre>
+<p>►</p>
+<div class="rendered render_svgbob">
+<p><svg xmlns="http://www.w3.org/2000/svg" width="232" height="176">
+    <style>line, path, circle,rect,polygon {
+                          stroke: black;
+                          stroke-width: 2;
+                          stroke-opacity: 1;
+                          fill-opacity: 1;
+                          stroke-linecap: round;
+                          stroke-linejoin: miter;
+                        }
+
+                    text {
+                        fill: black;
+                        }
+                        rect.backdrop{
+                            stroke: none;
+                            fill: white;
+                        }
+                        .broken{
+                            stroke-dasharray: 8;
+                        }
+                        .filled{
+                            fill: black;
+                        }
+                        .bg_filled{
+                            fill: white;
+                        }
+                        .nofill{
+                            fill: white;
+                        }
+
+                        text {
+                         font-family: monospace;
+                         font-size: 14px;
+                        }
+
+                        .end_marked_arrow{
+                            marker-end: url(#arrow);
+                         }
+                        .start_marked_arrow{
+                            marker-start: url(#arrow);
+                         }
+
+                        .end_marked_diamond{
+                            marker-end: url(#diamond);
+                         }
+                        .start_marked_diamond{
+                            marker-start: url(#diamond);
+                         }
+
+                        .end_marked_circle{
+                            marker-end: url(#circle);
+                         }
+                        .start_marked_circle{
+                            marker-start: url(#circle);
+                         }
+
+                        .end_marked_open_circle{
+                            marker-end: url(#open_circle);
+                         }
+                        .start_marked_open_circle{
+                            marker-start: url(#open_circle);
+                         }
+
+                        .end_marked_big_open_circle{
+                            marker-end: url(#big_open_circle);
+                         }
+                        .start_marked_big_open_circle{
+                            marker-start: url(#big_open_circle);
+                         }
+
+                         
+                        </style>
+    <defs>
+        <marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,0 0,4 4,2 0,0"></polygon>
+        </marker>
+        <marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,2 2,0 4,2 2,4 0,2"></polygon>
+        </marker>
+        <marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="2" class="filled"></circle>
+        </marker>
+        <marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="2" class="bg_filled"></circle>
+        </marker>
+        <marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
+        </marker>
+    </defs>
+    <rect class="backdrop" x="0" y="0" width="232" height="176"></rect>
+    <text x="66" y="28" class="">P</text>
+    <text x="58" y="76" class="">v0</text>
+    <line x1="104" y1="64" x2="128" y2="112" class="solid end_marked_arrow"></line>
+    <text x="170" y="76" class="">v3</text>
+    <text x="138" y="108" class="">X</text>
+    <text x="18" y="156" class="">v1</text>
+    <text x="210" y="156" class="">v2</text>
+    <g>
+        <circle cx="84" cy="24" r="4" class="filled"></circle>
+        <line x1="84" y1="24" x2="104" y2="64" class="solid"></line>
+    </g>
+    <g>
+        <circle cx="76" cy="88" r="4" class="filled"></circle>
+        <line x1="76" y1="88" x2="164" y2="88" class="solid"></line>
+        <line x1="76" y1="88" x2="56" y2="128" class="solid"></line>
+        <circle cx="164" cy="88" r="4" class="filled"></circle>
+        <line x1="164" y1="88" x2="184" y2="128" class="solid"></line>
+        <line x1="56" y1="128" x2="44" y2="152" class="solid"></line>
+        <line x1="184" y1="128" x2="196" y2="152" class="solid"></line>
+        <circle cx="44" cy="152" r="4" class="filled"></circle>
+        <line x1="44" y1="152" x2="196" y2="152" class="solid"></line>
+        <circle cx="196" cy="152" r="4" class="filled"></circle>
+    </g>
+    <g>
+        <line x1="136" y1="112" x2="132" y2="120" class="solid"></line>
+        <circle cx="132" cy="120" r="2" class="nofill"></circle>
+    </g>
+</svg>
+</p>
+</div>
+</section>
+<section id="asciiart-mermaid" class="level1 ltr">
+<h1 class="ltr">asciiart (mermaid)</h1>
+<pre class="nohighlight" style="width: 40%; height: 100%; font-size: 40%;"><code>graph LR
+   a --&gt; b &amp; c--&gt; d</code></pre>
+<p>►</p>
+<pre class="render_mermaid nohighlight" data-args="-w 400" style="font-size: 100%;"><code>graph LR
+   a --&gt; b &amp; c--&gt; d</code></pre>
+</section>
+<section id="asciiart-plantuml" class="level1 ltr">
+<h1 class="ltr">asciiart (plantuml)</h1>
+<pre class="nohighlight" style="width: 40%; font-size: 60%;"><code>@startuml
+Bob-&gt;Alice : hello
+Alice-&gt;Bob : oh, you again...
+Bob-&gt;Alice : ??
+@enduml</code></pre>
+<p>►</p>
+<div class="rendered render_plantuml">
+<p><?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="253px" preserveAspectRatio="none" style="width:268px;height:253px;background:#00000000;" version="1.1" viewBox="0 0 268 253" width="268px" zoomAndPan="magnify"><defs><filter height="300%" id="f1c4i96sgv920m" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="36" x2="36" y1="52.1759" y2="198.7037"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="221" x2="221" y1="52.1759" y2="198.7037"/><rect fill="#FEFECE" filter="url(#f1c4i96sgv920m)" height="42.1759" style="stroke:#A80036;stroke-width:1.5;" width="59" x="5" y="5"/><text fill="#000000" font-family="Raleway" font-size="24" lengthAdjust="spacingAndGlyphs" textLength="45" x="12" y="34.5599">Bob</text><rect fill="#FEFECE" filter="url(#f1c4i96sgv920m)" height="42.1759" style="stroke:#A80036;stroke-width:1.5;" width="59" x="5" y="197.7037"/><text fill="#000000" font-family="Raleway" font-size="24" lengthAdjust="spacingAndGlyphs" textLength="45" x="12" y="227.2636">Bob</text><rect fill="#FEFECE" filter="url(#f1c4i96sgv920m)" height="42.1759" style="stroke:#A80036;stroke-width:1.5;" width="69" x="185" y="5"/><text fill="#000000" font-family="Raleway" font-size="24" lengthAdjust="spacingAndGlyphs" textLength="55" x="192" y="34.5599">Alice</text><rect fill="#FEFECE" filter="url(#f1c4i96sgv920m)" height="42.1759" style="stroke:#A80036;stroke-width:1.5;" width="69" x="185" y="197.7037"/><text fill="#000000" font-family="Raleway" font-size="24" lengthAdjust="spacingAndGlyphs" textLength="55" x="192" y="227.2636">Alice</text><polygon fill="#A80036" points="209.5,92.3518,219.5,96.3518,209.5,100.3518,213.5,96.3518" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="36.5" x2="215.5" y1="96.3518" y2="96.3518"/><text fill="#000000" font-family="Raleway" font-size="24" lengthAdjust="spacingAndGlyphs" textLength="56" x="43.5" y="88.7358">hello</text><polygon fill="#A80036" points="47.5,134.5278,37.5,138.5278,47.5,142.5278,43.5,138.5278" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="41.5" x2="220.5" y1="138.5278" y2="138.5278"/><text fill="#000000" font-family="Raleway" font-size="24" lengthAdjust="spacingAndGlyphs" textLength="161" x="53.5" y="130.9118">oh, you again...</text><polygon fill="#A80036" points="209.5,176.7037,219.5,180.7037,209.5,184.7037,213.5,180.7037" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="36.5" x2="215.5" y1="180.7037" y2="180.7037"/><text fill="#000000" font-family="Raleway" font-size="24" lengthAdjust="spacingAndGlyphs" textLength="22" x="43.5" y="173.0877">??</text><!--MD5=[e73b9a75a97c9c848349e8ab6b9904ae]
+@startuml
+skinparamlocked backgroundcolor transparent
+skinparamlocked backgroundcolor transparent
+skinparamlocked defaultFontSize 24
+skinparamlocked defaultFontName Raleway
+Bob->Alice : hello
+Alice->Bob : oh, you again...
+Bob->Alice : ??
+@enduml
+
+PlantUML version 1.2020.23(Sun Dec 13 19:14:58 GMT 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg></p>
+</div>
+</section>
+<section id="asciiart-graphviz" class="level1 ltr">
+<h1 class="ltr">asciiart (graphviz)</h1>
+<pre class="nohighlight" style="width: 50%; font-size: 60%;"><code>digraph G {
+    bgcolor=transparent;
+    node [style=filled,color=white];
+
+    a -&gt; b -&gt; c;
+    a -&gt; c;
+    b -&gt; d;
+}</code></pre>
+<p>►</p>
+<div class="rendered render_dot">
+<p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.44.0 ()
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="134pt" height="188pt"
+ viewBox="0.00 0.00 134.00 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>G</title>
+<!-- a -->
+<g id="node1" class="node">
+<title>a</title>
+<ellipse fill="white" stroke="white" cx="54" cy="-162" rx="27" ry="18"/>
+<text text-anchor="middle" x="54" y="-158.3" font-family="Raleway" font-size="14.00">a</text>
+</g>
+<!-- b -->
+<g id="node2" class="node">
+<title>b</title>
+<ellipse fill="white" stroke="white" cx="82" cy="-90" rx="27" ry="18"/>
+<text text-anchor="middle" x="82" y="-86.3" font-family="Raleway" font-size="14.00">b</text>
+</g>
+<!-- a&#45;&gt;b -->
+<g id="edge1" class="edge">
+<title>a&#45;&gt;b</title>
+<path fill="none" stroke="black" d="M60.64,-144.41C63.91,-136.22 67.94,-126.14 71.62,-116.95"/>
+<polygon fill="black" stroke="black" points="74.95,-118.05 75.41,-107.47 68.45,-115.45 74.95,-118.05"/>
+</g>
+<!-- c -->
+<g id="node3" class="node">
+<title>c</title>
+<ellipse fill="white" stroke="white" cx="27" cy="-18" rx="27" ry="18"/>
+<text text-anchor="middle" x="27" y="-14.3" font-family="Raleway" font-size="14.00">c</text>
+</g>
+<!-- a&#45;&gt;c -->
+<g id="edge3" class="edge">
+<title>a&#45;&gt;c</title>
+<path fill="none" stroke="black" d="M50.74,-143.87C46.14,-119.67 37.69,-75.21 32.21,-46.39"/>
+<polygon fill="black" stroke="black" points="35.57,-45.36 30.27,-36.19 28.7,-46.67 35.57,-45.36"/>
+</g>
+<!-- b&#45;&gt;c -->
+<g id="edge2" class="edge">
+<title>b&#45;&gt;c</title>
+<path fill="none" stroke="black" d="M70.07,-73.81C62.79,-64.55 53.34,-52.52 45.15,-42.09"/>
+<polygon fill="black" stroke="black" points="47.84,-39.86 38.91,-34.16 42.34,-44.18 47.84,-39.86"/>
+</g>
+<!-- d -->
+<g id="node4" class="node">
+<title>d</title>
+<ellipse fill="white" stroke="white" cx="99" cy="-18" rx="27" ry="18"/>
+<text text-anchor="middle" x="99" y="-14.3" font-family="Raleway" font-size="14.00">d</text>
+</g>
+<!-- b&#45;&gt;d -->
+<g id="edge4" class="edge">
+<title>b&#45;&gt;d</title>
+<path fill="none" stroke="black" d="M86.12,-72.05C88.01,-64.26 90.3,-54.82 92.42,-46.08"/>
+<polygon fill="black" stroke="black" points="95.85,-46.82 94.8,-36.28 89.04,-45.17 95.85,-46.82"/>
+</g>
+</g>
+</svg>
+</p>
+</div>
+</section>
+<section id="charts-vega-lite" class="level1 ltr" data-rx="0" data-ry="-1">
+<h1 class="ltr" data-rx="0" data-ry="-1">charts (vega-lite)</h1>
+<pre class="json" style="width: 50%; font-size: 30%;"><code>{
+    &quot;$schema&quot;: &quot;https://vega.github.io/schema/vega-lite/v2.0.json&quot;,
+    &quot;data&quot;: {
+        &quot;values&quot;: [
+            {&quot;a&quot;: &quot;A&quot;,&quot;b&quot;: 28}, {&quot;a&quot;: &quot;B&quot;,&quot;b&quot;: 55}, {&quot;a&quot;: &quot;C&quot;,&quot;b&quot;: 43},
+            {&quot;a&quot;: &quot;D&quot;,&quot;b&quot;: 91}, {&quot;a&quot;: &quot;E&quot;,&quot;b&quot;: 81}, {&quot;a&quot;: &quot;F&quot;,&quot;b&quot;: 53},
+            {&quot;a&quot;: &quot;G&quot;,&quot;b&quot;: 19}, {&quot;a&quot;: &quot;H&quot;,&quot;b&quot;: 87}, {&quot;a&quot;: &quot;I&quot;,&quot;b&quot;: 52}
+        ]
+    },
+    &quot;width&quot;: 600,
+    &quot;height&quot;: 300,
+    &quot;mark&quot;: &quot;area&quot;,
+    &quot;encoding&quot;: {
+        &quot;x&quot;: {&quot;field&quot;: &quot;a&quot;, &quot;type&quot;: &quot;ordinal&quot;},
+        &quot;y&quot;: {&quot;field&quot;: &quot;b&quot;, &quot;type&quot;: &quot;quantitative&quot;, &quot;scale&quot;: {&quot;domain&quot;: [0, 100]}}
+    }
+}</code></pre>
+<p>►</p>
+<div class="rendered render_vegalite">
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks" width="324" height="372" viewBox="0 0 324 372"><rect width="324" height="372" fill="white"/><g fill="none" stroke-miterlimit="10" transform="translate(69,14)"><g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h250v300h-250Z" stroke="#ddd"/><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,300)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,270)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,240)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,210)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,180)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,150)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,120)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,90)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,60)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,30)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,0)" x2="250" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled 'a' for a discrete scale with 9 values: A, B, C, D, E, ending with I"><g transform="translate(0.5,300.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(14,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(42,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(69,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(97,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(125,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(153,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(181,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(208,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(236,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="middle" transform="translate(13.888888888888886,21)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">A</text><text text-anchor="middle" transform="translate(41.666666666666664,21)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">B</text><text text-anchor="middle" transform="translate(69.44444444444444,21)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">C</text><text text-anchor="middle" transform="translate(97.22222222222223,21)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">D</text><text text-anchor="middle" transform="translate(125,21)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">E</text><text text-anchor="middle" transform="translate(152.77777777777777,21)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">F</text><text text-anchor="middle" transform="translate(180.55555555555557,21)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">G</text><text text-anchor="middle" transform="translate(208.33333333333334,21)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">H</text><text text-anchor="middle" transform="translate(236.11111111111111,21)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">I</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="250" y2="0" stroke="#888" stroke-width="1" opacity="1"/></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(125,48)" font-family="Raleway" font-size="24px" font-weight="bold" fill="#000" opacity="1">a</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis titled 'b' for a linear scale with values from 0 to 100"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,300)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,270)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,240)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,210)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,180)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,150)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,120)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,90)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,60)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,30)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,0)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-7,305)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">0</text><text text-anchor="end" transform="translate(-7,275)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">10</text><text text-anchor="end" transform="translate(-7,245)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">20</text><text text-anchor="end" transform="translate(-7,215)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">30</text><text text-anchor="end" transform="translate(-7,185)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">40</text><text text-anchor="end" transform="translate(-7,155)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">50</text><text text-anchor="end" transform="translate(-7,125)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">60</text><text text-anchor="end" transform="translate(-7,95.00000000000001)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">70</text><text text-anchor="end" transform="translate(-7,64.99999999999999)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">80</text><text text-anchor="end" transform="translate(-7,34.99999999999999)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">90</text><text text-anchor="end" transform="translate(-7,5)" font-family="Raleway" font-size="18px" fill="#000" opacity="1">100</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,300)" x2="0" y2="-300" stroke="#888" stroke-width="1" opacity="1"/></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(-54,145)" font-family="Raleway" font-size="24px" font-weight="bold" fill="#000" opacity="1">b</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g></g><g class="mark-area role-mark marks" role="graphics-object" aria-roledescription="area mark container"><path aria-label="a: A; b: 28" role="graphics-symbol" aria-roledescription="area mark" d="M13.888888888888886,216L41.666666666666664,135L69.44444444444444,171.00000000000003L97.22222222222223,26.99999999999999L125,56.999999999999986L152.77777777777777,141L180.55555555555557,243.00000000000003L208.33333333333334,39L236.11111111111111,144L236.11111111111111,300L208.33333333333334,300L180.55555555555557,300L152.77777777777777,300L125,300L97.22222222222223,300L69.44444444444444,300L41.666666666666664,300L13.888888888888886,300Z" fill="#4c78a8"/></g></g><path class="foreground" aria-hidden="true" d="" display="none"/></g></g></g></svg></p>
+</div>
+</section>
+<section id="math-equations" class="level1">
+<h1>math equations</h1>
+<pre class="nohighlight" style="width: 100%; font-size: 70%;"><code>$a^2 + b^2 = c^2$</code></pre>
+<p><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.336ex" height="2.676ex" style="vertical-align: -0.505ex;" viewBox="0 -934.9 5311.2 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<path stroke-width="1" id="E1-MJMATHI-61" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path>
+<path stroke-width="1" id="E1-MJMATHI-62" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path>
+<path stroke-width="1" id="E1-MJMATHI-63" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+ <use xlink:href="#E1-MJMATHI-61" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-32" x="748" y="513"></use>
+ <use xlink:href="#E1-MJMAIN-2B" x="1205" y="0"></use>
+<g transform="translate(2206,0)">
+ <use xlink:href="#E1-MJMATHI-62" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-32" x="607" y="513"></use>
+</g>
+ <use xlink:href="#E1-MJMAIN-3D" x="3367" y="0"></use>
+<g transform="translate(4423,0)">
+ <use xlink:href="#E1-MJMATHI-63" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-32" x="613" y="513"></use>
+</g>
+</g>
+</svg></p>
+<p> </p>
+<pre class="nohighlight" style="width: 100%; font-size: 70%;"><code>$$e = \mathop
+    {\lim }\limits_{n \to \infty }
+    \left( {1 + \frac{1}{n}} \right)^n$$</code></pre>
+<p><p><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="19.715ex" height="6.176ex" style="vertical-align: -2.505ex;" viewBox="0 -1580.7 8488.3 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<path stroke-width="1" id="E3-MJMATHI-65" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path>
+<path stroke-width="1" id="E3-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path>
+<path stroke-width="1" id="E3-MJMAIN-6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path>
+<path stroke-width="1" id="E3-MJMAIN-69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z"></path>
+<path stroke-width="1" id="E3-MJMAIN-6D" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q351 442 364 440T387 434T406 426T421 417T432 406T441 395T448 384T452 374T455 366L457 361L460 365Q463 369 466 373T475 384T488 397T503 410T523 422T546 432T572 439T603 442Q729 442 740 329Q741 322 741 190V104Q741 66 743 59T754 49Q775 46 803 46H819V0H811L788 1Q764 2 737 2T699 3Q596 3 587 0H579V46H595Q656 46 656 62Q657 64 657 200Q656 335 655 343Q649 371 635 385T611 402T585 404Q540 404 506 370Q479 343 472 315T464 232V168V108Q464 78 465 68T468 55T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z"></path>
+<path stroke-width="1" id="E3-MJMATHI-6E" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path>
+<path stroke-width="1" id="E3-MJMAIN-2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path>
+<path stroke-width="1" id="E3-MJMAIN-221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path>
+<path stroke-width="1" id="E3-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path>
+<path stroke-width="1" id="E3-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path>
+<path stroke-width="1" id="E3-MJMAIN-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path>
+<path stroke-width="1" id="E3-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path>
+<path stroke-width="1" id="E3-MJSZ3-28" d="M701 -940Q701 -943 695 -949H664Q662 -947 636 -922T591 -879T537 -818T475 -737T412 -636T350 -511T295 -362T250 -186T221 17T209 251Q209 962 573 1361Q596 1386 616 1405T649 1437T664 1450H695Q701 1444 701 1441Q701 1436 681 1415T629 1356T557 1261T476 1118T400 927T340 675T308 359Q306 321 306 250Q306 -139 400 -430T690 -924Q701 -936 701 -940Z"></path>
+<path stroke-width="1" id="E3-MJSZ3-29" d="M34 1438Q34 1446 37 1448T50 1450H56H71Q73 1448 99 1423T144 1380T198 1319T260 1238T323 1137T385 1013T440 864T485 688T514 485T526 251Q526 134 519 53Q472 -519 162 -860Q139 -885 119 -904T86 -936T71 -949H56Q43 -949 39 -947T34 -937Q88 -883 140 -813Q428 -430 428 251Q428 453 402 628T338 922T245 1146T145 1309T46 1425Q44 1427 42 1429T39 1433T36 1436L34 1438Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+ <use xlink:href="#E3-MJMATHI-65" x="0" y="0"></use>
+ <use xlink:href="#E3-MJMAIN-3D" x="744" y="0"></use>
+<g transform="translate(1800,0)">
+<g transform="translate(224,0)">
+ <use xlink:href="#E3-MJMAIN-6C"></use>
+ <use xlink:href="#E3-MJMAIN-69" x="278" y="0"></use>
+ <use xlink:href="#E3-MJMAIN-6D" x="557" y="0"></use>
+</g>
+<g transform="translate(0,-601)">
+ <use transform="scale(0.707)" xlink:href="#E3-MJMATHI-6E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E3-MJMAIN-2192" x="600" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E3-MJMAIN-221E" x="1601" y="0"></use>
+</g>
+</g>
+<g transform="translate(3806,0)">
+ <use xlink:href="#E3-MJSZ3-28"></use>
+<g transform="translate(736,0)">
+ <use xlink:href="#E3-MJMAIN-31" x="0" y="0"></use>
+ <use xlink:href="#E3-MJMAIN-2B" x="722" y="0"></use>
+<g transform="translate(1501,0)">
+<g transform="translate(342,0)">
+<rect stroke="none" width="720" height="60" x="0" y="220"></rect>
+ <use xlink:href="#E3-MJMAIN-31" x="110" y="676"></use>
+ <use xlink:href="#E3-MJMATHI-6E" x="60" y="-686"></use>
+</g>
+</g>
+</g>
+ <use xlink:href="#E3-MJSZ3-29" x="3420" y="-1"></use>
+ <use transform="scale(0.707)" xlink:href="#E3-MJMATHI-6E" x="5878" y="1665"></use>
+</g>
+</g>
+</svg></p></p>
+</section>
+<section id="terminal-session-asciinema" class="level1" data-rx="0" data-ry="-1" data-rz="0" data-bg="#121314" data-background="#121314">
+<h1 data-rx="0" data-ry="-1" data-rz="0" data-bg="#121314" data-background="#121314">terminal session (asciinema)</h1>
+<p><asciinema-player src="./assets/test.json"
+poster="npt:0:21"
+idle-time-limit=1
+speed=2
+rows=18
+font-size="medium"
+
+> </asciinema-player></p>
+</section>
+<section id="thank-you" class="level1">
+<h1>Thank You!</h1>
+<p><a href="http://pandoc.org">pandoc</a>
+•
+<a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>
+•
+<a href="https://github.com/impress/impress.js">impress.js</a>
+</br></p>
+<p><a href="http://plantuml.com">plantuml</a>
+•
+<a href="https://github.com/pepijnve/ditaa.git">ditaamini</a>
+•
+<a href="http://www.graphviz.org">graphviz</a>
+•
+<a href="https://ivanceras.github.io/svgbob-editor/">svgbob</a>
+•
+<a href="https://github.com/asciinema/asciinema-player">asciinema</a>
+</br></p>
+<p><a href="https://github.com/astefanutti/decktape">decktape</a>
+•
+<a href="https://vega.github.io/vega-lite/">vega-lite</a>
+•
+<a href="https://www.mathjax.org">math-jax</a>
+•
+<a href="https://fontawesome.com/">font awesome</a>
+</br></p>
+<p><img src="assets/markdeck/emojis/1f643.png" class="emoji" alt="🙃" /></p>
+</section>
+<section id="section" class="level1 flush-right" data-bg="White;themes/example/img/wordcloud.svg" data-rx="1" data-ry="0" data-background="White" data-background-image="themes/example/img/wordcloud.svg">
+<h1 class="flush-right" data-bg="White;themes/example/img/wordcloud.svg" data-rx="1" data-ry="0" data-background="White" data-background-image="themes/example/img/wordcloud.svg"></h1>
+<p><a href="https://github.com/arnehilmann/markdeck"><img src="rendered/render_qr-1c6d8d251e3a1b6735af303422cc15266211c56e.png" alt="" /></a></p>
+</section>
+<section id="markdeck-3" class="level1 light-on-dark" data-skipon="impress" data-bgcss="sea-gradient" data-state="sea-gradient">
+<h1 class="light-on-dark" data-skipon="impress" data-bgcss="sea-gradient" data-state="sea-gradient">markdeck</h1>
+<p>collaborative slide editing made easy</p>
+<p><i class='fab fa-markdown'></i>
+<i class='fab fa-docker'></i>
+<i class='fab fa-html5'></i>
+<i class='fab fa-css3'></i>
+<i class='fab fa-js-square'></i>
+<img src="assets/img/buddy-egyptian.svg" style="height:120px; vertical-align:middle; box-shadow:none;"/></p>
+</section>
+
+        </div>
+    </div>
+
+    <script src="assets/3rdparty/jquery.js"></script>
+
+    <script type="module">
+        import Reveal from "./assets/framework/reveal.js/dist/reveal.esm.js";
+        import Markdown from "./assets/framework/reveal.js/plugin/markdown/markdown.esm.js";
+        import Notes from "./assets/framework/reveal.js/plugin/notes/notes.esm.js";
+
+        let deck = new Reveal();
+        window.Reveal = deck;
+
+        deck.initialize({
+            width: 960,
+            height: 740,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.5,
+            controls: '',
+            controlsTutorial: 'false',
+            controlsLayout: 'bottom-right',
+            controlsBackArrows: 'faded',
+            progress: 'true',
+            defaultTiming: (Number(120) >= 0) ? Number(120) : 120,
+            slideNumber: 'false',
+            history: 'true',
+            keyboard: 'true',
+            overview: 'true',
+            center: 'true',
+            touch: 'true',
+            loop: '',
+            rtl: '',
+            shuffle: '',
+            fragments: 'true',
+            embedded: 'false',
+            help: 'true',
+            showNotes: '',
+            autoPlayMedia: '',
+
+            autoSlide: (window.pdf_render) ? 0 : Number(0),
+
+            autoSlideStoppable: 'true',
+            autoSlideMethod: 'Reveal.navigateNext',
+            mouseWheel: 'false',
+            hideAddressBar: 'true',
+            previewLinks: 'false',
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            viewDistance: (Number(3) >= 0) ? Number(3) : 3,
+
+            parallaxBackgroundImage: '',
+            parallaxBackgroundSize: '',
+            parallaxBackgroundHorizontal: (null != null && Number(null) >= 0) ? Number(null) : null,
+            parallaxBackgroundVertical: (null != null && Number(null) >= 0) ? Number(null) : null,
+
+            theme: '',
+
+            plugins: [ Markdown, Notes ]
+        });
+
+        function calc_offset_left() {
+            return jQuery(".slides").offset().left / deck.getScale();
+        }
+
+        function flushleft(selector) {
+            function deoffset() {
+                // console.log("flushleft");
+                var rel_offset_left = calc_offset_left();
+                jQuery(selector).each(function(i, e){
+                    jQuery(this).css({"margin-left": "-" + rel_offset_left + "px"});
+                });
+            }
+            deoffset();
+            if (window.pdf_render) {
+                setTimeout(deoffset, 50);
+            } else {
+                jQuery(window).on("resize", deoffset);
+            }
+        }
+
+        function centerleft(selector) {
+            function deoffset() {
+                // console.log("centerleft");
+                var rel_offset_left = calc_offset_left() / 2;
+                jQuery(selector).each(function(i, e){
+                    jQuery(this).css({"margin-left": "-" + rel_offset_left + "px"});
+                });
+            }
+            deoffset();
+            if (window.pdf_render) {
+                setTimeout(deoffset, 50);
+            } else {
+                jQuery(window).on("resize", deoffset);
+            }
+        }
+
+        jQuery(".flushleft").children(".flushleft").removeClass("flushleft");
+        flushleft(".slides section.flushleft");
+    </script>
+
+    <script src='assets/markdeck/highlight.js'></script>
+    <script src='assets/markdeck/highlightjs-line-numbers.min.js'></script>
+    <script>
+        window.hljs = hljs;
+        hljs.initHighlightingOnLoad();
+        hljs.initLineNumbersOnLoad();
+    </script>
+
+        <script src="assets/3rdparty/asciinema-player.js"></script>
+    
+    <script>
+        jQuery("pre.render_mermaid").each(function(i, old) {
+            var p = jQuery('<p>' + jQuery(old).children("code").text() + '</p>');
+            var attributes = jQuery(old).prop("attributes");
+            jQuery.each(attributes, function() {
+                p.attr(this.name, this.value);
+            });
+            p.addClass("mermaid");
+            old.replaceWith(p[0]);
+        });
+    </script>
+    <script src="assets/3rdparty/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true, theme:'forest'});</script>
+
+    <script>
+        // add notes class to make sure controls are always displayed on the
+        // speaker notes
+        if (window.self !== window.top) {
+            document.body.className += " notes";
+        }
+
+        document.body.className += " example";
+    </script>
+
+
+</body>
+</html>
