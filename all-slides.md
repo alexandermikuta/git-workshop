@@ -5,13 +5,11 @@
 the distributed version control system
 `<small>`{=html} Alexander Mikuta • 2022`</small>`{=html}
 
-[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/)
+[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){height="70%" width="70%"}
 
 ------------------------------------------------------------------------
 
-<!-- section 1 -->
-
-# Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
+## Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
 Often used branching strategies with Git are:
 
@@ -21,21 +19,17 @@ Often used branching strategies with Git are:
 
 ------------------------------------------------------------------------
 
-## GitFlow
+### GitFlow
 
 ![GitFlow](assets/gitflow.webp)
 
 ------------------------------------------------------------------------
 
-<!-- subsection 1 / 1 -->
-
-## Github-Flow
+### Github-Flow
 
 ![GithubFlow](assets/githubflow.webp)
 
-<!-- subsection 1 / 2 -->
-
-## Trunk-Based-Development
+### Trunk-Based-Development
 
 ------------------------------------------------------------------------
 
@@ -43,9 +37,9 @@ Often used branching strategies with Git are:
 
 ------------------------------------------------------------------------
 
-<!-- section 2 -->
+<!-- subsection 0 / 1 -->
 
-# features, contd. {#features-contd. rx="0" ry="1"}
+## features, contd. {#features-contd. rx="0" ry="1"}
 
 cool
 • graphical
@@ -54,7 +48,7 @@ cool
 • collaborative
 • adaptable
 
-<!-- section 3 -->
+<!-- section 1 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -62,15 +56,15 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 4 -->
+<!-- section 2 -->
 
 # easy {#easy rx="0" ry="-1"}
 
-<!-- section 5 -->
+<!-- section 3 -->
 
 # collaborative {#collaborative rx="1" ry="0"}
 
-<!-- section 6 -->
+<!-- section 4 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -136,7 +130,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 7 -->
+<!-- section 5 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -174,7 +168,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 8 -->
+<!-- section 6 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -223,7 +217,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 9 -->
+<!-- section 7 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -253,7 +247,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 10 -->
+<!-- section 8 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -269,7 +263,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 11 -->
+<!-- section 9 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -291,7 +285,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 12 -->
+<!-- section 10 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -319,7 +313,7 @@ digraph G {
 }
 ```
 
-<!-- section 13 -->
+<!-- section 11 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
@@ -377,6 +371,6 @@ digraph G {
 }
 ```
 
-<!-- section 14 -->
+<!-- section 12 -->
 
 # markdeck {#markdeck-2 .light-on-dark skipon="impress" bgcss="sea-gradient"}

@@ -24,11 +24,11 @@ themes: mytheme
 the distributed version control system
 <small> Alexander Mikuta • 2022</small>
 
-[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/)
+[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){ height=70% width=70% }
 
 ---
 
-# Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
+## Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
 Often used branching strategies with Git are:
 
@@ -38,17 +38,17 @@ Often used branching strategies with Git are:
 
 ---
 
-## GitFlow
+### GitFlow
 
 ![GitFlow](assets/gitflow.webp)
 
 ---
 
-## Github-Flow
+### Github-Flow
 
 ![GithubFlow](assets/githubflow.webp)
 
-## Trunk-Based-Development
+### Trunk-Based-Development
 
 ---
 
@@ -56,7 +56,7 @@ Often used branching strategies with Git are:
 
 ---
 
-# features, contd. {rx=0 ry=1}
+## features, contd. {rx=0 ry=1}
 
 cool
 • graphical
