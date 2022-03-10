@@ -1,9 +1,8 @@
 <!-- section 0 -->
 
-# ![Git](assets/git.png) {#git .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# Git Workshop {#git-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-the distributed version control system
-`<small>`{=html} Alexander Mikuta • 2022`</small>`{=html}
+![Git](assets/git.png)
 
 [`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){height="70%" width="70%"}
 
