@@ -6,9 +6,9 @@
 
 [`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){height="70%" width="70%"}
 
-------------------------------------------------------------------------
+<!-- section 1 -->
 
-## Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
+# Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
 Often used branching strategies with Git are:
 
@@ -16,29 +16,27 @@ Often used branching strategies with Git are:
 -   GithubFlow
 -   Trunk-Based Development
 
-------------------------------------------------------------------------
+<!-- section 2 -->
 
-### GitFlow
+# GitFlow
 
 ![GitFlow](assets/gitflow.webp)
 
-------------------------------------------------------------------------
+<!-- section 3 -->
 
-### Github-Flow
+# Github-Flow
 
 ![GithubFlow](assets/githubflow.webp)
 
-### Trunk-Based-Development
+<!-- section 4 -->
 
-------------------------------------------------------------------------
+# Trunk-Based-Development
 
 ![Trunk-Based-Development](assets/trunk-based-development.jpg)
 
-------------------------------------------------------------------------
+<!-- section 5 -->
 
-<!-- subsection 0 / 1 -->
-
-## features, contd. {#features-contd. rx="0" ry="1"}
+# features, contd. {#features-contd. rx="0" ry="1"}
 
 cool
 • graphical
@@ -47,7 +45,7 @@ cool
 • collaborative
 • adaptable
 
-<!-- section 1 -->
+<!-- section 6 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -55,15 +53,15 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 2 -->
+<!-- section 7 -->
 
 # easy {#easy rx="0" ry="-1"}
 
-<!-- section 3 -->
+<!-- section 8 -->
 
 # collaborative {#collaborative rx="1" ry="0"}
 
-<!-- section 4 -->
+<!-- section 9 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -129,7 +127,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 5 -->
+<!-- section 10 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -167,7 +165,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 6 -->
+<!-- section 11 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -216,7 +214,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 7 -->
+<!-- section 12 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -246,7 +244,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 8 -->
+<!-- section 13 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -262,7 +260,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 9 -->
+<!-- section 14 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -284,7 +282,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 10 -->
+<!-- section 15 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -312,7 +310,7 @@ digraph G {
 }
 ```
 
-<!-- section 11 -->
+<!-- section 16 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
@@ -370,6 +368,6 @@ digraph G {
 }
 ```
 
-<!-- section 12 -->
+<!-- section 17 -->
 
 # markdeck {#markdeck-2 .light-on-dark skipon="impress" bgcss="sea-gradient"}
