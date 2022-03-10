@@ -1,10 +1,8 @@
 <!-- section 0 -->
 
-# Git Workshop {#git-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# ![Git](assets/git.png) Workshop {#git-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 the distributed version control system
-
-![Git](assets/git.png)
 `<small>`{=html} Alexander Mikuta • 2022`</small>`{=html}
 
 [`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/)
@@ -13,9 +11,24 @@ the distributed version control system
 
 # features {#features .light-on-dark rx="1" bgcss="sea-gradient"}
 
-converts markdown to complex`</br>`{=html} HTML5 slides
-
-should run on all \*nix platforms,`</br>`{=html} windows`<small>`{=html}?`</small>`{=html} and MacOS
+``` {.nohighlight style="width: 40%; height: 100%; font-size: 40%;"}
+gitGraph:
+options
+{
+    "nodeSpacing": 150,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+```
 
 <!-- section 2 -->
 
