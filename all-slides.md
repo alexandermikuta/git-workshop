@@ -2,7 +2,7 @@
 
 # Git Workshop {#git-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-![](assets/git.png){height="50%" width="50%"}
+![](assets/git.png){height="110px" width="46px"}
 
 [`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/)
 
