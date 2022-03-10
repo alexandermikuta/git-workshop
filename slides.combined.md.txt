@@ -9,15 +9,13 @@ theme: mono
 
 ![the distributed version control system](assets/git.png){ height=46px width=110px }
 
-# Architecture
+# Architecture {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+
+# Architecture - directed acyclic graph
 
 > The history in Git is formed from the commit objects and creates a directed acyclic graph
 
 ![](assets/directed_acyclic_graph.png)
-
-```bash
-git log --decorate --graph --oneline --all
-```
 
 # Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
@@ -38,6 +36,14 @@ git log --decorate --graph --oneline --all
 # Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
+
+# Important commands {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+
+# Important commands: showing the history
+
+```bash
+git log --decorate --graph --oneline --all
+```
 
 # cool looking {bg=white;assets/paperclip.gif .light-on-dark rx=-1 ry=0}
 

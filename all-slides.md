@@ -6,17 +6,17 @@
 
 <!-- section 1 -->
 
-# Architecture
+# Architecture {#architecture .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+
+<!-- section 2 -->
+
+# Architecture - directed acyclic graph
 
 > The history in Git is formed from the commit objects and creates a directed acyclic graph
 
 ![](assets/directed_acyclic_graph.png)
 
-``` {.bash}
-git log --decorate --graph --oneline --all
-```
-
-<!-- section 2 -->
+<!-- section 3 -->
 
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
@@ -26,25 +26,37 @@ git log --decorate --graph --oneline --all
 
 -   Trunk-Based Development
 
-<!-- section 3 -->
+<!-- section 4 -->
 
 # GitFlow
 
 ![](assets/gitflow.webp)
 
-<!-- section 4 -->
+<!-- section 5 -->
 
 # Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 5 -->
+<!-- section 6 -->
 
 # Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
-<!-- section 6 -->
+<!-- section 7 -->
+
+# Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+
+<!-- section 8 -->
+
+# Important commands: showing the history
+
+``` {.bash}
+git log --decorate --graph --oneline --all
+```
+
+<!-- section 9 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -52,7 +64,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 7 -->
+<!-- section 10 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -86,7 +98,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 8 -->
+<!-- section 11 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -106,7 +118,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 9 -->
+<!-- section 12 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -131,7 +143,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 10 -->
+<!-- section 13 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -147,7 +159,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 11 -->
+<!-- section 14 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -156,7 +168,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 12 -->
+<!-- section 15 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -168,7 +180,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 13 -->
+<!-- section 16 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -183,7 +195,7 @@ digraph G {
 }
 ```
 
-<!-- section 14 -->
+<!-- section 17 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
