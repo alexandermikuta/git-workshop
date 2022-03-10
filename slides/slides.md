@@ -21,11 +21,12 @@ themes: mytheme
 
 # Git Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
-the distributed source control
+the distributed version control system
 
-<img src="assets/git.png style="vertical-align:middle; box-shadow:none;"/>
-
+![Git](assets/git.png)
 <small> Alexander Mikuta • 2022</small>
+
+[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/)
 
 # features {rx=1 bgcss=sea-gradient .light-on-dark}
 
@@ -42,48 +43,15 @@ cool
 • collaborative
 • adaptable
 
-# cool looking {bg=white;assets/img/paperclip.gif .light-on-dark rx=-1 ry=0}
+# cool looking {bg=white;assets/paperclip.gif .light-on-dark rx=-1 ry=0}
 
 leverages battle-proven</br>HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-# graphical
-
-content as markdown</br>
-<small>
-incl unicode ♥
-emojis 😎
-font-awesome
-![](fas fa-desktop)
-</small>
-
-images as asciiart</br>
-<small>charts, diagrams, graphs, math, …</small>
-
 # easy {rx=0 ry=-1}
 
-completely text-based</br>
-<small>use your preferred editor/IDE</small>
-
-auto-reload
-►
-fast feedback
-
-# robust
-
-modify and present your slides<br/> _without_ <br/>internet uplink
-
-[
-![](fas fa-wifi fa-stack-1x)
-![](fas fa-slash fa-stack-1x)
-]{.fa-stack .fa-1x}
-
 # collaborative {rx=1 ry=0}
-
-presentation-as-code
-
-use your normal version control system
 
 # asciiart (ditaa) {.ltr rx=0 ry=1}
 
@@ -380,34 +348,12 @@ digraph G {
 }
 ```
 
-# {bg=White;themes/mytheme/img/wordcloud.svg .flush-right rx=1 ry=0}
-
-[`https://github.com/arnehilmann/markdeck`{.render_qr}](https://github.com/arnehilmann/markdeck)
-
 # markdeck {.skip skipon="reveal" scale=5 x=1.8}
 
 # {.skip skipon="reveal" scale=1 .flush-right rx=0 ry=.25}
 
-impress.js-variant
-
 # markdeck {x=3 y=-2.5 z=3000 rotate-y=60 scale=2 skipon="reveal"}
-
-collaborative slide editing made easy
-
-![](fab fa-markdown)
-![](fab fa-docker)
-![](fab fa-html5)
-![](fab fa-css3)
-![](fab fa-js-square)
 
 # {x=0 y=0 scale=2 skipon="reveal" id=overview}
 
 # markdeck {skipon="impress" bgcss=sea-gradient .light-on-dark}
-
-collaborative slide editing made easy
-
-![](fab fa-markdown)
-![](fab fa-docker)
-![](fab fa-html5)
-![](fab fa-css3)
-![](fab fa-js-square)
