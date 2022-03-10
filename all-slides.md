@@ -1,10 +1,10 @@
 <!-- section 0 -->
 
-# Github-Workshop {#github-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# Git Workshop {#git-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-collaborative slide editing made easy
+the distributed source control
 
-![](fab%20fa-git)
+\<img src="assets/git.png style="vertical-align:middle; box-shadow:none;\"/\>
 
 `<small>`{=html} Alexander Mikuta • 2022`</small>`{=html}
 
@@ -402,4 +402,3 @@ collaborative slide editing made easy
 ![](fab%20fa-html5)
 ![](fab%20fa-css3)
 ![](fab%20fa-js-square)
-`<img src="assets/img/buddy-egyptian.svg" style="height:120px; vertical-align:middle; box-shadow:none;"/>`{=html}
