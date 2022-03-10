@@ -21,9 +21,9 @@ themes: mytheme
 
 # Git Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
-![Git](assets/git.png)
+![](assets/git.png)
 
-[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){ height=70% width=70% }
+[`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){ height=50% width=50% }
 
 # Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
@@ -35,15 +35,15 @@ Often used branching strategies with Git are:
 
 # GitFlow
 
-![GitFlow](assets/gitflow.webp)
+![](assets/gitflow.webp)
 
 # Github-Flow
 
-![GithubFlow](assets/githubflow.webp)
+![](assets/githubflow.webp)
 
 # Trunk-Based-Development
 
-![Trunk-Based-Development](assets/trunk-based-development.jpg)
+![](assets/trunk-based-development.jpg)
 
 # features, contd. {rx=0 ry=1}
 
