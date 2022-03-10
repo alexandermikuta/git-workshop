@@ -19,10 +19,9 @@ themes: mytheme
 # pdf_size: 1024x768
 ---
 
-# ![Git](assets/git.png) {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+# Git Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
-the distributed version control system
-<small> Alexander Mikuta • 2022</small>
+![Git](assets/git.png)
 
 [`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){ height=70% width=70% }
 
