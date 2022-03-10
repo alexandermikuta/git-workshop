@@ -15,9 +15,7 @@ themes: mytheme
 
 > The history in Git is formed from the commit objects and creates a directed acyclic graph
 
-![directed acyclic graph](assets/directed_acyclic_graph.png)
-
-The history can be displayed with:
+![](assets/directed_acyclic_graph.png)
 
 ```bash
 git log --decorate --graph --oneline --all
