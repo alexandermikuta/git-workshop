@@ -1,18 +1,12 @@
 <!-- section 0 -->
 
-# Content {#content .light-on-dark skipon="impress" bgcss="sea-gradient"}
-
-{:toc}
-
-<!-- section 1 -->
-
 # Git Workshop {#git-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 ![](assets/git.png)
 
 [`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){height="128pxpx" width="128px"}
 
-<!-- section 2 -->
+<!-- section 1 -->
 
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
@@ -22,25 +16,25 @@
 
 -   Trunk-Based Development
 
-<!-- section 3 -->
+<!-- section 2 -->
 
 # GitFlow
 
 ![](assets/gitflow.webp)
 
-<!-- section 4 -->
+<!-- section 3 -->
 
 # Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 5 -->
+<!-- section 4 -->
 
 # Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
-<!-- section 6 -->
+<!-- section 5 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -48,7 +42,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 7 -->
+<!-- section 6 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -82,7 +76,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 8 -->
+<!-- section 7 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -102,7 +96,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 9 -->
+<!-- section 8 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -127,7 +121,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 10 -->
+<!-- section 9 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -143,7 +137,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 11 -->
+<!-- section 10 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -152,7 +146,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 12 -->
+<!-- section 11 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -164,7 +158,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 13 -->
+<!-- section 12 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -179,7 +173,7 @@ digraph G {
 }
 ```
 
-<!-- section 14 -->
+<!-- section 13 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
