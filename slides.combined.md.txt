@@ -1,8 +1,8 @@
 ---
 title: Github-Workshop
 highlight_style: github-gist
-asciinema: true
 themes: mytheme
+theme: mono
 ---
 
 # Git Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
