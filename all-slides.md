@@ -1,12 +1,18 @@
 <!-- section 0 -->
 
+# Content {#content .light-on-dark skipon="impress" bgcss="sea-gradient"}
+
+{:toc}
+
+<!-- section 1 -->
+
 # Git Workshop {#git-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 ![](assets/git.png)
 
 [`https://alexandermikuta.github.io/git-workshop/`{.render_qr}](https://alexandermikuta.github.io/git-workshop/){height="128pxpx" width="128px"}
 
-<!-- section 1 -->
+<!-- section 2 -->
 
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
@@ -16,34 +22,23 @@
 
 -   Trunk-Based Development
 
-<!-- section 2 -->
+<!-- section 3 -->
 
 # GitFlow
 
 ![](assets/gitflow.webp)
 
-<!-- section 3 -->
+<!-- section 4 -->
 
 # Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 4 -->
+<!-- section 5 -->
 
 # Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
-
-<!-- section 5 -->
-
-# features, contd. {#features-contd. rx="0" ry="1"}
-
-cool
-• graphical
-• easy
-• robust
-• collaborative
-• adaptable
 
 <!-- section 6 -->
 
@@ -55,47 +50,7 @@ revealjs • impressjs
 
 <!-- section 7 -->
 
-# easy {#easy rx="0" ry="-1"}
-
-<!-- section 8 -->
-
-# collaborative {#collaborative rx="1" ry="0"}
-
-<!-- section 9 -->
-
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
-
-``` {.nohighlight style="width: 40%; height: 100%; font-size: 40%;"}
-+-----------------------------+
-| Node A                      |
-|                             |
-| +----------+   +----------+ |
-| |          |   |          | |
-| | Frontend |   | Foo      | |
-| |          |   |          | |
-| |          |   | {s}      | |
-| +-----+----+   +----------+ |
-|       ^                     |
-|       |                     |
-|       \-service-\           |
-|                 |           |
-+-----------------|-----------+
-                  |
-+-----------------|-----------+
-| Node B          |           |
-|       /---------/           |
-|       |                     |
-|       v                     |
-| +-----+----+   +=---------+ |
-| |          |   |          | |
-| | Frontend |   | Bar      | |
-| |          |   |          | |
-| |          |   | {s}      | |
-| +----------+   +----------+ |
-+-----------------------------+
-```
-
-►
 
 ``` {.render_ditaa args="--transparent --scale 1 --font 'Raleway'"}
 +-----------------------------+
@@ -127,27 +82,9 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 10 -->
+<!-- section 8 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
-
-``` {.nohighlight style="width: 40%;"}
-#--------------------.
-|[0]                 |
-| .---# .---# #---.  |
-| |[1]| |[1]| |[1]|  |
-| #---' #---' '---#  |
-|   ^     ^     ^    |
-#---+-----+-----+----#
-|   |     |     |    |
-|   a     2 sketch   |
-'--------------------#
-
-[0]: {"fill": "#933"}
-[1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
-```
-
-►
 
 ``` {.render_a2s}
 #--------------------.
@@ -165,35 +102,11 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 11 -->
+<!-- section 9 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
-``` {.nohighlight style="width: 45%;"}
-#=----------------------------#
-|[0]                          |
-| Node                        |
-|                             |
-| #----------#   #----------# |
-| |          |   |[1]       | |
-| | front    |   | foo      | |
-| |          |   |          | |
-| |  ^       |   |          | |
-| |  |       |   |          | |
-| #--|-------#   #----------# |
-|    |                ^       |
-|    |                |       |
-|    '-- service    --'       |
-|                             |
-#-----------------------------#
-[0]: {"fill":"#fff","fillStyle":"solid","a2s:delref":true}
-[1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
-```
-
-►
-
 ``` {.render_a2sketch}
-
 #-----------------------------#
 |[0]                          |
 | Node                        |
@@ -214,23 +127,9 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 12 -->
+<!-- section 10 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
-
-``` {.nohighlight style="width: 40%; height: 100%;"}
-        P *
-           \
-            \
-       v0    \       v3
-         *----\-----*
-        /      v X   \
-       /        o     \
-      /                \
-  v1 *------------------* v2
-```
-
-►
 
 ``` {.render_svgbob args="--scale 10 --font-family Raleway --font-size 24"}
         P *
@@ -244,35 +143,18 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 13 -->
+<!-- section 11 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
-
-``` {.nohighlight style="width: 40%; height: 100%; font-size: 40%;"}
-graph LR
-   a --> b & c--> d
-```
-
-►
 
 ``` {.render_mermaid args="-w 400" style="font-size: 100%;"}
 graph LR
    a --> b & c--> d
 ```
 
-<!-- section 14 -->
+<!-- section 12 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
-
-``` {.nohighlight style="width: 40%; font-size: 60%;"}
-@startuml
-Bob->Alice : hello
-Alice->Bob : oh, you again...
-Bob->Alice : ??
-@enduml
-```
-
-►
 
 ``` {.render_plantuml args="-Sbackgroundcolor=transparent -SdefaultFontSize=24 -SdefaultFontName=Raleway"}
 @startuml
@@ -282,22 +164,9 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 15 -->
+<!-- section 13 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
-
-``` {.nohighlight style="width: 50%; font-size: 60%;"}
-digraph G {
-    bgcolor=transparent;
-    node [style=filled,color=white];
-
-    a -> b -> c;
-    a -> c;
-    b -> d;
-}
-```
-
-►
 
 ``` {.render_dot args="-Nfontname=Raleway"}
 digraph G {
@@ -310,31 +179,9 @@ digraph G {
 }
 ```
 
-<!-- section 16 -->
+<!-- section 14 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
-
-``` {.json style="width: 50%; font-size: 30%;"}
-{
-    "$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
-    "data": {
-        "values": [
-            {"a": "A","b": 28}, {"a": "B","b": 55}, {"a": "C","b": 43},
-            {"a": "D","b": 91}, {"a": "E","b": 81}, {"a": "F","b": 53},
-            {"a": "G","b": 19}, {"a": "H","b": 87}, {"a": "I","b": 52}
-        ]
-    },
-    "width": 600,
-    "height": 300,
-    "mark": "area",
-    "encoding": {
-        "x": {"field": "a", "type": "ordinal"},
-        "y": {"field": "b", "type": "quantitative", "scale": {"domain": [0, 100]}}
-    }
-}
-```
-
-►
 
 ``` {.render_vegalite}
 {
@@ -367,7 +214,3 @@ digraph G {
     }
 }
 ```
-
-<!-- section 17 -->
-
-# markdeck {#markdeck-2 .light-on-dark skipon="impress" bgcss="sea-gradient"}
