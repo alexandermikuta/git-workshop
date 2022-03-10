@@ -1,9 +1,9 @@
 ---
-title: markdeck example
+title: Github-Workshop
 # variant: reveal
 # variant: impress
-# pdf: markdeck-example.pdf
-# standalone: markdeck-example.html
+# pdf: github-workshop.pdf
+# standalone: github-workshop.html
 # highlight_style: grayscale
 highlight_style: github-gist
 asciinema: true
@@ -19,21 +19,13 @@ themes: mytheme
 # pdf_size: 1024x768
 ---
 
-# markdeck {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+# Github-Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
 collaborative slide editing made easy
 
-![](fab fa-markdown)
-![](fab fa-docker)
-![](fab fa-html5)
-![](fab fa-css3)
-![](fab fa-js-square)
+![](fab fa-git)
 
-<small> arne@hilmann.de • 2020</small>
-
-[![](fab fa-github)](https://github.com/arnehilmann/markdeck)
-[![](fab fa-docker)](https://hub.docker.com/r/arne/markdeck-pandoc/)
-[![](fas fa-envelope)](email:arne@hilmann.de)
+<small> Alexander Mikuta • 2022</small>
 
 # features {rx=1 bgcss=sea-gradient .light-on-dark}
 
@@ -92,21 +84,6 @@ modify and present your slides<br/> _without_ <br/>internet uplink
 presentation-as-code
 
 use your normal version control system
-
-# adaptable
-
-you can always fall back to</br>plain HTML/CSS
-
-# code, highlighted
-
-```java
-public class Example {
-    public static final void main(String[] args) {
-        // foo
-        System.out.println("Hello World");
-    }
-}
-```
 
 # asciiart (ditaa) {.ltr rx=0 ry=1}
 
@@ -403,71 +380,7 @@ digraph G {
 }
 ```
 
-# math equations
-
-```{.nohighlight style="width: 100%; font-size: 70%;"}
-$a^2 + b^2 = c^2$
-```
-
-$a^2 + b^2 = c^2$
-
-&nbsp;
-
-```{.nohighlight style="width: 100%; font-size: 70%;"}
-$$e = \mathop
-    {\lim }\limits_{n \to \infty }
-    \left( {1 + \frac{1}{n}} \right)^n$$
-```
-
-$$
-e = \mathop
-    {\lim }\limits_{n \to \infty }
-    \left( {1 + \frac{1}{n}} \right)^n
-$$
-
-# terminal session (asciinema) {rx=0 ry=-1 rz=0 bg=#121314}
-
-<asciinema-player src="./assets/test.json"
-poster="npt:0:21"
-idle-time-limit=1
-speed=2
-rows=18
-font-size="medium"
-
-> </asciinema-player>
-
-# Thank You!
-
-[pandoc](http://pandoc.org)
-•
-[reveal.js](http://lab.hakim.se/reveal-js/#/)
-•
-[impress.js](https://github.com/impress/impress.js)
-</br>
-
-[plantuml](http://plantuml.com)
-•
-[ditaamini](https://github.com/pepijnve/ditaa.git)
-•
-[graphviz](http://www.graphviz.org)
-•
-[svgbob](https://ivanceras.github.io/svgbob-editor/)
-•
-[asciinema](https://github.com/asciinema/asciinema-player)
-</br>
-
-[decktape](https://github.com/astefanutti/decktape)
-•
-[vega-lite](https://vega.github.io/vega-lite/)
-•
-[math-jax](https://www.mathjax.org)
-•
-[font awesome](https://fontawesome.com/)
-</br>
-
-🙃
-
-# {bg=White;themes/example/img/wordcloud.svg .flush-right rx=1 ry=0}
+# {bg=White;themes/mytheme/img/wordcloud.svg .flush-right rx=1 ry=0}
 
 [`https://github.com/arnehilmann/markdeck`{.render_qr}](https://github.com/arnehilmann/markdeck)
 

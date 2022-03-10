@@ -1,20 +1,12 @@
 <!-- section 0 -->
 
-# markdeck {#markdeck .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# Github-Workshop {#github-workshop .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 collaborative slide editing made easy
 
-![](fab%20fa-markdown)
-![](fab%20fa-docker)
-![](fab%20fa-html5)
-![](fab%20fa-css3)
-![](fab%20fa-js-square)
+![](fab%20fa-git)
 
-`<small>`{=html} arne\@hilmann.de • 2020`</small>`{=html}
-
-[![](fab%20fa-github)](https://github.com/arnehilmann/markdeck)
-[![](fab%20fa-docker)](https://hub.docker.com/r/arne/markdeck-pandoc/)
-[![](fas%20fa-envelope)](email:arne@hilmann.de)
+`<small>`{=html} Alexander Mikuta • 2022`</small>`{=html}
 
 <!-- section 1 -->
 
@@ -88,25 +80,6 @@ use your normal version control system
 
 <!-- section 8 -->
 
-# adaptable
-
-you can always fall back to`</br>`{=html}plain HTML/CSS
-
-<!-- section 9 -->
-
-# code, highlighted
-
-``` {.java}
-public class Example {
-    public static final void main(String[] args) {
-        // foo
-        System.out.println("Hello World");
-    }
-}
-```
-
-<!-- section 10 -->
-
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
 ``` {.nohighlight style="width: 40%; height: 100%; font-size: 40%;"}
@@ -171,7 +144,7 @@ public class Example {
 +-----------------------------+
 ```
 
-<!-- section 11 -->
+<!-- section 9 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -209,7 +182,7 @@ public class Example {
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 12 -->
+<!-- section 10 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -258,7 +231,7 @@ public class Example {
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 13 -->
+<!-- section 11 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -288,7 +261,7 @@ public class Example {
   v1 *------------------* v2
 ```
 
-<!-- section 14 -->
+<!-- section 12 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -304,7 +277,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 15 -->
+<!-- section 13 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -326,7 +299,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 16 -->
+<!-- section 14 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -354,7 +327,7 @@ digraph G {
 }
 ```
 
-<!-- section 17 -->
+<!-- section 15 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
@@ -412,85 +385,15 @@ digraph G {
 }
 ```
 
-<!-- section 18 -->
+<!-- section 16 -->
 
-# math equations
-
-``` {.nohighlight style="width: 100%; font-size: 70%;"}
-$a^2 + b^2 = c^2$
-```
-
-$a^2 + b^2 = c^2$
-
- 
-
-``` {.nohighlight style="width: 100%; font-size: 70%;"}
-$$e = \mathop
-    {\lim }\limits_{n \to \infty }
-    \left( {1 + \frac{1}{n}} \right)^n$$
-```
-
-$$
-e = \mathop
-    {\lim }\limits_{n \to \infty }
-    \left( {1 + \frac{1}{n}} \right)^n
-$$
-
-<!-- section 19 -->
-
-# terminal session (asciinema) {#terminal-session-asciinema rx="0" ry="-1" rz="0" bg="#121314"}
-
-`<asciinema-player src="./assets/test.json"
-poster="npt:0:21"
-idle-time-limit=1
-speed=2
-rows=18
-font-size="medium"
-
->`{=html} `</asciinema-player>`{=html}
-
-<!-- section 20 -->
-
-# Thank You!
-
-[pandoc](http://pandoc.org)
-•
-[reveal.js](http://lab.hakim.se/reveal-js/#/)
-•
-[impress.js](https://github.com/impress/impress.js)
-`</br>`{=html}
-
-[plantuml](http://plantuml.com)
-•
-[ditaamini](https://github.com/pepijnve/ditaa.git)
-•
-[graphviz](http://www.graphviz.org)
-•
-[svgbob](https://ivanceras.github.io/svgbob-editor/)
-•
-[asciinema](https://github.com/asciinema/asciinema-player)
-`</br>`{=html}
-
-[decktape](https://github.com/astefanutti/decktape)
-•
-[vega-lite](https://vega.github.io/vega-lite/)
-•
-[math-jax](https://www.mathjax.org)
-•
-[font awesome](https://fontawesome.com/)
-`</br>`{=html}
-
-🙃
-
-<!-- section 21 -->
-
-#  {#section .flush-right bg="White;themes/example/img/wordcloud.svg" rx="1" ry="0"}
+#  {#section .flush-right bg="White;themes/mytheme/img/wordcloud.svg" rx="1" ry="0"}
 
 [`https://github.com/arnehilmann/markdeck`{.render_qr}](https://github.com/arnehilmann/markdeck)
 
-<!-- section 22 -->
+<!-- section 17 -->
 
-# markdeck {#markdeck-3 .light-on-dark skipon="impress" bgcss="sea-gradient"}
+# markdeck {#markdeck-2 .light-on-dark skipon="impress" bgcss="sea-gradient"}
 
 collaborative slide editing made easy
 
