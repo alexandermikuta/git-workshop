@@ -8,6 +8,10 @@
 
 # Architecture {#architecture .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
+## Git-Workflow
+
+![](assets/git-workflow.png)
+
 <!-- section 2 -->
 
 # Architecture - directed acyclic graph
