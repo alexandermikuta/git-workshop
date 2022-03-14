@@ -64,6 +64,24 @@
 
 # Branching Strategies - GitFlow
 
+## Pros
+
+-   clear and simple collaboration rules
+
+-   Continuous integration and deployment
+
+-   Less risk of technical debt with this branching strategy
+
+<!-- subsection 6 / 1 -->
+
+## Cons
+
+-   Speed comes at cost of less organized workflow in comparison to Git-Flow
+
+-   This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
+
+-   release preparation and bug fixes happen both in master branch -\> requires attention
+
 <!-- section 7 -->
 
 # Branching Strategies - Github-Flow
