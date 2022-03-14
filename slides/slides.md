@@ -11,6 +11,10 @@ theme: mono
 
 # Architecture {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
+## Git-Workflow
+
+![](assets/git-workflow.png)
+
 # Architecture - directed acyclic graph
 
 > The history in Git is formed from the commit objects and creates a directed acyclic graph
