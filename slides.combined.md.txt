@@ -31,15 +31,35 @@ theme: mono
 
 - Trunk-Based Development
 
-# GitFlow
+# Branching Strategies - GitFlow
+
+## Pros
+
+- isolated features ensure you have no need to freeze development or master branch for release preparation
+
+- code in master remains clean and organized. Only updated with tested code
+
+- easy traceability as merges are bundled and clearly labeled
+
+- conductive to the distribution of traditional software
+
+## Cons
+
+- Many branches with complicated rules
+
+- Heavy maintenance workload for released versions
+
+- structured and specific development path conflict with agile iterative approach
 
 ![](assets/gitflow.webp)
 
-# Github-Flow
+# Branching Strategies - GitFlow
+
+# Branching Strategies - Github-Flow
 
 ![](assets/githubflow.webp)
 
-# Trunk-Based-Development
+# Branching Strategies - Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 

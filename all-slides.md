@@ -36,27 +36,51 @@
 
 <!-- section 5 -->
 
-# GitFlow
+# Branching Strategies - GitFlow
+
+## Pros
+
+-   isolated features ensure you have no need to freeze development or master branch for release preparation
+
+-   code in master remains clean and organized. Only updated with tested code
+
+-   easy traceability as merges are bundled and clearly labeled
+
+-   conductive to the distribution of traditional software
+
+<!-- subsection 5 / 1 -->
+
+## Cons
+
+-   Many branches with complicated rules
+
+-   Heavy maintenance workload for released versions
+
+-   structured and specific development path conflict with agile iterative approach
 
 ![](assets/gitflow.webp)
 
 <!-- section 6 -->
 
-# Github-Flow
-
-![](assets/githubflow.webp)
+# Branching Strategies - GitFlow
 
 <!-- section 7 -->
 
-# Trunk-Based-Development
+# Branching Strategies - Github-Flow
 
-![](assets/trunk-based-development.jpg)
+![](assets/githubflow.webp)
 
 <!-- section 8 -->
 
-# Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# Branching Strategies - Trunk-Based-Development
+
+![](assets/trunk-based-development.jpg)
 
 <!-- section 9 -->
+
+# Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+
+<!-- section 10 -->
 
 # Important commands: showing the history
 
@@ -64,7 +88,7 @@
 git log --decorate --graph --oneline --all
 ```
 
-<!-- section 10 -->
+<!-- section 11 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -72,7 +96,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 11 -->
+<!-- section 12 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -106,7 +130,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 12 -->
+<!-- section 13 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -126,7 +150,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 13 -->
+<!-- section 14 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -151,7 +175,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 14 -->
+<!-- section 15 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -167,7 +191,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 15 -->
+<!-- section 16 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -176,7 +200,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 16 -->
+<!-- section 17 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -188,7 +212,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 17 -->
+<!-- section 18 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -203,7 +227,7 @@ digraph G {
 }
 ```
 
-<!-- section 18 -->
+<!-- section 19 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
