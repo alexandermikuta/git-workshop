@@ -199,18 +199,48 @@ git log --decorate --graph --oneline --all
 
 <!-- section 19 -->
 
-# GitOps
-
--   Github-Actions (Azure-Devops-Pipelines)
+# GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 <!-- section 20 -->
+
+# GitOps - What is GitOps?
+
+> GitOps is code-based infrastructure and operational procedures that rely on Git as a source control system
+
+> GitOps ensures that a cloud infrastructure is immediately reproducible based on the state of a Git repository.
+> Pull requests modify the state of the Git repository.
+> Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
+> This live syncing pull request workflow is the core essence of GitOps
+
+<!-- section 21 -->
+
+# GitOps - Pipeline
+
+To achieve a full GitOps install, a pipeline platform is required, e.g.:
+
+-   Azure-Devops-Pipelines
+-   Github-Actions
+-   Gitlab Pipelines
+-   Bitbucket Pipelines
+-   Jenkins/Jenkins X
+-   ArgoCD
+-   Flux
+-   Tekton Pipelines
+
+<!-- section 22 -->
+
+# GitOps - Example Pipeline
+
+![](assets/gitops_cd_pipeline.png)
+
+<!-- section 23 -->
 
 # Ressources
 
 -   Githug
 -   learngitbranching.js.org
 
-<!-- section 21 -->
+<!-- section 24 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -218,7 +248,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 22 -->
+<!-- section 25 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -252,7 +282,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 23 -->
+<!-- section 26 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -272,7 +302,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 24 -->
+<!-- section 27 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -297,7 +327,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 25 -->
+<!-- section 28 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -313,7 +343,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 26 -->
+<!-- section 29 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -322,7 +352,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 27 -->
+<!-- section 30 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -334,7 +364,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 28 -->
+<!-- section 31 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -349,7 +379,7 @@ digraph G {
 }
 ```
 
-<!-- section 29 -->
+<!-- section 32 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
