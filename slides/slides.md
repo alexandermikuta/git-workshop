@@ -97,6 +97,22 @@ theme: mono
 
 ![](assets/trunk-based-development.jpg)
 
+# Best practices {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+
+# Best practices
+
+- commit often: Each commit is a snapshot that the codebase can be reverted to. A group of commits can be combined into a single commit using `rebase`
+
+- Ensure you are working from latest version with `git pull` before making updates to the code. This helps avoiding merge conflicts
+
+- Make detailed notes: Each commit has a correspondig log entry. These messages should contain "why" and "what" of the commit.
+
+- Review changes before commiting: The staging area can be used to collect a group of edits before commiting them. This can be used to manage and review changes.
+
+- Use Branches: Enable several developers to work in parallel on separate lines of the product
+
+- Agree on a common workflow, e.g. Git-Flow -> otherwise overhead in merges
+
 # Tooling
 
 # Tooling - IDEs
