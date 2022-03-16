@@ -21,21 +21,21 @@ theme: mono
 
 ![](assets/3tier.png){ height=60% width=60% }
 
-> Files from staging area will move to Git Repository with commit
-> Useful if you do not want a commit for every added file, but e.g. want a changeset containing 5 added files
+- Files from staging area will move to Git Repository with commit
+- Useful if you do not want a commit for every added file, but e.g. want a changeset containing 5 added files
 
 # Architecture - Git-Workflow
 
-![](assets/git-workflow.png){ height=80% width=80% }
+![](assets/git-workflow.png){ height=70% width=70% }
 
 > Recommended sequence: commit &rarr; pull &rarr; push
 
 # Architecture - Distributed Development
 
-![Each developer gets its own local repository](assets/distributed_dev.svg){ height=80% width=80% }
+![Each developer gets its own local repository](assets/distributed_dev.svg){ height=60% width=60% }
 
-> Advantage: No network connection needed for commits.
-> Checkins in local repository also work if production branch in SVN is broken.
+- Advantage: No network connection needed for commits.
+- Checkins in local repository also work if production branch in SVN is broken.
 
 # Architecture - Git as Folder
 
@@ -49,51 +49,44 @@ theme: mono
 
 - Trunk-Based Development
 
-# Branching Strategies - GitFlow
+# Branching Strategies: GitFlow
+
+![](assets/gitflow.webp)
+
+# Branching Strategies: GitFlow
 
 ## Pros
 
-- isolated features ensure you have no need to freeze development or master branch for release preparation
-
+- isolated features
 - code in master remains clean and organized. Only updated with tested code
-
-- easy traceability as merges are bundled and clearly labeled
-
-- conductive to the distribution of traditional software
+- easy traceability as merges are bundled/labeled
+- good for traditional software distribution
 
 ## Cons
 
 - Many branches with complicated rules
-
 - Heavy maintenance workload for released versions
-
 - structured and specific development path conflict with agile iterative approach
 
-![](assets/gitflow.webp)
+# Branching Strategies: Github-Flow
 
-# Branching Strategies - GitFlow
+![](assets/githubflow.webp)
+
+# Branching Strategies: GithubFlow
 
 ## Pros
 
 - clear and simple collaboration rules
-
 - Continuous integration and deployment
-
 - Less risk of technical debt with this branching strategy
 
 ## Cons
 
 - Speed comes at cost of less organized workflow in comparison to Git-Flow
-
 - This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
-
 - release preparation and bug fixes happen both in master branch -> requires attention
 
-# Branching Strategies - Github-Flow
-
-![](assets/githubflow.webp)
-
-# Branching Strategies - Trunk-Based-Development
+# Branching Strategies: Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
@@ -101,16 +94,11 @@ theme: mono
 
 # Best practices
 
-- commit often: Each commit is a snapshot that the codebase can be reverted to. A group of commits can be combined into a single commit using `rebase`
-
-- Ensure you are working from latest version with `git pull` before making updates to the code. This helps avoiding merge conflicts
-
-- Make detailed notes: Each commit has a correspondig log entry. These messages should contain "why" and "what" of the commit.
-
-- Review changes before commiting: The staging area can be used to collect a group of edits before commiting them. This can be used to manage and review changes.
-
-- Use Branches: Enable several developers to work in parallel on separate lines of the product
-
+- commit often: Each commit is a snapshot that can be reverted to. Commits can be combined using `rebase`.
+- work from latest version with `git pull` to avoid merge conflicts
+- commit notes should contain "why" and "what" of change
+- review changes before commiting
+- Use Branches: Enables developers to work in parallel on separate lines of product
 - Agree on a common workflow, e.g. Git-Flow -> otherwise overhead in merges
 
 # Tooling
@@ -192,6 +180,7 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 
 # Ressources
 
+- Cheatsheet: https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
 - Githug
 - learngitbranching.js.org
 
