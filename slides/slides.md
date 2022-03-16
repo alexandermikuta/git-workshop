@@ -162,9 +162,33 @@ git log --decorate --graph --oneline --all
 - Git-LFS
 - Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
-# GitOps
+# GitOps {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
-- Github-Actions (Azure-Devops-Pipelines)
+# GitOps - What is GitOps?
+
+> GitOps is code-based infrastructure and operational procedures that rely on Git as a source control system
+
+> GitOps ensures that a cloud infrastructure is immediately reproducible based on the state of a Git repository.
+> Pull requests modify the state of the Git repository.
+> Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
+> This live syncing pull request workflow is the core essence of GitOps
+
+# GitOps - Pipeline
+
+To achieve a full GitOps install, a pipeline platform is required, e.g.:
+
+- Azure-Devops-Pipelines
+- Github-Actions
+- Gitlab Pipelines
+- Bitbucket Pipelines
+- Jenkins/Jenkins X
+- ArgoCD
+- Flux
+- Tekton Pipelines
+
+# GitOps - Example Pipeline
+
+![](assets/gitops_cd_pipeline.png)
 
 # Ressources
 
