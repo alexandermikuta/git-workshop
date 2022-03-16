@@ -120,16 +120,36 @@
 
 <!-- section 12 -->
 
-# Tooling
+# Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 <!-- section 13 -->
+
+# Best practices
+
+-   commit often: Each commit is a snapshot that the codebase can be reverted to. A group of commits can be combined into a single commit using `rebase`
+
+-   Ensure you are working from latest version with `git pull` before making updates to the code. This helps avoiding merge conflicts
+
+-   Make detailed notes: Each commit has a correspondig log entry. These messages should contain "why" and "what" of the commit.
+
+-   Review changes before commiting: The staging area can be used to collect a group of edits before commiting them. This can be used to manage and review changes.
+
+-   Use Branches: Enable several developers to work in parallel on separate lines of the product
+
+-   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
+
+<!-- section 14 -->
+
+# Tooling
+
+<!-- section 15 -->
 
 # Tooling - IDEs
 
 -   VisualStudio
 -   VS-Code
 
-<!-- section 14 -->
+<!-- section 16 -->
 
 # Tooling - Other
 
@@ -142,11 +162,11 @@
 -   Git-TFS-Plugin
 -   Azure-Devops-Pipeline -\> Github-Action Converter
 
-<!-- section 15 -->
+<!-- section 17 -->
 
 # Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 16 -->
+<!-- section 18 -->
 
 # Important commands: showing the history
 
@@ -177,20 +197,20 @@ git log --decorate --graph --oneline --all
 -   Git-LFS
 -   Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
-<!-- section 17 -->
+<!-- section 19 -->
 
 # GitOps
 
 -   Github-Actions (Azure-Devops-Pipelines)
 
-<!-- section 18 -->
+<!-- section 20 -->
 
 # Ressources
 
 -   Githug
 -   learngitbranching.js.org
 
-<!-- section 19 -->
+<!-- section 21 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -198,7 +218,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 20 -->
+<!-- section 22 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -232,7 +252,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 21 -->
+<!-- section 23 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -252,7 +272,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 22 -->
+<!-- section 24 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -277,7 +297,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 23 -->
+<!-- section 25 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -293,7 +313,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 24 -->
+<!-- section 26 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -302,7 +322,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 25 -->
+<!-- section 27 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -314,7 +334,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 26 -->
+<!-- section 28 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -329,7 +349,7 @@ digraph G {
 }
 ```
 
-<!-- section 27 -->
+<!-- section 29 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
