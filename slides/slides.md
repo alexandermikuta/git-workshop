@@ -37,9 +37,14 @@ theme: mono
 - Advantage: No network connection needed for commits.
 - Checkins in local repository also work if production branch in SVN is broken.
 
-# Architecture - Git as Folder
+# Architecture - Creating a new repository
 
-> When you run `git init` in a folder, Git creates the `.git` directory containing your local git repository
+> When you run `git init` in a folder, Git creates the `.git` directory
+
+![](assets/file-tree.png)
+
+> This `.git` directory contains your local repository data
+> ![](assets/git-folder.png)
 
 # Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
@@ -55,14 +60,14 @@ theme: mono
 
 # Branching Strategies: GitFlow
 
-## Pros
+**Pros**
 
 - isolated features
 - code in master remains clean and organized. Only updated with tested code
 - easy traceability as merges are bundled/labeled
 - good for traditional software distribution
 
-## Cons
+**Cons**
 
 - Many branches with complicated rules
 - Heavy maintenance workload for released versions
@@ -74,13 +79,13 @@ theme: mono
 
 # Branching Strategies: GithubFlow
 
-## Pros
+**Pros**
 
 - clear and simple collaboration rules
 - Continuous integration and deployment
 - Less risk of technical debt with this branching strategy
 
-## Cons
+**Cons**
 
 - Speed comes at cost of less organized workflow in comparison to Git-Flow
 - This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
