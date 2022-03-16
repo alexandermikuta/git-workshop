@@ -19,7 +19,7 @@ theme: mono
 
 # Architecture - 3-Tier-Architecture
 
-![](assets/3tier.png)
+![](assets/3tier.png){ height=60% width=60% }
 
 > Files from staging area will move to Git Repository with commit
 > Useful if you do not want a commit for every added file, but e.g. want a changeset containing 5 added files
@@ -29,6 +29,17 @@ theme: mono
 ![](assets/git-workflow.png){ height=80% width=80% }
 
 > Recommended sequence: commit &rarr; pull &rarr; push
+
+# Architecture - Distributed Development
+
+![Each developer gets its own local repository](assets/distributed_dev.svg){ height=80% width=80% }
+
+> Advantage: No network connection needed for commits.
+> Checkins in local repository also work if production branch in SVN is broken.
+
+# Architecture - Git as Folder
+
+> When you run `git init` in a folder, Git creates the `.git` directory containing your local git repository
 
 # Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
