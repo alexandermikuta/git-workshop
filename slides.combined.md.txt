@@ -17,6 +17,13 @@ theme: mono
 
 ![](assets/directed_acyclic_graph.png)
 
+# Architecture - 3-Tier-Architecture
+
+![](assets/3tier.png)
+
+> Files from staging area will move to Git Repository with commit
+> Useful if you do not want a commit for every added file, but e.g. want a changeset containing 5 added files
+
 # Architecture - Git-Workflow
 
 ![](assets/git-workflow.png){ height=80% width=80% }
@@ -79,6 +86,24 @@ theme: mono
 
 ![](assets/trunk-based-development.jpg)
 
+# Tooling
+
+# Tooling - IDEs
+
+- VisualStudio
+- VS-Code
+
+# Tooling - Other
+
+- Clients (Github Desktop, SourceTree, SmartGit, GitKraken, GitTower)
+- Explorer-Integration (TortoiseGit)
+- Merge-Tools (meld)
+- ZSH-Plugin
+- Azure Devops (mit Git)
+- Unterschied Git/Github
+- Git-TFS-Plugin
+- Azure-Devops-Pipeline -> Github-Action Converter
+
 # Important commands {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
 # Important commands: showing the history
@@ -86,6 +111,38 @@ theme: mono
 ```bash
 git log --decorate --graph --oneline --all
 ```
+
+- Commits/signierte Commits
+- Blobs
+- Referenzen
+- .gitignore
+- Merge/Octopus-Merge
+- Pull-Requests
+- Cherry-Picking
+- Reset
+- Rebasing
+- Revert
+- Staging
+- Stashing
+- Squashing
+- Deletion von Elementen -> Teasern
+- Hooks (z.B. Linting)
+- Tags/signierte Tags
+- Submodules
+- Subtrees
+- Fehlersuche mit "git bisect"
+- Git-Alias
+- Git-LFS
+- Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
+
+# GitOps
+
+- Github-Actions (Azure-Devops-Pipelines)
+
+# Ressources
+
+- Githug
+- learngitbranching.js.org
 
 # cool looking {bg=white;assets/paperclip.gif .light-on-dark rx=-1 ry=0}
 

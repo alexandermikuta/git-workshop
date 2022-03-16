@@ -18,13 +18,22 @@
 
 <!-- section 3 -->
 
+# Architecture - 3-Tier-Architecture
+
+![](assets/3tier.png)
+
+> Files from staging area will move to Git Repository with commit
+> Useful if you do not want a commit for every added file, but e.g. want a changeset containing 5 added files
+
+<!-- section 4 -->
+
 # Architecture - Git-Workflow
 
 ![](assets/git-workflow.png){height="80%" width="80%"}
 
 > Recommended sequence: commit → pull → push
 
-<!-- section 4 -->
+<!-- section 5 -->
 
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
@@ -34,7 +43,7 @@
 
 -   Trunk-Based Development
 
-<!-- section 5 -->
+<!-- section 6 -->
 
 # Branching Strategies - GitFlow
 
@@ -48,7 +57,7 @@
 
 -   conductive to the distribution of traditional software
 
-<!-- subsection 5 / 1 -->
+<!-- subsection 6 / 1 -->
 
 ## Cons
 
@@ -60,7 +69,7 @@
 
 ![](assets/gitflow.webp)
 
-<!-- section 6 -->
+<!-- section 7 -->
 
 # Branching Strategies - GitFlow
 
@@ -72,7 +81,7 @@
 
 -   Less risk of technical debt with this branching strategy
 
-<!-- subsection 6 / 1 -->
+<!-- subsection 7 / 1 -->
 
 ## Cons
 
@@ -82,23 +91,47 @@
 
 -   release preparation and bug fixes happen both in master branch -\> requires attention
 
-<!-- section 7 -->
+<!-- section 8 -->
 
 # Branching Strategies - Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 8 -->
+<!-- section 9 -->
 
 # Branching Strategies - Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
-<!-- section 9 -->
+<!-- section 10 -->
+
+# Tooling
+
+<!-- section 11 -->
+
+# Tooling - IDEs
+
+-   VisualStudio
+-   VS-Code
+
+<!-- section 12 -->
+
+# Tooling - Other
+
+-   Clients (Github Desktop, SourceTree, SmartGit, GitKraken, GitTower)
+-   Explorer-Integration (TortoiseGit)
+-   Merge-Tools (meld)
+-   ZSH-Plugin
+-   Azure Devops (mit Git)
+-   Unterschied Git/Github
+-   Git-TFS-Plugin
+-   Azure-Devops-Pipeline -\> Github-Action Converter
+
+<!-- section 13 -->
 
 # Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 10 -->
+<!-- section 14 -->
 
 # Important commands: showing the history
 
@@ -106,7 +139,43 @@
 git log --decorate --graph --oneline --all
 ```
 
-<!-- section 11 -->
+-   Commits/signierte Commits
+-   Blobs
+-   Referenzen
+-   .gitignore
+-   Merge/Octopus-Merge
+-   Pull-Requests
+-   Cherry-Picking
+-   Reset
+-   Rebasing
+-   Revert
+-   Staging
+-   Stashing
+-   Squashing
+-   Deletion von Elementen -\> Teasern
+-   Hooks (z.B. Linting)
+-   Tags/signierte Tags
+-   Submodules
+-   Subtrees
+-   Fehlersuche mit "git bisect"
+-   Git-Alias
+-   Git-LFS
+-   Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
+
+<!-- section 15 -->
+
+# GitOps
+
+-   Github-Actions (Azure-Devops-Pipelines)
+
+<!-- section 16 -->
+
+# Ressources
+
+-   Githug
+-   learngitbranching.js.org
+
+<!-- section 17 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -114,7 +183,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 12 -->
+<!-- section 18 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -148,7 +217,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 13 -->
+<!-- section 19 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -168,7 +237,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 14 -->
+<!-- section 20 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -193,7 +262,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 15 -->
+<!-- section 21 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -209,7 +278,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 16 -->
+<!-- section 22 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -218,7 +287,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 17 -->
+<!-- section 23 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -230,7 +299,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 18 -->
+<!-- section 24 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -245,7 +314,7 @@ digraph G {
 }
 ```
 
-<!-- section 19 -->
+<!-- section 25 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
