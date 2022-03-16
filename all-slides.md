@@ -44,9 +44,14 @@
 
 <!-- section 6 -->
 
-# Architecture - Git as Folder
+# Architecture - Creating a new repository
 
-> When you run `git init` in a folder, Git creates the `.git` directory containing your local git repository
+> When you run `git init` in a folder, Git creates the `.git` directory
+
+![](assets/file-tree.png)
+
+> This `.git` directory contains your local repository data
+> ![](assets/git-folder.png)
 
 <!-- section 7 -->
 
@@ -68,16 +73,14 @@
 
 # Branching Strategies: GitFlow
 
-## Pros
+**Pros**
 
 -   isolated features
 -   code in master remains clean and organized. Only updated with tested code
 -   easy traceability as merges are bundled/labeled
 -   good for traditional software distribution
 
-<!-- subsection 9 / 1 -->
-
-## Cons
+**Cons**
 
 -   Many branches with complicated rules
 -   Heavy maintenance workload for released versions
@@ -93,15 +96,13 @@
 
 # Branching Strategies: GithubFlow
 
-## Pros
+**Pros**
 
 -   clear and simple collaboration rules
 -   Continuous integration and deployment
 -   Less risk of technical debt with this branching strategy
 
-<!-- subsection 11 / 1 -->
-
-## Cons
+**Cons**
 
 -   Speed comes at cost of less organized workflow in comparison to Git-Flow
 -   This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
