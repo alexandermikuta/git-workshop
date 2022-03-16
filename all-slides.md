@@ -51,9 +51,17 @@
 ![](assets/file-tree.png)
 
 > This `.git` directory contains your local repository data
-> ![](assets/git-folder.png)
+
+![HEAD is a reference to the checked out commit](assets/git-folder.png)
 
 <!-- section 7 -->
+
+# Git-Configuration
+
+-   can be local for git-repository within `.git/config`
+-   can be global via global flag: `git config --global ...`
+
+<!-- section 8 -->
 
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
@@ -63,13 +71,13 @@
 
 -   Trunk-Based Development
 
-<!-- section 8 -->
+<!-- section 9 -->
 
 # Branching Strategies: GitFlow
 
 ![](assets/gitflow.webp)
 
-<!-- section 9 -->
+<!-- section 10 -->
 
 # Branching Strategies: GitFlow
 
@@ -86,13 +94,13 @@
 -   Heavy maintenance workload for released versions
 -   structured and specific development path conflict with agile iterative approach
 
-<!-- section 10 -->
+<!-- section 11 -->
 
 # Branching Strategies: Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 11 -->
+<!-- section 12 -->
 
 # Branching Strategies: GithubFlow
 
@@ -108,17 +116,17 @@
 -   This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
 -   release preparation and bug fixes happen both in master branch -\> requires attention
 
-<!-- section 12 -->
+<!-- section 13 -->
 
 # Branching Strategies: Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
-<!-- section 13 -->
+<!-- section 14 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 14 -->
+<!-- section 15 -->
 
 # Best practices
 
@@ -129,18 +137,18 @@
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
 
-<!-- section 15 -->
+<!-- section 16 -->
 
 # Tooling
 
-<!-- section 16 -->
+<!-- section 17 -->
 
 # Tooling - IDEs
 
 -   VisualStudio
 -   VS-Code
 
-<!-- section 17 -->
+<!-- section 18 -->
 
 # Tooling - Other
 
@@ -153,11 +161,11 @@
 -   Git-TFS-Plugin
 -   Azure-Devops-Pipeline -\> Github-Action Converter
 
-<!-- section 18 -->
+<!-- section 19 -->
 
 # Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 19 -->
+<!-- section 20 -->
 
 # Important commands: showing the history
 
@@ -188,11 +196,11 @@ git log --decorate --graph --oneline --all
 -   Git-LFS
 -   Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
-<!-- section 20 -->
+<!-- section 21 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 21 -->
+<!-- section 22 -->
 
 # GitOps - What is GitOps?
 
@@ -203,7 +211,7 @@ git log --decorate --graph --oneline --all
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 22 -->
+<!-- section 23 -->
 
 # GitOps - Pipeline
 
@@ -218,13 +226,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 23 -->
+<!-- section 24 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 24 -->
+<!-- section 25 -->
 
 # Ressources
 
@@ -232,7 +240,7 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Githug
 -   learngitbranching.js.org
 
-<!-- section 25 -->
+<!-- section 26 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -240,7 +248,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 26 -->
+<!-- section 27 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -274,7 +282,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 27 -->
+<!-- section 28 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -294,7 +302,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 28 -->
+<!-- section 29 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -319,7 +327,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 29 -->
+<!-- section 30 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -335,7 +343,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 30 -->
+<!-- section 31 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -344,7 +352,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 31 -->
+<!-- section 32 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -356,7 +364,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 32 -->
+<!-- section 33 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -371,7 +379,7 @@ digraph G {
 }
 ```
 
-<!-- section 33 -->
+<!-- section 34 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 

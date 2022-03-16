@@ -44,7 +44,13 @@ theme: mono
 ![](assets/file-tree.png)
 
 > This `.git` directory contains your local repository data
-> ![](assets/git-folder.png)
+
+![HEAD is a reference to the checked out commit](assets/git-folder.png)
+
+# Git-Configuration
+
+- can be local for git-repository within `.git/config`
+- can be global via global flag: `git config --global ...`
 
 # Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
