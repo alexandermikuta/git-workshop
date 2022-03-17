@@ -364,6 +364,7 @@ If you want to add e.g. additional files to your previous commit you can use `g
     -   use `git bisect good <good_commit>` when the last known good state was
     -   goes to middle of possibly broken commits -\> check -\> git bisect bad/good
     -   when finished use `git bisect reset`
+-   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
 <!-- section 36 -->
 
