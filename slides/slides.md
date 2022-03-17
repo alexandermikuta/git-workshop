@@ -193,6 +193,17 @@ Pattern format:
 - to remove a remote use `git remote remove <remote-name>`
 - pushing to a remote: `git push origin master`
 
+# Tagging
+
+- list your existing tags with `git tag` or search with `git tag -l "v1.8.5*"`
+- you can create a tag with `git tag -a v1.9 -m "my version 1.9"`
+- to get the data of a tagged commit use `git show v1.9`
+- when tagging without -a, -m, -s option a lightweight tag is created only containing the commit checksum, e.g. `git tag v1.9-lw`
+- tagging later can be done by specifying the commit the should be tagged, e.g. `git tag -a v1.9 9fceb02`
+- by default `git push` does **not** transfer tags to the remote server, instead use `git push origin v1.9` or `git push origin --tags`
+- tags can be deleted by `git tag -d v1.9`
+- to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://git-scm.com/book/en/v2/Git-Basics-Tagging)
+
 # Merge strategies
 
 > If not specified explicitly Git will automatically choose a strategy based on the branches provided for merging
@@ -223,6 +234,8 @@ Pattern format:
 ![](assets/Octopus-Merge-Strategy.png)
 
 > Resolves cases with more than two heads. It is primarily used for bundling topic branch heads together
+
+> Linus Torvalds was no amused about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
 
 # Merge: Resolve
 
