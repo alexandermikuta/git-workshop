@@ -56,12 +56,32 @@
 
 <!-- section 7 -->
 
+# Differences to TFS
+
+> Git is recommended over TFS by Microsoft itself for new projects!
+
+  --------------------------------------------------------------------------------
+  TFS                                            Git
+  ---------------------------------------------- ---------------------------------
+  Centralised VCS                                Distributed VCS
+
+  branches are folders in TFS folder hierarchy   private local branches possible
+  --------------------------------------------------------------------------------
+
+<!-- section 8 -->
+
+# Migration form TFS to Git
+
+-   git-tfs
+
+<!-- section 9 -->
+
 # Git-Configuration
 
 -   can be local for git-repository within `.git/config`
 -   can be global via global flag: `git config --global ...`
 
-<!-- section 8 -->
+<!-- section 10 -->
 
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
@@ -71,13 +91,13 @@
 
 -   Trunk-Based Development
 
-<!-- section 9 -->
+<!-- section 11 -->
 
 # Branching Strategies: GitFlow
 
 ![](assets/gitflow.webp)
 
-<!-- section 10 -->
+<!-- section 12 -->
 
 # Branching Strategies: GitFlow
 
@@ -94,13 +114,13 @@
 -   Heavy maintenance workload for released versions
 -   structured and specific development path conflict with agile iterative approach
 
-<!-- section 11 -->
+<!-- section 13 -->
 
 # Branching Strategies: Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 12 -->
+<!-- section 14 -->
 
 # Branching Strategies: GithubFlow
 
@@ -116,26 +136,11 @@
 -   This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
 -   release preparation and bug fixes happen both in master branch -\> requires attention
 
-<!-- section 13 -->
+<!-- section 15 -->
 
 # Branching Strategies: Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
-
-<!-- section 14 -->
-
-# Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
-
-<!-- section 15 -->
-
-# Best practices
-
--   commit often: Each commit is a snapshot that can be reverted to. Commits can be combined using `rebase`.
--   work from latest version with `git pull` to avoid merge conflicts
--   commit notes should contain "why" and "what" of change
--   review changes before commiting
--   Use Branches: Enables developers to work in parallel on separate lines of product
--   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
 
 <!-- section 16 -->
 
@@ -163,9 +168,77 @@
 
 <!-- section 19 -->
 
-# Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# Working with Git {#working-with-git .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 <!-- section 20 -->
+
+# Merge strategies
+
+> If not specified explicitly Git will automatically choose a strategy based on the branches provided for merging
+
+-   **Fast Forward (Rebase)**
+-   **Recursive**
+-   Ours
+-   Octopus
+-   Resolve
+-   Subtree
+
+<!-- section 21 -->
+
+# Merge: Fast Forward (Rebase)
+
+![Rebase](assets/Fast-Forward-Merge.png)
+
+<!-- section 22 -->
+
+# Merge: Recursive
+
+![Rebase](assets/Recursive-Merge.png)
+
+<!-- section 23 -->
+
+# Merge: Ours
+
+![Rebase](assets/Ours-Merge.png)
+
+<!-- section 24 -->
+
+# Merge: Octopus
+
+![Rebase](assets/Octopus-Merge-Strategy.png)
+
+<!-- section 25 -->
+
+# Merge: Resolve
+
+![Rebase](assets/Resolve-Merge-Strategy.png)
+
+<!-- section 26 -->
+
+# Merge: Subtree
+
+![Rebase](assets/Subtree-Merge-Strategy.png)
+
+<!-- section 27 -->
+
+# Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+
+<!-- section 28 -->
+
+# Best practices
+
+-   commit often: Each commit is a snapshot that can be reverted to. Commits can be combined using `rebase`.
+-   work from latest version with `git pull` to avoid merge conflicts
+-   commit notes should contain "why" and "what" of change
+-   review changes before commiting
+-   Use Branches: Enables developers to work in parallel on separate lines of product
+-   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
+
+<!-- section 29 -->
+
+# Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+
+<!-- section 30 -->
 
 # Important commands: showing the history
 
@@ -177,11 +250,9 @@ git log --decorate --graph --oneline --all
 -   Blobs
 -   Referenzen
 -   .gitignore
--   Merge/Octopus-Merge
 -   Pull-Requests
 -   Cherry-Picking
 -   Reset
--   Rebasing
 -   Revert
 -   Staging
 -   Stashing
@@ -196,11 +267,11 @@ git log --decorate --graph --oneline --all
 -   Git-LFS
 -   Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
-<!-- section 21 -->
+<!-- section 31 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 22 -->
+<!-- section 32 -->
 
 # GitOps - What is GitOps?
 
@@ -211,7 +282,7 @@ git log --decorate --graph --oneline --all
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 23 -->
+<!-- section 33 -->
 
 # GitOps - Pipeline
 
@@ -226,13 +297,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 24 -->
+<!-- section 34 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 25 -->
+<!-- section 35 -->
 
 # Ressources
 
@@ -240,7 +311,7 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Githug
 -   learngitbranching.js.org
 
-<!-- section 26 -->
+<!-- section 36 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -248,7 +319,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 27 -->
+<!-- section 37 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -282,7 +353,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 28 -->
+<!-- section 38 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -302,7 +373,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 29 -->
+<!-- section 39 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -327,7 +398,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 30 -->
+<!-- section 40 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -343,7 +414,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 31 -->
+<!-- section 41 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -352,7 +423,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 32 -->
+<!-- section 42 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -364,7 +435,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 33 -->
+<!-- section 43 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -379,7 +450,7 @@ digraph G {
 }
 ```
 
-<!-- section 34 -->
+<!-- section 44 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
