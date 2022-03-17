@@ -1,9 +1,9 @@
 ---
 title: Github-Workshop
 highlight_style: github-gist
-#themes: mytheme
-#theme: mono
-#width: 1280
+themes: mytheme
+theme: mono
+width: 1280
 ---
 
 # Git Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
@@ -47,6 +47,19 @@ highlight_style: github-gist
 > This `.git` directory contains your local repository data
 
 ![HEAD is a reference to the checked out commit](assets/git-folder.png)
+
+# Differences to TFS
+
+> Git is recommended over TFS by Microsoft itself for new projects!
+
+| TFS                                          | Git                             |
+| -------------------------------------------- | ------------------------------- |
+| Centralised VCS                              | Distributed VCS                 |
+| branches are folders in TFS folder hierarchy | private local branches possible |
+
+# Migration form TFS to Git
+
+- git-tfs
 
 # Git-Configuration
 
@@ -102,17 +115,6 @@ highlight_style: github-gist
 
 ![](assets/trunk-based-development.jpg)
 
-# Best practices {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
-
-# Best practices
-
-- commit often: Each commit is a snapshot that can be reverted to. Commits can be combined using `rebase`.
-- work from latest version with `git pull` to avoid merge conflicts
-- commit notes should contain "why" and "what" of change
-- review changes before commiting
-- Use Branches: Enables developers to work in parallel on separate lines of product
-- Agree on a common workflow, e.g. Git-Flow -> otherwise overhead in merges
-
 # Tooling
 
 # Tooling - IDEs
@@ -131,6 +133,54 @@ highlight_style: github-gist
 - Git-TFS-Plugin
 - Azure-Devops-Pipeline -> Github-Action Converter
 
+# Working with Git {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+
+# Merge strategies
+
+> If not specified explicitly Git will automatically choose a strategy based on the branches provided for merging
+
+- **Fast Forward (Rebase)**
+- **Recursive**
+- Ours
+- Octopus
+- Resolve
+- Subtree
+
+# Merge: Fast Forward (Rebase)
+
+![Rebase](assets/Fast-Forward-Merge.png)
+
+# Merge: Recursive
+
+![Rebase](assets/Recursive-Merge.png)
+
+# Merge: Ours
+
+![Rebase](assets/Ours-Merge.png)
+
+# Merge: Octopus
+
+![Rebase](assets/Octopus-Merge-Strategy.png)
+
+# Merge: Resolve
+
+![Rebase](assets/Resolve-Merge-Strategy.png)
+
+# Merge: Subtree
+
+![Rebase](assets/Subtree-Merge-Strategy.png)
+
+# Best practices {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+
+# Best practices
+
+- commit often: Each commit is a snapshot that can be reverted to. Commits can be combined using `rebase`.
+- work from latest version with `git pull` to avoid merge conflicts
+- commit notes should contain "why" and "what" of change
+- review changes before commiting
+- Use Branches: Enables developers to work in parallel on separate lines of product
+- Agree on a common workflow, e.g. Git-Flow -> otherwise overhead in merges
+
 # Important commands {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
 # Important commands: showing the history
@@ -143,11 +193,9 @@ git log --decorate --graph --oneline --all
 - Blobs
 - Referenzen
 - .gitignore
-- Merge/Octopus-Merge
 - Pull-Requests
 - Cherry-Picking
 - Reset
-- Rebasing
 - Revert
 - Staging
 - Stashing
