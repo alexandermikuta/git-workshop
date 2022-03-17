@@ -104,7 +104,15 @@ Plan your migration carefully:
 # Git-Configuration
 
 -   can be local for git-repository within `.git/config`
--   can be global via global flag: `git config --global ...`
+-   can be global via global flag `git config --global ...`
+-   can be accessed via `git config --list`
+
+Typical settings:
+
+-   `git config --global core.editor "code --wait"`
+-   `git config --global user.name "John Doe"`
+-   `git config --global user.email johndoe@example.com`
+-   `git config --global merge.tool kdiff3`
 
 <!-- section 12 -->
 
@@ -228,17 +236,32 @@ Plan your migration carefully:
 
 # Merge: Octopus
 
+`git merge -s octopus`
+
 ![](assets/Octopus-Merge-Strategy.png)
+
+> Resolves cases with more than two heads. It is primarily used for bundling topic branch heads together
 
 <!-- section 27 -->
 
 # Merge: Resolve
+
+`git merge -s resolve`
+
+> Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.
 
 ![](assets/Resolve-Merge-Strategy.png)
 
 <!-- section 28 -->
 
 # Merge: Subtree
+
+`git merge -s subtree`
+
+![](assets/Subtree-Merge-Strategy.png)
+
+> The idea of the subtree merge is that you have two projects, and one of the projects maps to a subdirectory of the other one.
+> When you specify a subtree merge, Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
 <!-- section 29 -->
 
