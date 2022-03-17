@@ -187,37 +187,37 @@
 
 # Merge: Fast Forward (Rebase)
 
-![Rebase](assets/Fast-Forward-Merge.png)
+![](assets/Fast-Forward-Merge.png)
 
 <!-- section 22 -->
 
 # Merge: Recursive
 
-![Rebase](assets/Recursive-Merge.png)
+![](assets/Recursive-Merge.png)
 
 <!-- section 23 -->
 
 # Merge: Ours
 
-![Rebase](assets/Ours-Merge.png)
+![](assets/Ours-Merge.png)
 
 <!-- section 24 -->
 
 # Merge: Octopus
 
-![Rebase](assets/Octopus-Merge-Strategy.png)
+![](assets/Octopus-Merge-Strategy.png)
 
 <!-- section 25 -->
 
 # Merge: Resolve
 
-![Rebase](assets/Resolve-Merge-Strategy.png)
+![](assets/Resolve-Merge-Strategy.png)
 
 <!-- section 26 -->
 
 # Merge: Subtree
 
-![Rebase](assets/Subtree-Merge-Strategy.png)
+![](assets/Subtree-Merge-Strategy.png)
 
 <!-- section 27 -->
 

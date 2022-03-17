@@ -148,27 +148,27 @@ width: 1280
 
 # Merge: Fast Forward (Rebase)
 
-![Rebase](assets/Fast-Forward-Merge.png)
+![](assets/Fast-Forward-Merge.png)
 
 # Merge: Recursive
 
-![Rebase](assets/Recursive-Merge.png)
+![](assets/Recursive-Merge.png)
 
 # Merge: Ours
 
-![Rebase](assets/Ours-Merge.png)
+![](assets/Ours-Merge.png)
 
 # Merge: Octopus
 
-![Rebase](assets/Octopus-Merge-Strategy.png)
+![](assets/Octopus-Merge-Strategy.png)
 
 # Merge: Resolve
 
-![Rebase](assets/Resolve-Merge-Strategy.png)
+![](assets/Resolve-Merge-Strategy.png)
 
 # Merge: Subtree
 
-![Rebase](assets/Subtree-Merge-Strategy.png)
+![](assets/Subtree-Merge-Strategy.png)
 
 # Best practices {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
