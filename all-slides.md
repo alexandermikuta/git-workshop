@@ -117,6 +117,27 @@ Typical settings:
 
 <!-- section 12 -->
 
+# .gitignore
+
+-   .gitinore-File specifies intentionally untracked files that Git should ignore
+-   files alread track are not affected!
+-   each line in .gitignore specifies a pattern
+
+Pattern format:
+
+-   `#` serves as a comment
+-   `!` negates a pattern
+-   `/` directory separator
+    -   slash at beginning -\> relative to the .gitignore-directory, otherwise any level
+    -   slash at end -\> matches only directories, otherwise also files
+-   `*` matches anything except slash
+-   `?` like `*` but only one character
+-   `**` match in all directories, e.g. `**/foo`
+-   `/**` matches everything inside, e.g. `foo/**`
+-   `/**/` matches zero or more directories, e.g. `foo/**/foo`
+
+<!-- section 13 -->
+
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
 -   GitFlow
@@ -125,13 +146,13 @@ Typical settings:
 
 -   Trunk-Based Development
 
-<!-- section 13 -->
+<!-- section 14 -->
 
 # Branching Strategies: GitFlow
 
 ![](assets/gitflow.webp)
 
-<!-- section 14 -->
+<!-- section 15 -->
 
 # Branching Strategies: GitFlow
 
@@ -148,13 +169,13 @@ Typical settings:
 -   Heavy maintenance workload for released versions
 -   structured and specific development path conflict with agile iterative approach
 
-<!-- section 15 -->
+<!-- section 16 -->
 
 # Branching Strategies: Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 16 -->
+<!-- section 17 -->
 
 # Branching Strategies: GithubFlow
 
@@ -170,24 +191,24 @@ Typical settings:
 -   This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
 -   release preparation and bug fixes happen both in master branch -\> requires attention
 
-<!-- section 17 -->
+<!-- section 18 -->
 
 # Branching Strategies: Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
-<!-- section 18 -->
+<!-- section 19 -->
 
 # Tooling
 
-<!-- section 19 -->
+<!-- section 20 -->
 
 # Tooling - IDEs
 
 -   VisualStudio
 -   VS-Code
 
-<!-- section 20 -->
+<!-- section 21 -->
 
 # Tooling - Other
 
@@ -198,11 +219,11 @@ Typical settings:
 -   Azure Devops (mit Git)
 -   Azure-Devops-Pipeline -\> Github-Action Converter
 
-<!-- section 21 -->
+<!-- section 22 -->
 
 # Working with Git {#working-with-git .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 22 -->
+<!-- section 23 -->
 
 # Merge strategies
 
@@ -215,25 +236,25 @@ Typical settings:
 -   Resolve
 -   Subtree
 
-<!-- section 23 -->
+<!-- section 24 -->
 
 # Merge: Fast Forward (Rebase)
 
 ![](assets/Fast-Forward-Merge.png)
 
-<!-- section 24 -->
+<!-- section 25 -->
 
 # Merge: Recursive
 
 ![](assets/Recursive-Merge.png)
 
-<!-- section 25 -->
+<!-- section 26 -->
 
 # Merge: Ours
 
 ![](assets/Ours-Merge.png)
 
-<!-- section 26 -->
+<!-- section 27 -->
 
 # Merge: Octopus
 
@@ -243,7 +264,7 @@ Typical settings:
 
 > Resolves cases with more than two heads. It is primarily used for bundling topic branch heads together
 
-<!-- section 27 -->
+<!-- section 28 -->
 
 # Merge: Resolve
 
@@ -253,7 +274,7 @@ Typical settings:
 
 ![](assets/Resolve-Merge-Strategy.png)
 
-<!-- section 28 -->
+<!-- section 29 -->
 
 # Merge: Subtree
 
@@ -264,7 +285,7 @@ Typical settings:
 > The idea of the subtree merge is that you have two projects, and one of the projects maps to a subdirectory of the other one.
 > When you specify a subtree merge, Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
-<!-- section 29 -->
+<!-- section 30 -->
 
 # Undoing commits
 
@@ -281,7 +302,7 @@ From public repository:
 
 ![](assets/Subtree-Merge-Strategy.png)
 
-<!-- section 30 -->
+<!-- section 31 -->
 
 # Debugging with Git
 
@@ -293,11 +314,11 @@ From public repository:
     -   goes to middle of possibly broken commits -\> check -\> git bisect bad/good
     -   when finished use `git bisect reset`
 
-<!-- section 31 -->
+<!-- section 32 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 32 -->
+<!-- section 33 -->
 
 # Best practices
 
@@ -308,11 +329,11 @@ From public repository:
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
 
-<!-- section 33 -->
+<!-- section 34 -->
 
 # Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 34 -->
+<!-- section 35 -->
 
 # Important commands: showing the history
 
@@ -323,7 +344,6 @@ git log --decorate --graph --oneline --all
 -   Commits/signierte Commits
 -   Blobs
 -   Referenzen
--   .gitignore
 -   Pull-Requests
 -   Cherry-Picking
 -   Staging
@@ -338,11 +358,11 @@ git log --decorate --graph --oneline --all
 -   Git-LFS
 -   Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
-<!-- section 35 -->
+<!-- section 36 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 36 -->
+<!-- section 37 -->
 
 # GitOps - What is GitOps?
 
@@ -353,7 +373,7 @@ git log --decorate --graph --oneline --all
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 37 -->
+<!-- section 38 -->
 
 # GitOps - Pipeline
 
@@ -368,13 +388,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 38 -->
+<!-- section 39 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 39 -->
+<!-- section 40 -->
 
 # Ressources
 
@@ -382,7 +402,7 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Githug
 -   learngitbranching.js.org
 
-<!-- section 40 -->
+<!-- section 41 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -390,7 +410,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 41 -->
+<!-- section 42 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -424,7 +444,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 42 -->
+<!-- section 43 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -444,7 +464,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 43 -->
+<!-- section 44 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -469,7 +489,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 44 -->
+<!-- section 45 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -485,7 +505,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 45 -->
+<!-- section 46 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -494,7 +514,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 46 -->
+<!-- section 47 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -506,7 +526,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 47 -->
+<!-- section 48 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -521,7 +541,7 @@ digraph G {
 }
 ```
 
-<!-- section 48 -->
+<!-- section 49 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
