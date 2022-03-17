@@ -61,6 +61,16 @@ width: 1280
 
 ![HEAD is a reference to the checked out commit](assets/git-folder.png)
 
+https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain
+
+# Architecture - Git Objects
+
+https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+
+# Architecture - Git References
+
+https://git-scm.com/book/en/v2/Git-Internals-Git-References
+
 # Differences to TFS
 
 > Git is recommended over TFS by Microsoft itself for new projects!
@@ -221,7 +231,13 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git u
   - push it with `git push --set-upstream origin corrected-branch-name`
   - delete bad branch on remote with `git push origin --delete bad-branch-name`
 
+https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+
 # Merge strategies
+
+https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 > If not specified explicitly Git will automatically choose a strategy based on the branches provided for merging
 
@@ -271,7 +287,20 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git u
 > The idea of the subtree merge is that you have two projects, and one of the projects maps to a subdirectory of the other one.
 > When you specify a subtree merge, Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
+# Mergetool
+
+https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Branching-and-Merging
+
+# Merging vs. Rebasing vs. Cherry-Picking
+
+https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
+https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
+https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching
+
 # Undoing commits
+
+https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified
 
 From local repository:
 
@@ -290,6 +319,30 @@ If you want to add e.g. additional files to your previous commit you can use `gi
 
 ![](assets/Subtree-Merge-Strategy.png)
 
+# Git Replace
+
+https://git-scm.com/book/en/v2/Git-Tools-Replace
+
+# Signing Commits/Tags
+
+https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
+
+# Rewriting History
+
+https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+
+# Staging
+
+https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
+
+# Stashing
+
+https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
+
+# Submodules
+
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
 # Debugging with Git
 
 - File annotations: `git blame -L 3,5 <somefilename>`
@@ -300,6 +353,16 @@ If you want to add e.g. additional files to your previous commit you can use `gi
   - goes to middle of possibly broken commits -> check -> git bisect bad/good
   - when finished use `git bisect reset`
 - git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
+
+# Git-Hooks
+
+https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+
+Enforcing Policies:
+
+https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
+
+Husky.NET
 
 # Best practices {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
@@ -316,25 +379,23 @@ If you want to add e.g. additional files to your previous commit you can use `gi
 
 # Important commands: showing the history
 
+https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Basic-Snapshotting
+https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection
+https://git-scm.com/book/en/v2/Git-Tools-Rerere
+https://git-scm.com/book/en/v2/Git-Tools-Bundling
+https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
+
 ```bash
 git log --decorate --graph --oneline --all
 ```
 
-- Commits/signierte Commits
 - Blobs
 - Referenzen
 - Pull-Requests
-- Cherry-Picking
-- Staging
-- Stashing
 - Squashing
 - Deletion von Elementen -> Teasern
-- Hooks (z.B. Linting)
-- Tags/signierte Tags
-- Submodules
 - Subtrees
 - Git-LFS
-- Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
 # GitOps {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 

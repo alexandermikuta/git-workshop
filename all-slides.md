@@ -71,7 +71,21 @@
 
 ![HEAD is a reference to the checked out commit](assets/git-folder.png)
 
+https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain
+
 <!-- section 9 -->
+
+# Architecture - Git Objects
+
+https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+
+<!-- section 10 -->
+
+# Architecture - Git References
+
+https://git-scm.com/book/en/v2/Git-Internals-Git-References
+
+<!-- section 11 -->
 
 # Differences to TFS
 
@@ -85,7 +99,7 @@
   branches are folders in TFS folder hierarchy   private local branches possible
   --------------------------------------------------------------------------------
 
-<!-- section 10 -->
+<!-- section 12 -->
 
 # Migration form TFS to Git
 
@@ -99,7 +113,7 @@ Plan your migration carefully:
 -   usually large binary data is not put into Git -\> cleanup before migration
 -   for big projects multiple Git-Repositories could be created and included via Submodule/Subtree
 
-<!-- section 11 -->
+<!-- section 13 -->
 
 # Git-Configuration
 
@@ -115,7 +129,7 @@ Typical settings:
 -   `git config --global merge.tool kdiff3`
 -   `git config --global credential.helper cache`
 
-<!-- section 12 -->
+<!-- section 14 -->
 
 # .gitignore
 
@@ -136,7 +150,7 @@ Pattern format:
 -   `/**` matches everything inside, e.g. `foo/**`
 -   `/**/` matches zero or more directories, e.g. `foo/**/foo`
 
-<!-- section 13 -->
+<!-- section 15 -->
 
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
@@ -146,13 +160,13 @@ Pattern format:
 
 -   Trunk-Based Development
 
-<!-- section 14 -->
+<!-- section 16 -->
 
 # Branching Strategies: GitFlow
 
 ![](assets/gitflow.webp)
 
-<!-- section 15 -->
+<!-- section 17 -->
 
 # Branching Strategies: GitFlow
 
@@ -169,13 +183,13 @@ Pattern format:
 -   Heavy maintenance workload for released versions
 -   structured and specific development path conflict with agile iterative approach
 
-<!-- section 16 -->
+<!-- section 18 -->
 
 # Branching Strategies: Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 17 -->
+<!-- section 19 -->
 
 # Branching Strategies: GithubFlow
 
@@ -191,24 +205,24 @@ Pattern format:
 -   This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
 -   release preparation and bug fixes happen both in master branch -\> requires attention
 
-<!-- section 18 -->
+<!-- section 20 -->
 
 # Branching Strategies: Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
-<!-- section 19 -->
+<!-- section 21 -->
 
 # Tooling
 
-<!-- section 20 -->
+<!-- section 22 -->
 
 # Tooling - IDEs
 
 -   VisualStudio
 -   VS-Code
 
-<!-- section 21 -->
+<!-- section 23 -->
 
 # Tooling - Other
 
@@ -219,11 +233,11 @@ Pattern format:
 -   Azure Devops (mit Git)
 -   Azure-Devops-Pipeline -\> Github-Action Converter
 
-<!-- section 22 -->
+<!-- section 24 -->
 
 # Working with Git {#working-with-git .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 23 -->
+<!-- section 25 -->
 
 # Working with Remotes
 
@@ -238,7 +252,7 @@ Pattern format:
 -   pulling from a remote: `git pull` (pull is a combination of `git fetch` and `git merge`)
 -   pushing to a remote: `git push origin master`
 
-<!-- section 24 -->
+<!-- section 26 -->
 
 # Tagging
 
@@ -251,7 +265,7 @@ Pattern format:
 -   tags can be deleted by `git tag -d v1.9`
 -   to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 
-<!-- section 25 -->
+<!-- section 27 -->
 
 # Git Aliases
 
@@ -259,7 +273,7 @@ Pattern format:
 
 e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git unstage fileA` instead of `git reset HEAD -- fileA`
 
-<!-- section 26 -->
+<!-- section 28 -->
 
 # Branching
 
@@ -270,9 +284,15 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git 
     -   push it with `git push --set-upstream origin corrected-branch-name`
     -   delete bad branch on remote with `git push origin --delete bad-branch-name`
 
-<!-- section 27 -->
+https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+
+<!-- section 29 -->
 
 # Merge strategies
+
+https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 > If not specified explicitly Git will automatically choose a strategy based on the branches provided for merging
 
@@ -283,25 +303,25 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git 
 -   Resolve
 -   Subtree
 
-<!-- section 28 -->
+<!-- section 30 -->
 
 # Merge: Fast Forward (Rebase)
 
 ![](assets/Fast-Forward-Merge.png)
 
-<!-- section 29 -->
+<!-- section 31 -->
 
 # Merge: Recursive
 
 ![](assets/Recursive-Merge.png)
 
-<!-- section 30 -->
+<!-- section 32 -->
 
 # Merge: Ours
 
 ![](assets/Ours-Merge.png)
 
-<!-- section 31 -->
+<!-- section 33 -->
 
 # Merge: Octopus
 
@@ -313,7 +333,7 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git 
 
 > Linus Torvalds was no amused about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
 
-<!-- section 32 -->
+<!-- section 34 -->
 
 # Merge: Resolve
 
@@ -323,7 +343,7 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git 
 
 ![](assets/Resolve-Merge-Strategy.png)
 
-<!-- section 33 -->
+<!-- section 35 -->
 
 # Merge: Subtree
 
@@ -334,9 +354,26 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git 
 > The idea of the subtree merge is that you have two projects, and one of the projects maps to a subdirectory of the other one.
 > When you specify a subtree merge, Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
-<!-- section 34 -->
+<!-- section 36 -->
+
+# Mergetool
+
+https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Branching-and-Merging
+
+<!-- section 37 -->
+
+# Merging vs. Rebasing vs. Cherry-Picking
+
+https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
+https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
+https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching
+
+<!-- section 38 -->
 
 # Undoing commits
+
+https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified
 
 From local repository:
 
@@ -355,7 +392,43 @@ If you want to add e.g. additional files to your previous commit you can use `g
 
 ![](assets/Subtree-Merge-Strategy.png)
 
-<!-- section 35 -->
+<!-- section 39 -->
+
+# Git Replace
+
+https://git-scm.com/book/en/v2/Git-Tools-Replace
+
+<!-- section 40 -->
+
+# Signing Commits/Tags
+
+https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
+
+<!-- section 41 -->
+
+# Rewriting History
+
+https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+
+<!-- section 42 -->
+
+# Staging
+
+https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
+
+<!-- section 43 -->
+
+# Stashing
+
+https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
+
+<!-- section 44 -->
+
+# Submodules
+
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
+<!-- section 45 -->
 
 # Debugging with Git
 
@@ -368,11 +441,23 @@ If you want to add e.g. additional files to your previous commit you can use `g
     -   when finished use `git bisect reset`
 -   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
-<!-- section 36 -->
+<!-- section 46 -->
+
+# Git-Hooks
+
+https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+
+Enforcing Policies:
+
+https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
+
+Husky.NET
+
+<!-- section 47 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 37 -->
+<!-- section 48 -->
 
 # Best practices
 
@@ -383,39 +468,37 @@ If you want to add e.g. additional files to your previous commit you can use `g
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
 
-<!-- section 38 -->
+<!-- section 49 -->
 
 # Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 39 -->
+<!-- section 50 -->
 
 # Important commands: showing the history
+
+https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Basic-Snapshotting
+https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection
+https://git-scm.com/book/en/v2/Git-Tools-Rerere
+https://git-scm.com/book/en/v2/Git-Tools-Bundling
+https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 
 ``` {.bash}
 git log --decorate --graph --oneline --all
 ```
 
--   Commits/signierte Commits
 -   Blobs
 -   Referenzen
 -   Pull-Requests
--   Cherry-Picking
--   Staging
--   Stashing
 -   Squashing
 -   Deletion von Elementen -\> Teasern
--   Hooks (z.B. Linting)
--   Tags/signierte Tags
--   Submodules
 -   Subtrees
 -   Git-LFS
--   Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
-<!-- section 40 -->
+<!-- section 51 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 41 -->
+<!-- section 52 -->
 
 # GitOps - What is GitOps?
 
@@ -426,7 +509,7 @@ git log --decorate --graph --oneline --all
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 42 -->
+<!-- section 53 -->
 
 # GitOps - Pipeline
 
@@ -441,13 +524,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 43 -->
+<!-- section 54 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 44 -->
+<!-- section 55 -->
 
 # Ressources
 
@@ -455,7 +538,7 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Githug
 -   learngitbranching.js.org
 
-<!-- section 45 -->
+<!-- section 56 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -463,7 +546,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 46 -->
+<!-- section 57 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -497,7 +580,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 47 -->
+<!-- section 58 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -517,7 +600,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 48 -->
+<!-- section 59 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -542,7 +625,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 49 -->
+<!-- section 60 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -558,7 +641,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 50 -->
+<!-- section 61 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -567,7 +650,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 51 -->
+<!-- section 62 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -579,7 +662,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 52 -->
+<!-- section 63 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -594,7 +677,7 @@ digraph G {
 }
 ```
 
-<!-- section 53 -->
+<!-- section 64 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
