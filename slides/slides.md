@@ -182,6 +182,17 @@ Pattern format:
 
 # Working with Git {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
+# Working with Remotes
+
+> "Remote repositories are versions of your project that are hosted on the Internet or network somewhere"
+
+- to list the current remotes you can use `git remote -v`
+- a remote can be inspected with `git remote show origin`
+- when cloning a repo the origin is already set to the repo you cloned from
+- remotes can be added with `git remote add pb <e.g. some github-repo-url>`
+- to remove a remote use `git remote remove <remote-name>`
+- pushing to a remote: `git push origin master`
+
 # Merge strategies
 
 > If not specified explicitly Git will automatically choose a strategy based on the branches provided for merging
