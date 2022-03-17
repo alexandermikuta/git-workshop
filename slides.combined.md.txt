@@ -182,6 +182,43 @@ Pattern format:
 
 # Working with Git {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
+# Working with Remotes
+
+> "Remote repositories are versions of your project that are hosted on the Internet or network somewhere"
+
+- to list the current remotes you can use `git remote -v`
+- a remote can be inspected with `git remote show origin`
+- when cloning a repo the origin is already set to the repo you cloned from
+- remotes can be added with `git remote add pb <e.g. some github-repo-url>`
+- to remove a remote use `git remote remove <remote-name>`
+- pushing to a remote: `git push origin master`
+
+# Tagging
+
+- list your existing tags with `git tag` or search with `git tag -l "v1.8.5*"`
+- you can create a tag with `git tag -a v1.9 -m "my version 1.9"`
+- to get the data of a tagged commit use `git show v1.9`
+- when tagging without -a, -m, -s option a lightweight tag is created only containing the commit checksum, e.g. `git tag v1.9-lw`
+- tagging later can be done by specifying the commit the should be tagged, e.g. `git tag -a v1.9 9fceb02`
+- by default `git push` does **not** transfer tags to the remote server, instead use `git push origin v1.9` or `git push origin --tags`
+- tags can be deleted by `git tag -d v1.9`
+- to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://git-scm.com/book/en/v2/Git-Basics-Tagging)
+
+# Git Aliases
+
+> can simplify your Git-experience by settig custom aliases that are easier/shorter to remember
+
+e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git unstage fileA` instead of `git reset HEAD -- fileA`
+
+# Branching
+
+- list branches with `git branch` or `git branch -v`
+  - with `--merged` or `--no-merged` option you can filter branches that you have/not merged into the branch you are currently on
+- Creating a new branch: `git branch <branchname>`
+- to rename a branch use `git branch --move bad-branch-name corrected-branch-name`
+  - push it with `git push --set-upstream origin corrected-branch-name`
+  - delete bad branch on remote with `git push origin --delete bad-branch-name`
+
 # Merge strategies
 
 > If not specified explicitly Git will automatically choose a strategy based on the branches provided for merging
@@ -213,6 +250,8 @@ Pattern format:
 
 > Resolves cases with more than two heads. It is primarily used for bundling topic branch heads together
 
+> Linus Torvalds was no amused about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
+
 # Merge: Resolve
 
 `git merge -s resolve`
@@ -236,12 +275,16 @@ From local repository:
 
 - keeping your local changes: `git reset --soft HEAD`
 - discarding your local changes: `git reset --hard HEAD`
+- unstage staged file: `git restore --staged <filename>`
+- unmodifying a file: `git restore <filename>`
 
 From public repository:
 
 - `git revert HEAD` and `git commit -m "reverted last commit"`
 
 > HEAD points to last commit in branch: `git reset HEAD~<no-of-commits>`
+
+If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
 
 ![](assets/Subtree-Merge-Strategy.png)
 
@@ -287,7 +330,6 @@ git log --decorate --graph --oneline --all
 - Tags/signierte Tags
 - Submodules
 - Subtrees
-- Git-Alias
 - Git-LFS
 - Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
