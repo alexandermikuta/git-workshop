@@ -191,6 +191,8 @@ Pattern format:
 - when cloning a repo the origin is already set to the repo you cloned from
 - remotes can be added with `git remote add pb <e.g. some github-repo-url>`
 - to remove a remote use `git remote remove <remote-name>`
+- fetching from a remote: `git fetch`
+- pulling from a remote: `git pull` (pull is a combination of `git fetch` and `git merge`)
 - pushing to a remote: `git push origin master`
 
 # Tagging
