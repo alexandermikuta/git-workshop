@@ -204,6 +204,12 @@ Pattern format:
 - tags can be deleted by `git tag -d v1.9`
 - to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 
+# Git Aliases
+
+> can simplify your Git-experience by settig custom aliases that are easier/shorter to remember
+
+e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git unstage fileA` instead of `git reset HEAD -- fileA`
+
 # Merge strategies
 
 > If not specified explicitly Git will automatically choose a strategy based on the branches provided for merging
@@ -315,7 +321,6 @@ git log --decorate --graph --oneline --all
 - Tags/signierte Tags
 - Submodules
 - Subtrees
-- Git-Alias
 - Git-LFS
 - Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
