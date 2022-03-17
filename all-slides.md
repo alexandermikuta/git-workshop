@@ -89,7 +89,15 @@
 
 # Migration form TFS to Git
 
--   git-tfs
+-   history not needed: `git init` on current files
+-   history is needed: http://git-tfs.com/
+    -   `git tfs clone ...` instead of the usual `git clone ...`
+    -   git-tfs works as two-way bridge so changes can also be pushed to TFS: `git tfs checkintool`
+
+Plan your migration carefully:
+
+-   usually large binary data is not put into Git -\> cleanup before migration
+-   for big projects multiple Git-Repositories could be created and included via Submodule/Subtree
 
 <!-- section 11 -->
 
@@ -179,7 +187,6 @@
 -   Merge-Tools (meld)
 -   ZSH-Plugin
 -   Azure Devops (mit Git)
--   Git-TFS-Plugin
 -   Azure-Devops-Pipeline -\> Github-Action Converter
 
 <!-- section 21 -->
