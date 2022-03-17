@@ -237,8 +237,16 @@
 
 # Undoing commits
 
--   git reset...
--   git revert...
+From local repository:
+
+-   keeping your local changes: `git reset --soft HEAD`
+-   discarding your local changes: `git reset --hard HEAD`
+
+From public repository:
+
+-   `git revert HEAD` and `git commit -m "reverted last commit"`
+
+> HEAD points to last commit in branch: `git reset HEAD~<no-of-commits>`
 
 ![](assets/Subtree-Merge-Strategy.png)
 
