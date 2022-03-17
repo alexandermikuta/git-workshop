@@ -32,6 +32,10 @@
   }
 }
 
+.slides {
+  width: auto;
+}
+
 .reveal .slides section .fragment.fade-in-otherwise-semi-out {
   opacity: 0.4;
   visibility: inherit;
@@ -53,6 +57,6 @@
   @include sky-gradient-13;
 }
 
-.marckdeck-logo {
+.markdeck-logo {
   display: none;
 }
