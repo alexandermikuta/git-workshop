@@ -210,6 +210,15 @@ Pattern format:
 
 e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git unstage fileA` instead of `git reset HEAD -- fileA`
 
+# Branching
+
+- list branches with `git branch` or `git branch -v`
+  - with `--merged` or `--no-merged` option you can filter branches that you have/not merged into the branch you are currently on
+- Creating a new branch: `git branch <branchname>`
+- to rename a branch use `git branch --move bad-branch-name corrected-branch-name`
+  - push it with `git push --set-upstream origin corrected-branch-name`
+  - delete bad branch on remote with `git push origin --delete bad-branch-name`
+
 # Merge strategies
 
 > If not specified explicitly Git will automatically choose a strategy based on the branches provided for merging
