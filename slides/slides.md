@@ -96,6 +96,25 @@ Typical settings:
 - `git config --global merge.tool kdiff3`
 - `git config --global credential.helper cache`
 
+# .gitignore
+
+- .gitinore-File specifies intentionally untracked files that Git should ignore
+- files alread track are not affected!
+- each line in .gitignore specifies a pattern
+
+Pattern format:
+
+- `#` serves as a comment
+- `!` negates a pattern
+- `/` directory separator
+  - slash at beginning -> relative to the .gitignore-directory, otherwise any level
+  - slash at end -> matches only directories, otherwise also files
+- `*` matches anything except slash
+- `?` like `*` but only one character
+- `**` match in all directories, e.g. `**/foo`
+- `/**` matches everything inside, e.g. `foo/**`
+- `/**/` matches zero or more directories, e.g. `foo/**/foo`
+
 # Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
 - GitFlow
@@ -258,7 +277,6 @@ git log --decorate --graph --oneline --all
 - Commits/signierte Commits
 - Blobs
 - Referenzen
-- .gitignore
 - Pull-Requests
 - Cherry-Picking
 - Staging
