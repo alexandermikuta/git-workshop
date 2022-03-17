@@ -236,12 +236,16 @@ From local repository:
 
 - keeping your local changes: `git reset --soft HEAD`
 - discarding your local changes: `git reset --hard HEAD`
+- unstage staged file: `git restore --staged <filename>`
+- unmodifying a file: `git restore <filename>`
 
 From public repository:
 
 - `git revert HEAD` and `git commit -m "reverted last commit"`
 
 > HEAD points to last commit in branch: `git reset HEAD~<no-of-commits>`
+
+If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
 
 ![](assets/Subtree-Merge-Strategy.png)
 
