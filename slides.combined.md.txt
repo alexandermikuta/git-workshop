@@ -94,6 +94,7 @@ Typical settings:
 - `git config --global user.name "John Doe"`
 - `git config --global user.email johndoe@example.com`
 - `git config --global merge.tool kdiff3`
+- `git config --global credential.helper cache`
 
 # Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
@@ -225,6 +226,16 @@ From public repository:
 
 ![](assets/Subtree-Merge-Strategy.png)
 
+# Debugging with Git
+
+- File annotations: `git blame -L 3,5 <somefilename>`
+- git bisect:
+  - start with `git bisect start`
+  - use `git bisect bad` to tell the system that current commit is broken
+  - use `git bisect good <good_commit>` when the last known good state was
+  - goes to middle of possibly broken commits -> check -> git bisect bad/good
+  - when finished use `git bisect reset`
+
 # Best practices {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
 # Best practices
@@ -258,7 +269,6 @@ git log --decorate --graph --oneline --all
 - Tags/signierte Tags
 - Submodules
 - Subtrees
-- Fehlersuche mit "git bisect"
 - Git-Alias
 - Git-LFS
 - Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)

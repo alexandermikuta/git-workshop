@@ -113,6 +113,7 @@ Typical settings:
 -   `git config --global user.name "John Doe"`
 -   `git config --global user.email johndoe@example.com`
 -   `git config --global merge.tool kdiff3`
+-   `git config --global credential.helper cache`
 
 <!-- section 12 -->
 
@@ -282,9 +283,21 @@ From public repository:
 
 <!-- section 30 -->
 
-# Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# Debugging with Git
+
+-   File annotations: `git blame -L 3,5 <somefilename>`
+-   git bisect:
+    -   start with `git bisect start`
+    -   use `git bisect bad` to tell the system that current commit is broken
+    -   use `git bisect good <good_commit>` when the last known good state was
+    -   goes to middle of possibly broken commits -\> check -\> git bisect bad/good
+    -   when finished use `git bisect reset`
 
 <!-- section 31 -->
+
+# Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+
+<!-- section 32 -->
 
 # Best practices
 
@@ -295,11 +308,11 @@ From public repository:
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
 
-<!-- section 32 -->
+<!-- section 33 -->
 
 # Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 33 -->
+<!-- section 34 -->
 
 # Important commands: showing the history
 
@@ -321,16 +334,15 @@ git log --decorate --graph --oneline --all
 -   Tags/signierte Tags
 -   Submodules
 -   Subtrees
--   Fehlersuche mit "git bisect"
 -   Git-Alias
 -   Git-LFS
 -   Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
-<!-- section 34 -->
+<!-- section 35 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 35 -->
+<!-- section 36 -->
 
 # GitOps - What is GitOps?
 
@@ -341,7 +353,7 @@ git log --decorate --graph --oneline --all
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 36 -->
+<!-- section 37 -->
 
 # GitOps - Pipeline
 
@@ -356,13 +368,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 37 -->
+<!-- section 38 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 38 -->
+<!-- section 39 -->
 
 # Ressources
 
@@ -370,7 +382,7 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Githug
 -   learngitbranching.js.org
 
-<!-- section 39 -->
+<!-- section 40 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -378,7 +390,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 40 -->
+<!-- section 41 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -412,7 +424,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 41 -->
+<!-- section 42 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -432,7 +444,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 42 -->
+<!-- section 43 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -457,7 +469,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 43 -->
+<!-- section 44 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -473,7 +485,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 44 -->
+<!-- section 45 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -482,7 +494,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 45 -->
+<!-- section 46 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -494,7 +506,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 46 -->
+<!-- section 47 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -509,7 +521,7 @@ digraph G {
 }
 ```
 
-<!-- section 47 -->
+<!-- section 48 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
