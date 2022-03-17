@@ -10,6 +10,19 @@ width: 1280
 
 ![the distributed version control system](assets/git.png){ height=46px width=110px }
 
+# Git vs. GitHub {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+
+# Git vs. GitHub
+
+| Git                              | GitHub                               |
+| -------------------------------- | ------------------------------------ |
+| Software                         | Service                              |
+| command line tool                | GUI                                  |
+| installed locally                | hosted on the web                    |
+| VCS to mange source code history | hosting service for GIT repositories |
+
+> GitHub uses Git as central tool for its service
+
 # Architecture {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
 # Architecture - directed acyclic graph
@@ -129,7 +142,6 @@ width: 1280
 - Merge-Tools (meld)
 - ZSH-Plugin
 - Azure Devops (mit Git)
-- Unterschied Git/Github
 - Git-TFS-Plugin
 - Azure-Devops-Pipeline -> Github-Action Converter
 
@@ -168,6 +180,11 @@ width: 1280
 
 # Merge: Subtree
 
+# Undoing commits
+
+- git reset...
+- git revert...
+
 ![](assets/Subtree-Merge-Strategy.png)
 
 # Best practices {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
@@ -195,8 +212,6 @@ git log --decorate --graph --oneline --all
 - .gitignore
 - Pull-Requests
 - Cherry-Picking
-- Reset
-- Revert
 - Staging
 - Stashing
 - Squashing

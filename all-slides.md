@@ -6,9 +6,26 @@
 
 <!-- section 1 -->
 
-# Architecture {#architecture .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# Git vs. GitHub {#git-vs.-github .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 <!-- section 2 -->
+
+# Git vs. GitHub
+
+  Git                                GitHub
+  ---------------------------------- --------------------------------------
+  Software                           Service
+  command line tool                  GUI
+  installed locally                  hosted on the web
+  VCS to mange source code history   hosting service for GIT repositories
+
+> GitHub uses Git as central tool for its service
+
+<!-- section 3 -->
+
+# Architecture {#architecture .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+
+<!-- section 4 -->
 
 # Architecture - directed acyclic graph
 
@@ -16,7 +33,7 @@
 
 ![](assets/directed_acyclic_graph.png)
 
-<!-- section 3 -->
+<!-- section 5 -->
 
 # Architecture - 3-Tier-Architecture
 
@@ -25,7 +42,7 @@
 -   Files from staging area will move to Git Repository with commit
 -   Useful if you do not want a commit for every added file, but e.g. want a changeset containing 5 added files
 
-<!-- section 4 -->
+<!-- section 6 -->
 
 # Architecture - Git-Workflow
 
@@ -33,7 +50,7 @@
 
 > Recommended sequence: commit → pull → push
 
-<!-- section 5 -->
+<!-- section 7 -->
 
 # Architecture - Distributed Development
 
@@ -42,7 +59,7 @@
 -   Advantage: No network connection needed for commits.
 -   Checkins in local repository also work if production branch in SVN is broken.
 
-<!-- section 6 -->
+<!-- section 8 -->
 
 # Architecture - Creating a new repository
 
@@ -54,7 +71,7 @@
 
 ![HEAD is a reference to the checked out commit](assets/git-folder.png)
 
-<!-- section 7 -->
+<!-- section 9 -->
 
 # Differences to TFS
 
@@ -68,20 +85,20 @@
   branches are folders in TFS folder hierarchy   private local branches possible
   --------------------------------------------------------------------------------
 
-<!-- section 8 -->
+<!-- section 10 -->
 
 # Migration form TFS to Git
 
 -   git-tfs
 
-<!-- section 9 -->
+<!-- section 11 -->
 
 # Git-Configuration
 
 -   can be local for git-repository within `.git/config`
 -   can be global via global flag: `git config --global ...`
 
-<!-- section 10 -->
+<!-- section 12 -->
 
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
@@ -91,13 +108,13 @@
 
 -   Trunk-Based Development
 
-<!-- section 11 -->
+<!-- section 13 -->
 
 # Branching Strategies: GitFlow
 
 ![](assets/gitflow.webp)
 
-<!-- section 12 -->
+<!-- section 14 -->
 
 # Branching Strategies: GitFlow
 
@@ -114,13 +131,13 @@
 -   Heavy maintenance workload for released versions
 -   structured and specific development path conflict with agile iterative approach
 
-<!-- section 13 -->
+<!-- section 15 -->
 
 # Branching Strategies: Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 14 -->
+<!-- section 16 -->
 
 # Branching Strategies: GithubFlow
 
@@ -136,24 +153,24 @@
 -   This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
 -   release preparation and bug fixes happen both in master branch -\> requires attention
 
-<!-- section 15 -->
+<!-- section 17 -->
 
 # Branching Strategies: Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
-<!-- section 16 -->
+<!-- section 18 -->
 
 # Tooling
 
-<!-- section 17 -->
+<!-- section 19 -->
 
 # Tooling - IDEs
 
 -   VisualStudio
 -   VS-Code
 
-<!-- section 18 -->
+<!-- section 20 -->
 
 # Tooling - Other
 
@@ -162,15 +179,14 @@
 -   Merge-Tools (meld)
 -   ZSH-Plugin
 -   Azure Devops (mit Git)
--   Unterschied Git/Github
 -   Git-TFS-Plugin
 -   Azure-Devops-Pipeline -\> Github-Action Converter
 
-<!-- section 19 -->
+<!-- section 21 -->
 
 # Working with Git {#working-with-git .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 20 -->
+<!-- section 22 -->
 
 # Merge strategies
 
@@ -183,47 +199,54 @@
 -   Resolve
 -   Subtree
 
-<!-- section 21 -->
+<!-- section 23 -->
 
 # Merge: Fast Forward (Rebase)
 
 ![](assets/Fast-Forward-Merge.png)
 
-<!-- section 22 -->
+<!-- section 24 -->
 
 # Merge: Recursive
 
 ![](assets/Recursive-Merge.png)
 
-<!-- section 23 -->
+<!-- section 25 -->
 
 # Merge: Ours
 
 ![](assets/Ours-Merge.png)
 
-<!-- section 24 -->
+<!-- section 26 -->
 
 # Merge: Octopus
 
 ![](assets/Octopus-Merge-Strategy.png)
 
-<!-- section 25 -->
+<!-- section 27 -->
 
 # Merge: Resolve
 
 ![](assets/Resolve-Merge-Strategy.png)
 
-<!-- section 26 -->
+<!-- section 28 -->
 
 # Merge: Subtree
 
+<!-- section 29 -->
+
+# Undoing commits
+
+-   git reset...
+-   git revert...
+
 ![](assets/Subtree-Merge-Strategy.png)
 
-<!-- section 27 -->
+<!-- section 30 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 28 -->
+<!-- section 31 -->
 
 # Best practices
 
@@ -234,11 +257,11 @@
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
 
-<!-- section 29 -->
+<!-- section 32 -->
 
 # Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 30 -->
+<!-- section 33 -->
 
 # Important commands: showing the history
 
@@ -252,8 +275,6 @@ git log --decorate --graph --oneline --all
 -   .gitignore
 -   Pull-Requests
 -   Cherry-Picking
--   Reset
--   Revert
 -   Staging
 -   Stashing
 -   Squashing
@@ -267,11 +288,11 @@ git log --decorate --graph --oneline --all
 -   Git-LFS
 -   Linting von Commits/Commit-Messages (z.B. mittels Husky.Net)
 
-<!-- section 31 -->
+<!-- section 34 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 32 -->
+<!-- section 35 -->
 
 # GitOps - What is GitOps?
 
@@ -282,7 +303,7 @@ git log --decorate --graph --oneline --all
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 33 -->
+<!-- section 36 -->
 
 # GitOps - Pipeline
 
@@ -297,13 +318,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 34 -->
+<!-- section 37 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 35 -->
+<!-- section 38 -->
 
 # Ressources
 
@@ -311,7 +332,7 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Githug
 -   learngitbranching.js.org
 
-<!-- section 36 -->
+<!-- section 39 -->
 
 # cool looking {#cool-looking .light-on-dark bg="white;assets/paperclip.gif" rx="-1" ry="0"}
 
@@ -319,7 +340,7 @@ leverages battle-proven`</br>`{=html}HTML5 presentation frameworks:
 
 revealjs • impressjs
 
-<!-- section 37 -->
+<!-- section 40 -->
 
 # asciiart (ditaa) {#asciiart-ditaa .ltr rx="0" ry="1"}
 
@@ -353,7 +374,7 @@ revealjs • impressjs
 +-----------------------------+
 ```
 
-<!-- section 38 -->
+<!-- section 41 -->
 
 # asciiart (a2s) {#asciiart-a2s .ltr}
 
@@ -373,7 +394,7 @@ revealjs • impressjs
 [1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
 ```
 
-<!-- section 39 -->
+<!-- section 42 -->
 
 # asciiart (sketchy) {#asciiart-sketchy .ltr}
 
@@ -398,7 +419,7 @@ revealjs • impressjs
 [1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
 ```
 
-<!-- section 40 -->
+<!-- section 43 -->
 
 # asciiart (svgbob) {#asciiart-svgbob .ltr rx="-1" ry="0"}
 
@@ -414,7 +435,7 @@ revealjs • impressjs
   v1 *------------------* v2
 ```
 
-<!-- section 41 -->
+<!-- section 44 -->
 
 # asciiart (mermaid) {#asciiart-mermaid .ltr}
 
@@ -423,7 +444,7 @@ graph LR
    a --> b & c--> d
 ```
 
-<!-- section 42 -->
+<!-- section 45 -->
 
 # asciiart (plantuml) {#asciiart-plantuml .ltr}
 
@@ -435,7 +456,7 @@ Bob->Alice : ??
 @enduml
 ```
 
-<!-- section 43 -->
+<!-- section 46 -->
 
 # asciiart (graphviz) {#asciiart-graphviz .ltr}
 
@@ -450,7 +471,7 @@ digraph G {
 }
 ```
 
-<!-- section 44 -->
+<!-- section 47 -->
 
 # charts (vega-lite) {#charts-vega-lite .ltr rx="0" ry="-1"}
 
