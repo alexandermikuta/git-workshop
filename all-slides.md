@@ -395,14 +395,27 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Branching-and-Merging
 
 <!-- section 40 -->
 
-# Merging vs. Rebasing vs. Cherry-Picking
+# Merging vs. Rebasing vs. Cherry-Picking {#merging-vs.-rebasing-vs.-cherry-picking .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+
+<!-- section 41 -->
+
+# Cherry-Picking
+
+> Cherry picking can cause duplicate commits -\> often merges are better
+
+Use cases for Cherry-Picking:
+
+-   Team Collaboration, e.g. backend create data-structure and frontend-dev cherry-picks it
+-   Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users
+
+Usage: `git cherry-pick commitSha`
 
 https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
 https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
 https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching
 
-<!-- section 41 -->
+<!-- section 42 -->
 
 # Undoing commits
 
@@ -425,43 +438,43 @@ If you want to add e.g. additional files to your previous commit you can use `g
 
 ![](assets/Subtree-Merge-Strategy.png)
 
-<!-- section 42 -->
+<!-- section 43 -->
 
 # Git Replace
 
 https://git-scm.com/book/en/v2/Git-Tools-Replace
 
-<!-- section 43 -->
+<!-- section 44 -->
 
 # Signing Commits/Tags
 
 https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
 
-<!-- section 44 -->
+<!-- section 45 -->
 
 # Rewriting History
 
 https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
 
-<!-- section 45 -->
+<!-- section 46 -->
 
 # Staging
 
 https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
 
-<!-- section 46 -->
+<!-- section 47 -->
 
 # Stashing
 
 https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
 
-<!-- section 47 -->
+<!-- section 48 -->
 
 # Submodules
 
 https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
-<!-- section 48 -->
+<!-- section 49 -->
 
 # Debugging with Git
 
@@ -474,7 +487,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
     -   when finished use `git bisect reset`
 -   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
-<!-- section 49 -->
+<!-- section 50 -->
 
 # Git-Hooks
 
@@ -486,11 +499,11 @@ https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
 
 Husky.NET
 
-<!-- section 50 -->
+<!-- section 51 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 51 -->
+<!-- section 52 -->
 
 # Best practices
 
@@ -501,11 +514,11 @@ Husky.NET
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
 
-<!-- section 52 -->
+<!-- section 53 -->
 
 # Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 53 -->
+<!-- section 54 -->
 
 # Important commands: showing the history
 
@@ -525,11 +538,11 @@ git log --decorate --graph --oneline --all
 -   Deletion von Elementen -\> Teasern
 -   Git-LFS
 
-<!-- section 54 -->
+<!-- section 55 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 55 -->
+<!-- section 56 -->
 
 # GitOps - What is GitOps?
 
@@ -540,7 +553,7 @@ git log --decorate --graph --oneline --all
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 56 -->
+<!-- section 57 -->
 
 # GitOps - Pipeline
 
@@ -555,13 +568,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 57 -->
+<!-- section 58 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 58 -->
+<!-- section 59 -->
 
 # Ressources
 

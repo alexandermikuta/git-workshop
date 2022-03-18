@@ -318,7 +318,18 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Branching-and-Merging
 
-# Merging vs. Rebasing vs. Cherry-Picking
+# Merging vs. Rebasing vs. Cherry-Picking {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+
+# Cherry-Picking
+
+> Cherry picking can cause duplicate commits -> often merges are better
+
+Use cases for Cherry-Picking:
+
+- Team Collaboration, e.g. backend create data-structure and frontend-dev cherry-picks it
+- Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users
+
+Usage: `git cherry-pick commitSha`
 
 https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
 https://git-scm.com/book/en/v2/Git-Branching-Rebasing

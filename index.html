@@ -451,8 +451,20 @@ When you specify a subtree merge, Git is often smart enough to figure out that o
 <h1>Mergetool</h1>
 <p>https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Branching-and-Merging</p>
 </section>
-<section id="merging-vs.-rebasing-vs.-cherry-picking" class="level1">
-<h1>Merging vs. Rebasing vs. Cherry-Picking</h1>
+<section id="merging-vs.-rebasing-vs.-cherry-picking" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
+<h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">Merging vs. Rebasing vs. Cherry-Picking</h1>
+</section>
+<section id="cherry-picking" class="level1">
+<h1>Cherry-Picking</h1>
+<blockquote>
+<p>Cherry picking can cause duplicate commits -&gt; often merges are better</p>
+</blockquote>
+<p>Use cases for Cherry-Picking:</p>
+<ul>
+<li>Team Collaboration, e.g. backend create data-structure and frontend-dev cherry-picks it</li>
+<li>Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users</li>
+</ul>
+<p>Usage: <code>git cherry-pick commitSha</code></p>
 <p>https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
 https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
