@@ -314,9 +314,10 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 > The idea of the subtree merge is that you have two projects, and one of the projects maps to a subdirectory of the other one.
 > When you specify a subtree merge, Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
-# Mergetool
+# Mergetool & Difftool
 
-https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Branching-and-Merging
+- `git mergetool` opens the merge tool defined in git-config (e.g. meld)
+- `git diff Commit1sha Commit2sha` opens the diff tool defined in git-config
 
 # Merging vs. Rebasing vs. Cherry-Picking {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
@@ -377,6 +378,8 @@ https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
 
 https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
 
+# Squashing
+
 # Submodules
 
 https://git-scm.com/book/en/v2/Git-Tools-Submodules
@@ -429,7 +432,6 @@ git log --decorate --graph --oneline --all
 
 - Blobs
 - Pull-Requests
-- Squashing
 - Deletion von Elementen -> Teasern
 - Git-LFS
 
