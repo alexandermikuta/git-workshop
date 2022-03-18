@@ -327,11 +327,9 @@ Showing the history:
 
 # Merge strategies
 
-https://www.geeksforgeeks.org/merge-strategies-in-git/
-
 > If not specified explicitly Git will automatically choose a strategy based on the branches provided for merging
 
-- **Fast Forward (Rebase)**
+- **Fast Forward**
 - **Recursive**
 - Ours
 - Octopus
@@ -342,13 +340,20 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 ![](assets/Fast-Forward-Merge.png)
 
+- most commonly used merge strategy. history is just one straight line.
+- No new merges on the master between branch creation and merge to master.
+
 # Merge: Recursive
 
 ![](assets/Recursive-Merge.png)
 
+- New commits on master before branch is merged back to master
+
 # Merge: Ours
 
 ![](assets/Ours-Merge.png)
+
+- resolves any number of heads &rarr; resulting tree of merge is that of the current branch head ignoring all changes from other branches
 
 # Merge: Octopus
 
@@ -356,15 +361,14 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 ![](assets/Octopus-Merge-Strategy.png)
 
-> Resolves cases with more than two heads. It is primarily used for bundling topic branch heads together
-
-> Linus Torvalds was not happy about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
+- Resolves cases with more than two heads. It is primarily used for bundling topic branch heads together
+- Linus Torvalds was not happy about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
 
 # Merge: Resolve
 
 `git merge -s resolve`
 
-> Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.
+- Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.
 
 ![](assets/Resolve-Merge-Strategy.png)
 
@@ -374,7 +378,7 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 ![](assets/Subtree-Merge-Strategy.png)
 
-> Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
+- Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
 # Mergetool & Difftool
 
