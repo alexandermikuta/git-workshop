@@ -203,9 +203,8 @@
 <li><p>each line in .gitignore specifies a pattern</p></li>
 </ul>
 </section>
-<section id="gitignore-1" class="level1">
-<h1>.gitignore</h1>
-<p>Pattern format:</p>
+<section id="gitignore---patterns" class="level1">
+<h1>.gitignore - Patterns</h1>
 <ul>
 <li><code>#</code> serves as a comment</li>
 <li><code>!</code> negates a pattern</li>
@@ -227,49 +226,56 @@
 <section id="tooling-1" class="level1">
 <h1>Tooling</h1>
 <ul>
-<li>VisualStudio</li>
-<li>VS-Code</li>
-<li>Clients (Github Desktop, SourceTree, SmartGit, GitKraken, GitTower)</li>
-<li>Explorer-Integration (TortoiseGit)</li>
-<li>Merge-Tools (meld)</li>
-<li>ZSH-Plugin</li>
-<li>Azure Devops (mit Git)</li>
+<li>IDEs: VisualStudio, VS-Code</li>
+<li>Clients: Github Desktop, SourceTree, SmartGit, GitKraken, GitTower</li>
+<li>Explorer-Integration: TortoiseGit</li>
+<li>Merge-Tools: meld, kdiff3</li>
+<li>Shells: ZSH+Plugin</li>
 <li>Azure-Devops-Pipeline -&gt; Github-Action Converter</li>
 </ul>
 </section>
-<section id="branching" class="level1">
+<section id="branching" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
+<h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">Branching</h1>
+</section>
+<section id="branching-1" class="level1">
+<h1>Branching</h1>
+<p>Creating a new branch: <code>git branch &lt;branchname&gt;</code></p>
+<blockquote>
+<p>branches are very lightweight in Git: You can have many and switch very fast.</p>
+</blockquote>
+</section>
+<section id="branching-2" class="level1">
+<h1>Branching</h1>
+<p>list branches with <code>git branch</code> or <code>git branch -v</code></p>
+<p>with <code>--merged</code> or <code>--no-merged</code> option you can filter branches that you have/not merged into the branch you are currently on</p>
+</section>
+<section id="branching-3" class="level1">
 <h1>Branching</h1>
 <ul>
-<li><p>list branches with <code>git branch</code> or <code>git branch -v</code></p>
-<ul>
-<li>with <code>--merged</code> or <code>--no-merged</code> option you can filter branches that you have/not merged into the branch you are currently on</li>
-</ul></li>
-<li><p>Creating a new branch: <code>git branch &lt;branchname&gt;</code></p></li>
-<li><p>to rename a branch use <code>git branch --move bad-branch-name corrected-branch-name</code></p>
+<li>rename branch with <code>git branch --move bad-branch-name corrected-branch-name</code>
 <ul>
 <li>push it with <code>git push --set-upstream origin corrected-branch-name</code></li>
 <li>delete bad branch on remote with <code>git push origin --delete bad-branch-name</code></li>
 </ul></li>
 </ul>
 </section>
-<section id="branching-1" class="level1">
+<section id="branching-4" class="level1">
 <h1>Branching</h1>
 <figure>
 <img src="assets/branch1.png" alt="" /><figcaption>new branch “testing” created</figcaption>
 </figure>
 </section>
-<section id="branching-2" class="level1">
+<section id="branching-5" class="level1">
 <h1>Branching</h1>
 <figure>
 <img src="assets/branch2.png" alt="" /><figcaption>added commit to branch “testing”</figcaption>
 </figure>
 </section>
-<section id="branching-3" class="level1">
+<section id="branching-6" class="level1">
 <h1>Branching</h1>
 <figure>
 <img src="assets/branch3.png" alt="" /><figcaption>switched back to branch “master”</figcaption>
 </figure>
-<p>https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows</p>
 </section>
 <section id="branching-strategies" class="level1 light-on-dark" data-rx="1" data-bgcss="sea-gradient" data-state="sea-gradient">
 <h1 class="light-on-dark" data-rx="1" data-bgcss="sea-gradient" data-state="sea-gradient">Branching Strategies</h1>

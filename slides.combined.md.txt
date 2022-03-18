@@ -107,9 +107,7 @@ Typical settings:
 
 - each line in .gitignore specifies a pattern
 
-# .gitignore
-
-Pattern format:
+# .gitignore - Patterns
 
 - `#` serves as a comment
 - `!` negates a pattern
@@ -126,23 +124,30 @@ Pattern format:
 
 # Tooling
 
-- VisualStudio
-- VS-Code
-- Clients (Github Desktop, SourceTree, SmartGit, GitKraken, GitTower)
-- Explorer-Integration (TortoiseGit)
-- Merge-Tools (meld)
-- ZSH-Plugin
-- Azure Devops (mit Git)
+- IDEs: VisualStudio, VS-Code
+- Clients: Github Desktop, SourceTree, SmartGit, GitKraken, GitTower
+- Explorer-Integration: TortoiseGit
+- Merge-Tools: meld, kdiff3
+- Shells: ZSH+Plugin
 - Azure-Devops-Pipeline -> Github-Action Converter
+
+# Branching {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
 # Branching
 
-- list branches with `git branch` or `git branch -v`
-  - with `--merged` or `--no-merged` option you can filter branches that you have/not merged into the branch you are currently on
+Creating a new branch: `git branch <branchname>`
 
-- Creating a new branch: `git branch <branchname>`
+> branches are very lightweight in Git: You can have many and switch very fast.
 
-- to rename a branch use `git branch --move bad-branch-name corrected-branch-name`
+# Branching
+
+list branches with `git branch` or `git branch -v`
+
+with `--merged` or `--no-merged` option you can filter branches that you have/not merged into the branch you are currently on
+
+# Branching
+
+- rename branch with `git branch --move bad-branch-name corrected-branch-name`
   - push it with `git push --set-upstream origin corrected-branch-name`
   - delete bad branch on remote with `git push origin --delete bad-branch-name`
 
@@ -157,8 +162,6 @@ Pattern format:
 # Branching
 
 ![switched back to branch "master"](assets/branch3.png)
-
-https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
 
 # Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
