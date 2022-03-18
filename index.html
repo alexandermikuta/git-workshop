@@ -98,17 +98,9 @@
 </blockquote>
 <p><img src="assets/directed_acyclic_graph.png" /></p>
 </section>
-<section id="architecture---3-tier-architecture" class="level1">
-<h1>Architecture - 3-Tier-Architecture</h1>
-<p><img src="assets/3tier.png" style="width:60.0%;height:60.0%" /></p>
-<ul>
-<li>Files from staging area will move to Git Repository with commit</li>
-<li>Useful if you do not want a commit for every added file, but e.g. want a changeset containing 5 added files</li>
-</ul>
-</section>
 <section id="architecture---git-workflow" class="level1">
 <h1>Architecture - Git-Workflow</h1>
-<p><img src="assets/git-workflow.png" style="width:70.0%;height:70.0%" /></p>
+<p><img src="assets/git-workflow.png" style="width:50.0%;height:50.0%" /></p>
 <blockquote>
 <p>Recommended sequence: commit → pull → push</p>
 </blockquote>
@@ -126,7 +118,7 @@
 <blockquote>
 <p>When you run <code>git init</code> in a folder, Git creates the <code>.git</code> directory</p>
 </blockquote>
-<p><img src="assets/file-tree.png" /></p>
+<p><img src="assets/file-tree.png" style="width:200.0%;height:200.0%" /></p>
 <blockquote>
 <p>This <code>.git</code> directory contains your local repository data</p>
 </blockquote>
@@ -134,11 +126,11 @@
 <img src="assets/git-folder.png" alt="" /><figcaption>HEAD is a reference to the checked out commit</figcaption>
 </figure>
 </section>
+<section id="gittfs" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
+<h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">GIT/TFS</h1>
+</section>
 <section id="differences-to-tfs" class="level1">
 <h1>Differences to TFS</h1>
-<blockquote>
-<p>Git is recommended over TFS by Microsoft itself for new projects!</p>
-</blockquote>
 <table>
 <colgroup>
 <col style="width: 58%" />
@@ -161,30 +153,39 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>Git is recommended over TFS by Microsoft itself for new projects!</p>
+</blockquote>
 </section>
 <section id="migration-form-tfs-to-git" class="level1">
 <h1>Migration form TFS to Git</h1>
 <ul>
-<li>history not needed: <code>git init</code> on current files</li>
-<li>history is needed: http://git-tfs.com/
+<li><p>history not needed: <code>git init</code> on current files</p></li>
+<li><p>history is needed: http://git-tfs.com/</p>
 <ul>
 <li><code>git tfs clone ...</code> instead of the usual <code>git clone ...</code></li>
 <li>git-tfs works as two-way bridge so changes can also be pushed to TFS: <code>git tfs checkintool</code></li>
 </ul></li>
 </ul>
+</section>
+<section id="migration-form-tfs-to-git-1" class="level1">
+<h1>Migration form TFS to Git</h1>
 <p>Plan your migration carefully:</p>
 <ul>
-<li>usually large binary data is not put into Git -&gt; cleanup before migration</li>
-<li>for big projects multiple Git-Repositories could be created and included via Submodule/Subtree</li>
+<li><p>usually large binary data is not put into Git -&gt; cleanup before migration</p></li>
+<li><p>for big projects multiple Git-Repositories could be created and included via Submodule/Subtree</p></li>
 </ul>
 </section>
 <section id="git-configuration" class="level1">
 <h1>Git-Configuration</h1>
 <ul>
-<li>can be local for git-repository within <code>.git/config</code></li>
-<li>can be global via global flag <code>git config --global ...</code></li>
-<li>can be accessed via <code>git config --list</code></li>
+<li><p>can be local for git-repository within <code>.git/config</code></p></li>
+<li><p>can be global via global flag <code>git config --global ...</code></p></li>
+<li><p>can be accessed via <code>git config --list</code></p></li>
 </ul>
+</section>
+<section id="git-configuration-1" class="level1">
+<h1>Git-Configuration</h1>
 <p>Typical settings:</p>
 <ul>
 <li><code>git config --global core.editor "code --wait"</code></li>
@@ -197,10 +198,13 @@
 <section id="gitignore" class="level1">
 <h1>.gitignore</h1>
 <ul>
-<li>.gitinore-File specifies intentionally untracked files that Git should ignore</li>
-<li>files alread track are not affected!</li>
-<li>each line in .gitignore specifies a pattern</li>
+<li><p>.gitinore-File specifies intentionally untracked files that Git should ignore</p></li>
+<li><p>files alread track are not affected!</p></li>
+<li><p>each line in .gitignore specifies a pattern</p></li>
 </ul>
+</section>
+<section id="gitignore-1" class="level1">
+<h1>.gitignore</h1>
 <p>Pattern format:</p>
 <ul>
 <li><code>#</code> serves as a comment</li>
@@ -217,19 +221,14 @@
 <li><code>/**/</code> matches zero or more directories, e.g. <code>foo/**/foo</code></li>
 </ul>
 </section>
-<section id="tooling" class="level1">
-<h1>Tooling</h1>
+<section id="tooling" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
+<h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">Tooling</h1>
 </section>
-<section id="tooling---ides" class="level1">
-<h1>Tooling - IDEs</h1>
+<section id="tooling-1" class="level1">
+<h1>Tooling</h1>
 <ul>
 <li>VisualStudio</li>
 <li>VS-Code</li>
-</ul>
-</section>
-<section id="tooling---other" class="level1">
-<h1>Tooling - Other</h1>
-<ul>
 <li>Clients (Github Desktop, SourceTree, SmartGit, GitKraken, GitTower)</li>
 <li>Explorer-Integration (TortoiseGit)</li>
 <li>Merge-Tools (meld)</li>
@@ -241,12 +240,12 @@
 <section id="branching" class="level1">
 <h1>Branching</h1>
 <ul>
-<li>list branches with <code>git branch</code> or <code>git branch -v</code>
+<li><p>list branches with <code>git branch</code> or <code>git branch -v</code></p>
 <ul>
 <li>with <code>--merged</code> or <code>--no-merged</code> option you can filter branches that you have/not merged into the branch you are currently on</li>
 </ul></li>
-<li>Creating a new branch: <code>git branch &lt;branchname&gt;</code></li>
-<li>to rename a branch use <code>git branch --move bad-branch-name corrected-branch-name</code>
+<li><p>Creating a new branch: <code>git branch &lt;branchname&gt;</code></p></li>
+<li><p>to rename a branch use <code>git branch --move bad-branch-name corrected-branch-name</code></p>
 <ul>
 <li>push it with <code>git push --set-upstream origin corrected-branch-name</code></li>
 <li>delete bad branch on remote with <code>git push origin --delete bad-branch-name</code></li>
@@ -368,7 +367,7 @@ https://www.atlassian.com/de/git/tutorials/making-a-pull-request</p>
 <section id="git-aliases" class="level1">
 <h1>Git Aliases</h1>
 <blockquote>
-<p>can simplify your Git-experience by settig custom aliases that are easier/shorter to remember</p>
+<p>“Can simplify your Git-experience by settig custom aliases that are easier/shorter”</p>
 </blockquote>
 <p>e.g. <code>git config --global alias.unstage 'reset HEAD --'</code> enables usage of <code>git unstage fileA</code> instead of <code>git reset HEAD -- fileA</code></p>
 </section>
@@ -377,20 +376,24 @@ https://www.atlassian.com/de/git/tutorials/making-a-pull-request</p>
 <blockquote>
 <p>A git submodule is a record within a host git repository that points to a specific commit in another external repository</p>
 </blockquote>
+<p><code>git submodule add https://bitbucket.org/somerepo/awesomelibrary</code></p>
+</section>
+<section id="submodules-1" class="level1">
+<h1>Submodules</h1>
 <ul>
 <li>Submodules do not track git refs or branches and are not automatically updated when the host repository is updated</li>
 <li>If you need to maintain a strict version management over your external dependencies, it can make sense to use git submodules</li>
-<li>When an external component or subproject is changing too fast or upcoming changes will break the API, you can lock the code to a specific commit for your own safety</li>
-<li>if code in the submodule-repo gets updated you have to take care to update your submodule-reference to the latest version</li>
 </ul>
-<p><code>git submodule add https://bitbucket.org/somerepo/awesomelibrary</code></p>
 </section>
 <section id="subtrees" class="level1">
 <h1>Subtrees</h1>
 <blockquote>
 <p>Lets you nest one repository into anothers as sub-directory</p>
 </blockquote>
-<p><img src="assets/BeforeAfterGitSubtreeDiagram.png" /></p>
+<p><img src="assets/BeforeAfterGitSubtreeDiagram.png" style="width:80.0%;height:80.0%" /></p>
+</section>
+<section id="subtrees-1" class="level1">
+<h1>Subtrees</h1>
 <p><strong>Pros</strong></p>
 <ul>
 <li>The sub-project’s code is available right after the clone of the super project is done</li>
@@ -453,8 +456,7 @@ https://www.atlassian.com/de/git/tutorials/making-a-pull-request</p>
 <p><code>git merge -s subtree</code></p>
 <p><img src="assets/Subtree-Merge-Strategy.png" /></p>
 <blockquote>
-<p>The idea of the subtree merge is that you have two projects, and one of the projects maps to a subdirectory of the other one.
-When you specify a subtree merge, Git is often smart enough to figure out that one is a subtree of the other and merge appropriately</p>
+<p>Git is often smart enough to figure out that one is a subtree of the other and merge appropriately</p>
 </blockquote>
 </section>
 <section id="mergetool-difftool" class="level1">
@@ -472,12 +474,15 @@ When you specify a subtree merge, Git is often smart enough to figure out that o
 <blockquote>
 <p>Cherry picking can cause duplicate commits -&gt; often merges are better</p>
 </blockquote>
+<p>Usage: <code>git cherry-pick commitSha</code></p>
+</section>
+<section id="cherry-picking-1" class="level1">
+<h1>Cherry-Picking</h1>
 <p>Use cases for Cherry-Picking:</p>
 <ul>
 <li>Team Collaboration, e.g. backend create data-structure and frontend-dev cherry-picks it</li>
 <li>Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users</li>
 </ul>
-<p>Usage: <code>git cherry-pick commitSha</code></p>
 <p>https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
 https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
@@ -501,7 +506,6 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching</p>
 <p>HEAD points to last commit in branch: <code>git reset HEAD~&lt;no-of-commits&gt;</code></p>
 </blockquote>
 <p>If you want to add e.g. additional files to your previous commit you can use <code>git commit --amend</code> instead of creating an additional changeset</p>
-<p><img src="assets/Subtree-Merge-Strategy.png" /></p>
 </section>
 <section id="git-replace" class="level1">
 <h1>Git Replace</h1>
@@ -526,7 +530,7 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching</p>
 <section id="squashing" class="level1">
 <h1>Squashing</h1>
 </section>
-<section id="submodules-1" class="level1">
+<section id="submodules-2" class="level1">
 <h1>Submodules</h1>
 <p>https://git-scm.com/book/en/v2/Git-Tools-Submodules</p>
 </section>

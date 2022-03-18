@@ -31,22 +31,15 @@ width: 1280
 
 ![](assets/directed_acyclic_graph.png)
 
-# Architecture - 3-Tier-Architecture
-
-![](assets/3tier.png){ height=60% width=60% }
-
-- Files from staging area will move to Git Repository with commit
-- Useful if you do not want a commit for every added file, but e.g. want a changeset containing 5 added files
-
 # Architecture - Git-Workflow
 
-![](assets/git-workflow.png){ height=70% width=70% }
+![](assets/git-workflow.png){ height=50% width=50% }
 
 > Recommended sequence: commit &rarr; pull &rarr; push
 
 # Architecture - Distributed Development
 
-![Each developer gets its own local repository](assets/distributed_dev.svg){ height=60% width=60% }
+![Each developer has its own local repository](assets/distributed_dev.svg){ height=50% width=50% }
 
 - Advantage: No network connection needed for commits.
 - Checkins in local repository also work if production branch in SVN is broken.
@@ -55,38 +48,48 @@ width: 1280
 
 > When you run `git init` in a folder, Git creates the `.git` directory
 
-![](assets/file-tree.png)
+![](assets/file-tree.png){ height=200% width=200% }
 
 > This `.git` directory contains your local repository data
 
 ![HEAD is a reference to the checked out commit](assets/git-folder.png)
 
-# Differences to TFS
+# GIT/TFS {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
-> Git is recommended over TFS by Microsoft itself for new projects!
+# Differences to TFS
 
 | TFS                                          | Git                             |
 | -------------------------------------------- | ------------------------------- |
 | Centralised VCS                              | Distributed VCS                 |
 | branches are folders in TFS folder hierarchy | private local branches possible |
 
+> Git is recommended over TFS by Microsoft itself for new projects!
+
 # Migration form TFS to Git
 
 - history not needed: `git init` on current files
+
 - history is needed: http://git-tfs.com/
   - `git tfs clone ...` instead of the usual `git clone ...`
   - git-tfs works as two-way bridge so changes can also be pushed to TFS: `git tfs checkintool`
 
+# Migration form TFS to Git
+
 Plan your migration carefully:
 
 - usually large binary data is not put into Git -> cleanup before migration
+
 - for big projects multiple Git-Repositories could be created and included via Submodule/Subtree
 
 # Git-Configuration
 
 - can be local for git-repository within `.git/config`
+
 - can be global via global flag `git config --global ...`
+
 - can be accessed via `git config --list`
+
+# Git-Configuration
 
 Typical settings:
 
@@ -99,8 +102,12 @@ Typical settings:
 # .gitignore
 
 - .gitinore-File specifies intentionally untracked files that Git should ignore
+
 - files alread track are not affected!
+
 - each line in .gitignore specifies a pattern
+
+# .gitignore
 
 Pattern format:
 
@@ -115,15 +122,12 @@ Pattern format:
 - `/**` matches everything inside, e.g. `foo/**`
 - `/**/` matches zero or more directories, e.g. `foo/**/foo`
 
-# Tooling
+# Tooling {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
-# Tooling - IDEs
+# Tooling
 
 - VisualStudio
 - VS-Code
-
-# Tooling - Other
-
 - Clients (Github Desktop, SourceTree, SmartGit, GitKraken, GitTower)
 - Explorer-Integration (TortoiseGit)
 - Merge-Tools (meld)
@@ -135,7 +139,9 @@ Pattern format:
 
 - list branches with `git branch` or `git branch -v`
   - with `--merged` or `--no-merged` option you can filter branches that you have/not merged into the branch you are currently on
+
 - Creating a new branch: `git branch <branchname>`
+
 - to rename a branch use `git branch --move bad-branch-name corrected-branch-name`
   - push it with `git push --set-upstream origin corrected-branch-name`
   - delete bad branch on remote with `git push origin --delete bad-branch-name`
@@ -244,7 +250,7 @@ git log --decorate --graph --oneline --all
 
 # Git Aliases
 
-> can simplify your Git-experience by settig custom aliases that are easier/shorter to remember
+> "Can simplify your Git-experience by settig custom aliases that are easier/shorter"
 
 e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git unstage fileA` instead of `git reset HEAD -- fileA`
 
@@ -252,18 +258,20 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git u
 
 > A git submodule is a record within a host git repository that points to a specific commit in another external repository
 
+`git submodule add https://bitbucket.org/somerepo/awesomelibrary`
+
+# Submodules
+
 - Submodules do not track git refs or branches and are not automatically updated when the host repository is updated
 - If you need to maintain a strict version management over your external dependencies, it can make sense to use git submodules
-- When an external component or subproject is changing too fast or upcoming changes will break the API, you can lock the code to a specific commit for your own safety
-- if code in the submodule-repo gets updated you have to take care to update your submodule-reference to the latest version
-
-`git submodule add https://bitbucket.org/somerepo/awesomelibrary`
 
 # Subtrees
 
 > Lets you nest one repository into anothers as sub-directory
 
-![](assets/BeforeAfterGitSubtreeDiagram.png)
+![](assets/BeforeAfterGitSubtreeDiagram.png){ height=80% width=80% }
+
+# Subtrees
 
 **Pros**
 
@@ -324,8 +332,7 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 ![](assets/Subtree-Merge-Strategy.png)
 
-> The idea of the subtree merge is that you have two projects, and one of the projects maps to a subdirectory of the other one.
-> When you specify a subtree merge, Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
+> Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
 # Mergetool & Difftool
 
@@ -338,12 +345,14 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 > Cherry picking can cause duplicate commits -> often merges are better
 
+Usage: `git cherry-pick commitSha`
+
+# Cherry-Picking
+
 Use cases for Cherry-Picking:
 
 - Team Collaboration, e.g. backend create data-structure and frontend-dev cherry-picks it
 - Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users
-
-Usage: `git cherry-pick commitSha`
 
 https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
 https://git-scm.com/book/en/v2/Git-Branching-Rebasing
@@ -368,8 +377,6 @@ From public repository:
 > HEAD points to last commit in branch: `git reset HEAD~<no-of-commits>`
 
 If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
-
-![](assets/Subtree-Merge-Strategy.png)
 
 # Git Replace
 
