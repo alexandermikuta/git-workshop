@@ -447,9 +447,16 @@ Setup:
 - add -s to your commit command: **`git commit -a -S -m 'Signed commit'`**
 - use -s instead of -a for tags: **`git tag -s v1.5 -m 'my signed 1.5 tag'`**
 
-# Stashing
+# Stashing/Cleaning
 
-https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
+> If you want switching branches, but not commit half-done work you can use stashing
+
+- **`git stash`**
+- **`git stash list`**
+- **`git stash apply`**
+
+- New branch from stash: **`git stash branch testchanges`**
+- clean working dir without stashing: **`git clean`**
 
 # Debugging with Git
 
