@@ -169,6 +169,8 @@ with `--merged` or `--no-merged` option you can filter branches that you have/no
 
 - GithubFlow
 
+- GitlabFlow
+
 - Trunk-Based Development
 
 # Branching Strategies: GitFlow
@@ -176,6 +178,8 @@ with `--merged` or `--no-merged` option you can filter branches that you have/no
 ![](assets/gitflow.webp)
 
 # Branching Strategies: GitFlow
+
+https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
 
 **Pros**
 
@@ -196,6 +200,9 @@ with `--merged` or `--no-merged` option you can filter branches that you have/no
 
 # Branching Strategies: GithubFlow
 
+https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
+https://docs.github.com/en/get-started/quickstart/github-flow
+
 **Pros**
 
 - clear and simple collaboration rules
@@ -208,9 +215,23 @@ with `--merged` or `--no-merged` option you can filter branches that you have/no
 - This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
 - release preparation and bug fixes happen both in master branch -> requires attention
 
+# Branching Strategies: GitlabFlow and
+
+https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
+https://www.flagship.io/git-branching-strategies/
+
 # Branching Strategies: Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
+
+https://www.atlassian.com/de/continuous-delivery/continuous-integration/trunk-based-development
+https://trunkbaseddevelopment.com/
+
+# Branching Strategies: Trunk-Based-Development
+
+Recommended in: Accerlate: Building and Scaling High Performing Technology Organizations (Gez Humble, Gene Kim)
+
+![](assets/accelerate.jpg)
 
 # Working with Git {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
