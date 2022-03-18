@@ -37,36 +37,41 @@
 
 # Architecture - Git-Workflow
 
-![](assets/git-workflow.png){height="50%" width="50%"}
+![](assets/git-workflow.png){height="45%" width="45%"}
 
-> Recommended sequence: commit → pull → push
+Recommended sequence: commit → pull → push
 
 <!-- section 6 -->
 
 # Architecture - Distributed Development
 
-![Each developer has its own local repository](assets/distributed_dev.svg){height="50%" width="50%"}
-
--   Advantage: No network connection needed for commits.
--   Checkins in local repository also work if production branch in SVN is broken.
+![](assets/distributed_dev.svg){height="50%" width="50%"}
 
 <!-- section 7 -->
 
-# Architecture - Creating a new repository
+# Architecture - Distributed Development
 
-> When you run `git init` in a folder, Git creates the `.git` directory
+-   Each developer has its own full repository
 
-![](assets/file-tree.png){height="200%" width="200%"}
+-   Advantage: No network connection needed for commits.
 
-> This `.git` directory contains your local repository data
-
-![HEAD is a reference to the checked out commit](assets/git-folder.png)
+-   Checkins in local repository also work if production branch in SVN is broken.
 
 <!-- section 8 -->
 
-# GIT/TFS {#gittfs .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+# Architecture - Creating a new repository
+
+> When you run **`git init`** Git creates the **`.git`** directory which contains your local repository data
+
+![](assets/file-tree.png){height="200%" width="200%"}
+
+![HEAD is a reference to the checked out commit](assets/git-folder.png)
 
 <!-- section 9 -->
+
+# GIT/TFS {#gittfs .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+
+<!-- section 10 -->
 
 # Differences to TFS
 
@@ -80,28 +85,27 @@
 
 > Git is recommended over TFS by Microsoft itself for new projects!
 
-<!-- section 10 -->
+<!-- section 11 -->
 
 # Migration form TFS to Git
 
--   history not needed: `git init` on current files
+-   history not needed: **`git init`** on current files
 
 -   history is needed: http://git-tfs.com/
 
-    -   `git tfs clone ...` instead of the usual `git clone ...`
-    -   git-tfs works as two-way bridge so changes can also be pushed to TFS: `git tfs checkintool`
+    -   **`git tfs clone ...`** instead of the usual **`git clone ...`**
+    -   git-tfs works as two-way bridge so changes can also be pushed to TFS: **`git tfs checkintool`**
 
-<!-- section 11 -->
+<!-- section 12 -->
 
 # Migration form TFS to Git
 
 Plan your migration carefully:
 
--   usually large binary data is not put into Git -\> cleanup before migration
-
+-   cleanup before migration: e.g. large file → NuGet-Packages
 -   for big projects multiple Git-Repositories could be created and included via Submodule/Subtree
 
-<!-- section 12 -->
+<!-- section 13 -->
 
 # Git-Configuration
 
@@ -111,7 +115,7 @@ Plan your migration carefully:
 
 -   can be accessed via `git config --list`
 
-<!-- section 13 -->
+<!-- section 14 -->
 
 # Git-Configuration
 
@@ -123,36 +127,36 @@ Typical settings:
 -   `git config --global merge.tool kdiff3`
 -   `git config --global credential.helper cache`
 
-<!-- section 14 -->
+<!-- section 15 -->
 
 # .gitignore
 
--   .gitinore-File specifies intentionally untracked files that Git should ignore
+-   .gitinore-File specifies files that Git should ignore
 
--   files alread track are not affected!
+-   files already track are not affected!
 
 -   each line in .gitignore specifies a pattern
 
-<!-- section 15 -->
+<!-- section 16 -->
 
 # .gitignore - Patterns
 
 -   `#` serves as a comment
 -   `!` negates a pattern
 -   `/` directory separator
-    -   slash at beginning -\> relative to the .gitignore-directory, otherwise any level
-    -   slash at end -\> matches only directories, otherwise also files
+    -   slash at beginning → relative to the .gitignore-directory, otherwise any level
+    -   slash at end → matches only directories, otherwise also files
 -   `*` matches anything except slash
 -   `?` like `*` but only one character
 -   `**` match in all directories, e.g. `**/foo`
 -   `/**` matches everything inside, e.g. `foo/**`
 -   `/**/` matches zero or more directories, e.g. `foo/**/foo`
 
-<!-- section 16 -->
+<!-- section 17 -->
 
 # Tooling {#tooling .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 17 -->
+<!-- section 18 -->
 
 # Tooling
 
@@ -161,55 +165,56 @@ Typical settings:
 -   Explorer-Integration: TortoiseGit
 -   Merge-Tools: meld, kdiff3
 -   Shells: ZSH+Plugin
--   Azure-Devops-Pipeline -\> Github-Action Converter
-
-<!-- section 18 -->
-
-# Branching {#branching .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
+-   Azure-Devops-Pipeline → Github-Action Converter
+-   Git LFS
 
 <!-- section 19 -->
 
-# Branching
-
-Creating a new branch: `git branch <branchname>`
-
-> branches are very lightweight in Git: You can have many and switch very fast.
+# Branching {#branching .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
 <!-- section 20 -->
 
 # Branching
 
-list branches with `git branch` or `git branch -v`
+Creating a new branch: **`git branch <branchname>`**
 
-with `--merged` or `--no-merged` option you can filter branches that you have/not merged into the branch you are currently on
+> branches are very lightweight in Git: You can have many and switch very fast.
 
 <!-- section 21 -->
 
 # Branching
 
--   rename branch with `git branch --move bad-branch-name corrected-branch-name`
-    -   push it with `git push --set-upstream origin corrected-branch-name`
-    -   delete bad branch on remote with `git push origin --delete bad-branch-name`
+list branches with **`git branch`** or **`git branch -v`**
+
+with **`--merged`** or **`--no-merged`** option you can filter branches that you have/not merged into the branch you are currently on
 
 <!-- section 22 -->
 
 # Branching
 
-![new branch "testing" created](assets/branch1.png)
+-   rename branch with **`git branch --move bad-branch-name corrected-branch-name`**
+    -   push it with **`git push --set-upstream origin corrected-branch-name`**
+    -   delete bad branch on remote with **`git push origin --delete bad-branch-name`**
 
 <!-- section 23 -->
 
 # Branching
 
-![added commit to branch "testing"](assets/branch2.png)
+![new branch "testing" created](assets/branch1.png)
 
 <!-- section 24 -->
 
 # Branching
 
-![switched back to branch "master"](assets/branch3.png)
+![added commit to branch "testing"](assets/branch2.png)
 
 <!-- section 25 -->
+
+# Branching
+
+![switched back to branch "master"](assets/branch3.png)
+
+<!-- section 26 -->
 
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
@@ -221,13 +226,13 @@ with `--merged` or `--no-merged` option you can filter branches that you have/no
 
 -   Trunk-Based Development
 
-<!-- section 26 -->
+<!-- section 27 -->
 
 # GitFlow
 
 ![](assets/gitflow.webp)
 
-<!-- section 27 -->
+<!-- section 28 -->
 
 # GitFlow
 
@@ -246,13 +251,13 @@ https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
 -   Heavy maintenance workload for released versions
 -   structured and specific development path conflict with agile iterative approach
 
-<!-- section 28 -->
+<!-- section 29 -->
 
 # Github-Flow
 
 ![](assets/githubflow.webp)
 
-<!-- section 29 -->
+<!-- section 30 -->
 
 # GithubFlow
 
@@ -269,16 +274,16 @@ https://docs.github.com/en/get-started/quickstart/github-flow
 
 -   Speed comes at cost of less organized workflow in comparison to Git-Flow
 -   This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
--   release preparation and bug fixes happen both in master branch -\> requires attention
+-   release preparation and bug fixes happen both in master branch → requires attention
 
-<!-- section 30 -->
+<!-- section 31 -->
 
 # GitlabFlow
 
 https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 https://www.flagship.io/git-branching-strategies/
 
-<!-- section 31 -->
+<!-- section 32 -->
 
 # Trunk-Based-Development
 
@@ -287,7 +292,7 @@ https://www.flagship.io/git-branching-strategies/
 https://www.atlassian.com/de/continuous-delivery/continuous-integration/trunk-based-development
 https://trunkbaseddevelopment.com/
 
-<!-- section 32 -->
+<!-- section 33 -->
 
 # Trunk-Based-Development
 
@@ -295,17 +300,17 @@ Trunk-Based-Development is recommended in this book
 
 ![Accerlate: Building and Scaling High Performing Technology Organizations (Gez Humble, Gene Kim)](assets/accelerate.jpg)
 
-<!-- section 33 -->
+<!-- section 34 -->
 
 # Working with Git {#working-with-git .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 34 -->
+<!-- section 35 -->
 
 # Working with Remotes
 
 > "Remote repositories are versions of your project hosted on Internet or network somewhere"
 
-<!-- section 35 -->
+<!-- section 36 -->
 
 # Working with Remotes
 
@@ -318,14 +323,14 @@ Trunk-Based-Development is recommended in this book
 -   pulling from a remote: `git pull` (pull is a combination of `git fetch` and `git merge`)
 -   pushing to a remote: `git push origin master`
 
-<!-- section 36 -->
+<!-- section 37 -->
 
 # Pull-Request
 
 https://git-scm.com/docs/git-request-pull
 https://www.atlassian.com/de/git/tutorials/making-a-pull-request
 
-<!-- section 37 -->
+<!-- section 38 -->
 
 # Git log
 
@@ -335,7 +340,7 @@ https://www.atlassian.com/git/tutorials/git-log
 git log --decorate --graph --oneline --all
 ```
 
-<!-- section 38 -->
+<!-- section 39 -->
 
 # Tagging
 
@@ -348,7 +353,7 @@ git log --decorate --graph --oneline --all
 -   tags can be deleted with `git tag -d v1.9`
 -   to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
 
-<!-- section 39 -->
+<!-- section 40 -->
 
 # Git Aliases
 
@@ -358,7 +363,7 @@ git log --decorate --graph --oneline --all
 
 enables usage of **`git unstage fileA`** instead of **`git reset HEAD -- fileA`**
 
-<!-- section 40 -->
+<!-- section 41 -->
 
 # Submodules
 
@@ -366,14 +371,14 @@ enables usage of **`git unstage fileA`** instead of **`git reset HEAD -- fileA`*
 
 `git submodule add https://bitbucket.org/somerepo/awesomelibrary`
 
-<!-- section 41 -->
+<!-- section 42 -->
 
 # Submodules
 
 -   Submodules do not track git refs or branches and are not automatically updated when the host repository is updated
 -   If you need to maintain a strict version management over your external dependencies, it can make sense to use git submodules
 
-<!-- section 42 -->
+<!-- section 43 -->
 
 # Subtrees
 
@@ -381,7 +386,7 @@ enables usage of **`git unstage fileA`** instead of **`git reset HEAD -- fileA`*
 
 ![](assets/BeforeAfterGitSubtreeDiagram.png){height="80%" width="80%"}
 
-<!-- section 43 -->
+<!-- section 44 -->
 
 # Subtrees
 
@@ -395,7 +400,7 @@ enables usage of **`git unstage fileA`** instead of **`git reset HEAD -- fileA`*
 -   you have to learn a new merging strategy (subtree merge)
 -   Contributing code back upstream for the sub-projects is slightly more complicated
 
-<!-- section 44 -->
+<!-- section 45 -->
 
 # Merge strategies
 
@@ -410,25 +415,25 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 -   Resolve
 -   Subtree
 
-<!-- section 45 -->
+<!-- section 46 -->
 
 # Merge: Fast Forward (Rebase)
 
 ![](assets/Fast-Forward-Merge.png)
 
-<!-- section 46 -->
+<!-- section 47 -->
 
 # Merge: Recursive
 
 ![](assets/Recursive-Merge.png)
 
-<!-- section 47 -->
+<!-- section 48 -->
 
 # Merge: Ours
 
 ![](assets/Ours-Merge.png)
 
-<!-- section 48 -->
+<!-- section 49 -->
 
 # Merge: Octopus
 
@@ -440,7 +445,7 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 > Linus Torvalds was not happy about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
 
-<!-- section 49 -->
+<!-- section 50 -->
 
 # Merge: Resolve
 
@@ -450,7 +455,7 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 ![](assets/Resolve-Merge-Strategy.png)
 
-<!-- section 50 -->
+<!-- section 51 -->
 
 # Merge: Subtree
 
@@ -460,26 +465,26 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 > Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
-<!-- section 51 -->
+<!-- section 52 -->
 
 # Mergetool & Difftool
 
 -   `git mergetool` opens the merge tool defined in git-config (e.g. meld)
 -   `git diff Commit1sha Commit2sha` opens the diff tool defined in git-config
 
-<!-- section 52 -->
+<!-- section 53 -->
 
 # Merging vs. Rebasing vs. Cherry-Picking {#merging-vs.-rebasing-vs.-cherry-picking .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 53 -->
+<!-- section 54 -->
 
 # Cherry-Picking
 
-> Cherry picking can cause duplicate commits -\> often merges are better
+> Cherry picking can cause duplicate commits → often merges are better
 
 Usage: `git cherry-pick commitSha`
 
-<!-- section 54 -->
+<!-- section 55 -->
 
 # Cherry-Picking
 
@@ -493,7 +498,7 @@ https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
 https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching
 
-<!-- section 55 -->
+<!-- section 56 -->
 
 # Undoing commits
 
@@ -514,47 +519,47 @@ From public repository:
 
 If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
 
-<!-- section 56 -->
+<!-- section 57 -->
 
 # Git Replace
 
 https://git-scm.com/book/en/v2/Git-Tools-Replace
 
-<!-- section 57 -->
+<!-- section 58 -->
 
 # Signing Commits/Tags
 
 https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
 
-<!-- section 58 -->
+<!-- section 59 -->
 
 # Rewriting History
 
 https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
 
-<!-- section 59 -->
+<!-- section 60 -->
 
 # Staging
 
 https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
 
-<!-- section 60 -->
+<!-- section 61 -->
 
 # Stashing
 
 https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
 
-<!-- section 61 -->
+<!-- section 62 -->
 
 # Squashing
 
-<!-- section 62 -->
+<!-- section 63 -->
 
 # Submodules
 
 https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
-<!-- section 63 -->
+<!-- section 64 -->
 
 # Debugging with Git
 
@@ -563,11 +568,11 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
     -   start with `git bisect start`
     -   use `git bisect bad` to tell the system that current commit is broken
     -   use `git bisect good <good_commit>` when the last known good state was
-    -   goes to middle of possibly broken commits -\> check -\> git bisect bad/good
+    -   goes to middle of possibly broken commits → check → git bisect bad/good
     -   when finished use `git bisect reset`
 -   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
-<!-- section 64 -->
+<!-- section 65 -->
 
 # Git-Hooks
 
@@ -580,25 +585,25 @@ https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
 
 Husky.NET
 
-<!-- section 65 -->
+<!-- section 66 -->
 
 # Handling large repositories
 
 https://www.atlassian.com/git/tutorials/big-repositories
 https://www.atlassian.com/git/tutorials/git-lfs
 
-<!-- section 66 -->
+<!-- section 67 -->
 
 # git gc && git prune
 
 https://www.atlassian.com/git/tutorials/git-prune
 https://www.atlassian.com/git/tutorials/git-gc
 
-<!-- section 67 -->
+<!-- section 68 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 68 -->
+<!-- section 69 -->
 
 # Best practices
 
@@ -607,13 +612,13 @@ https://www.atlassian.com/git/tutorials/git-gc
 -   commit notes should contain "why" and "what" of change
 -   review changes before commiting
 -   Use Branches: Enables developers to work in parallel on separate lines of product
--   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
+-   Agree on a common workflow, e.g. Git-Flow → otherwise overhead in merges
 
-<!-- section 69 -->
+<!-- section 70 -->
 
 # Advanced stuff {#advanced-stuff .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 70 -->
+<!-- section 71 -->
 
 # Advanced stuff
 
@@ -623,13 +628,13 @@ https://git-scm.com/book/en/v2/Git-Tools-Rerere
 https://git-scm.com/book/en/v2/Git-Tools-Bundling
 https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 
--   Deletion von Elementen -\> Teasern
+-   Deletion von Elementen → Teasern
 
-<!-- section 71 -->
+<!-- section 72 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 72 -->
+<!-- section 73 -->
 
 # GitOps - What is GitOps?
 
@@ -640,7 +645,7 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 73 -->
+<!-- section 74 -->
 
 # GitOps - Pipeline
 
@@ -655,16 +660,17 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 74 -->
+<!-- section 75 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 75 -->
+<!-- section 76 -->
 
 # Ressources
 
--   Cheatsheet: https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
--   Githug
--   learngitbranching.js.org
+-   https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
+-   https://github.com/Gazler/githug
+-   https://learngitbranching.js.org
+-   https://docs.microsoft.com/de-de/learn/paths/intro-to-vc-git/
