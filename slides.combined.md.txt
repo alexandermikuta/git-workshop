@@ -53,7 +53,7 @@ Recommended sequence: commit &rarr; pull &rarr; push
 
 > When you run **`git init`** Git creates the **`.git`** directory which contains your local repository data
 
-![](assets/file-tree.png){ height=200% width=200% }
+![](assets/file-tree.png)
 
 ![HEAD is a reference to the checked out commit](assets/git-folder.png)
 
@@ -81,15 +81,16 @@ Recommended sequence: commit &rarr; pull &rarr; push
 Plan your migration carefully:
 
 - cleanup before migration: e.g. large file &rarr; NuGet-Packages
+
 - for big projects multiple Git-Repositories could be created and included via Submodule/Subtree
 
 # Git-Configuration
 
-- can be local for git-repository within `.git/config`
+- can be local for git-repository within **`.git/config`**
 
-- can be global via global flag `git config --global ...`
+- can be global via global flag **`git config --global ...`**
 
-- can be accessed via `git config --list`
+- can be accessed via **`git config --list`**
 
 # Git-Configuration
 
@@ -111,16 +112,16 @@ Typical settings:
 
 # .gitignore - Patterns
 
-- `#` serves as a comment
-- `!` negates a pattern
-- `/` directory separator
+- **`#`** serves as a comment
+- **`!`** negates a pattern
+- **`/`** directory separator
   - slash at beginning &rarr; relative to the .gitignore-directory, otherwise any level
   - slash at end &rarr; matches only directories, otherwise also files
-- `*` matches anything except slash
-- `?` like `*` but only one character
-- `**` match in all directories, e.g. `**/foo`
-- `/**` matches everything inside, e.g. `foo/**`
-- `/**/` matches zero or more directories, e.g. `foo/**/foo`
+- **`*`** matches anything except slash
+- **`?`** like **`*`** but only one character
+- **`**`** match in all directories, e.g. **`**/foo`**
+- **`/**`** matches everything inside, e.g. **`foo/**`**
+- **`/**/`** matches zero or more directories, e.g. **`foo/**/foo`**
 
 # Tooling {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
@@ -182,12 +183,10 @@ with **`--merged`** or **`--no-merged`** option you can filter branches that you
 
 # GitFlow
 
-https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
-
 **Pros**
 
 - isolated features
-- code in master remains clean and organized. Only updated with tested code
+- Only tested code comes in master
 - easy traceability as merges are bundled/labeled
 - good for traditional software distribution
 
@@ -195,7 +194,7 @@ https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
 
 - Many branches with complicated rules
 - Heavy maintenance workload for released versions
-- structured and specific development path conflict with agile iterative approach
+- structured and specific development path conflicts with agile iterative approach
 
 # Github-Flow
 
@@ -220,9 +219,6 @@ https://docs.github.com/en/get-started/quickstart/github-flow
 
 # GitlabFlow
 
-https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
-https://www.flagship.io/git-branching-strategies/
-
 # Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
@@ -234,7 +230,13 @@ https://trunkbaseddevelopment.com/
 
 Trunk-Based-Development is recommended in this book
 
-![Accerlate: Building and Scaling High Performing Technology Organizations (Gez Humble, Gene Kim)](assets/accelerate.jpg)
+![](assets/accelerate.jpg)
+
+# Comparison of Workflows
+
+https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
+https://www.flagship.io/git-branching-strategies/
+https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 
 # Working with Git {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
@@ -244,19 +246,24 @@ Trunk-Based-Development is recommended in this book
 
 # Working with Remotes
 
-- to list the current remotes you can use `git remote -v`
-- a remote can be inspected with `git remote show origin`
+- to list the current remotes you can use **`git remote -v`**
+- a remote can be inspected with **`git remote show origin`**
 - when cloning a repo the origin is already set to the repo you cloned from
-- remotes can be added with `git remote add pb <e.g. some github-repo-url>`
-- to remove a remote use `git remote remove <remote-name>`
-- fetching from a remote: `git fetch`
-- pulling from a remote: `git pull` (pull is a combination of `git fetch` and `git merge`)
-- pushing to a remote: `git push origin master`
+- remotes can be added with **`git remote add pb <e.g. some github-repo-url>`**
+- to remove a remote use **`git remote remove <remote-name>`**
+- fetching from a remote: **`git fetch`**
+- pulling from a remote: **`git pull`** (pull is a combination of **`git fetch`** and **`git merge`**)
+- pushing to a remote: **`git push origin master`**
 
 # Pull-Request
 
-https://git-scm.com/docs/git-request-pull
-https://www.atlassian.com/de/git/tutorials/making-a-pull-request
+> "Generate a request asking your upstream project to pull changes into their tree."
+
+Push: **`git push https://git.ko.xz/project master`**
+
+vs.
+
+Pull-Request: **`git request-pull v1.0 https://git.ko.xz/project master`**
 
 # Git log
 
@@ -265,6 +272,17 @@ https://www.atlassian.com/git/tutorials/git-log
 ```bash
 git log --decorate --graph --oneline --all
 ```
+
+Filtering the history:
+
+- by amount: **`git log -3`**
+- by date: **`git log --after="2014-7-1"`**
+- by author: **`git log --author="John"`**
+- by message: **`git log --grep="JRA-224:"`**
+- by file: **`git log -- foo.py bar.py`**
+- by content: **`git log -S"Hello, World!"`**
+- by range: **`git log main..feature`**
+- by merges: **`git log --merges`** or **`git log --no-merges`**
 
 # Tagging
 

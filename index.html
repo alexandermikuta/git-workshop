@@ -120,7 +120,7 @@
 <blockquote>
 <p>When you run <strong><code>git init</code></strong> Git creates the <strong><code>.git</code></strong> directory which contains your local repository data</p>
 </blockquote>
-<p><img src="assets/file-tree.png" style="width:200.0%;height:200.0%" /></p>
+<p><img src="assets/file-tree.png" /></p>
 <figure>
 <img src="assets/git-folder.png" alt="" /><figcaption>HEAD is a reference to the checked out commit</figcaption>
 </figure>
@@ -171,16 +171,16 @@
 <h1>Migration form TFS to Git</h1>
 <p>Plan your migration carefully:</p>
 <ul>
-<li>cleanup before migration: e.g. large file → NuGet-Packages</li>
-<li>for big projects multiple Git-Repositories could be created and included via Submodule/Subtree</li>
+<li><p>cleanup before migration: e.g. large file → NuGet-Packages</p></li>
+<li><p>for big projects multiple Git-Repositories could be created and included via Submodule/Subtree</p></li>
 </ul>
 </section>
 <section id="git-configuration" class="level1">
 <h1>Git-Configuration</h1>
 <ul>
-<li><p>can be local for git-repository within <code>.git/config</code></p></li>
-<li><p>can be global via global flag <code>git config --global ...</code></p></li>
-<li><p>can be accessed via <code>git config --list</code></p></li>
+<li><p>can be local for git-repository within <strong><code>.git/config</code></strong></p></li>
+<li><p>can be global via global flag <strong><code>git config --global ...</code></strong></p></li>
+<li><p>can be accessed via <strong><code>git config --list</code></strong></p></li>
 </ul>
 </section>
 <section id="git-configuration-1" class="level1">
@@ -205,18 +205,18 @@
 <section id="gitignore---patterns" class="level1">
 <h1>.gitignore - Patterns</h1>
 <ul>
-<li><code>#</code> serves as a comment</li>
-<li><code>!</code> negates a pattern</li>
-<li><code>/</code> directory separator
+<li><strong><code>#</code></strong> serves as a comment</li>
+<li><strong><code>!</code></strong> negates a pattern</li>
+<li><strong><code>/</code></strong> directory separator
 <ul>
 <li>slash at beginning → relative to the .gitignore-directory, otherwise any level</li>
 <li>slash at end → matches only directories, otherwise also files</li>
 </ul></li>
-<li><code>*</code> matches anything except slash</li>
-<li><code>?</code> like <code>*</code> but only one character</li>
-<li><code>**</code> match in all directories, e.g. <code>**/foo</code></li>
-<li><code>/**</code> matches everything inside, e.g. <code>foo/**</code></li>
-<li><code>/**/</code> matches zero or more directories, e.g. <code>foo/**/foo</code></li>
+<li><strong><code>*</code></strong> matches anything except slash</li>
+<li><strong><code>?</code></strong> like <strong><code>*</code></strong> but only one character</li>
+<li><strong><code>**</code></strong> match in all directories, e.g. <strong><code>**/foo</code></strong></li>
+<li><strong><code>/**</code></strong> matches everything inside, e.g. <strong><code>foo/**</code></strong></li>
+<li><strong><code>/**/</code></strong> matches zero or more directories, e.g. <strong><code>foo/**/foo</code></strong></li>
 </ul>
 </section>
 <section id="tooling" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
@@ -292,11 +292,10 @@
 </section>
 <section id="gitflow-1" class="level1">
 <h1>GitFlow</h1>
-<p>https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow</p>
 <p><strong>Pros</strong></p>
 <ul>
 <li>isolated features</li>
-<li>code in master remains clean and organized. Only updated with tested code</li>
+<li>Only tested code comes in master</li>
 <li>easy traceability as merges are bundled/labeled</li>
 <li>good for traditional software distribution</li>
 </ul>
@@ -304,7 +303,7 @@
 <ul>
 <li>Many branches with complicated rules</li>
 <li>Heavy maintenance workload for released versions</li>
-<li>structured and specific development path conflict with agile iterative approach</li>
+<li>structured and specific development path conflicts with agile iterative approach</li>
 </ul>
 </section>
 <section id="github-flow" class="level1">
@@ -330,8 +329,6 @@ https://docs.github.com/en/get-started/quickstart/github-flow</p>
 </section>
 <section id="gitlabflow" class="level1">
 <h1>GitlabFlow</h1>
-<p>https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
-https://www.flagship.io/git-branching-strategies/</p>
 </section>
 <section id="trunk-based-development" class="level1">
 <h1>Trunk-Based-Development</h1>
@@ -342,9 +339,13 @@ https://trunkbaseddevelopment.com/</p>
 <section id="trunk-based-development-1" class="level1">
 <h1>Trunk-Based-Development</h1>
 <p>Trunk-Based-Development is recommended in this book</p>
-<figure>
-<img src="assets/accelerate.jpg" alt="" /><figcaption>Accerlate: Building and Scaling High Performing Technology Organizations (Gez Humble, Gene Kim)</figcaption>
-</figure>
+<p><img src="assets/accelerate.jpg" /></p>
+</section>
+<section id="comparison-of-workflows" class="level1">
+<h1>Comparison of Workflows</h1>
+<p>https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
+https://www.flagship.io/git-branching-strategies/
+https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/</p>
 </section>
 <section id="working-with-git" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
 <h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">Working with Git</h1>
@@ -358,25 +359,40 @@ https://trunkbaseddevelopment.com/</p>
 <section id="working-with-remotes-1" class="level1">
 <h1>Working with Remotes</h1>
 <ul>
-<li>to list the current remotes you can use <code>git remote -v</code></li>
-<li>a remote can be inspected with <code>git remote show origin</code></li>
+<li>to list the current remotes you can use <strong><code>git remote -v</code></strong></li>
+<li>a remote can be inspected with <strong><code>git remote show origin</code></strong></li>
 <li>when cloning a repo the origin is already set to the repo you cloned from</li>
-<li>remotes can be added with <code>git remote add pb &lt;e.g. some github-repo-url&gt;</code></li>
-<li>to remove a remote use <code>git remote remove &lt;remote-name&gt;</code></li>
-<li>fetching from a remote: <code>git fetch</code></li>
-<li>pulling from a remote: <code>git pull</code> (pull is a combination of <code>git fetch</code> and <code>git merge</code>)</li>
-<li>pushing to a remote: <code>git push origin master</code></li>
+<li>remotes can be added with <strong><code>git remote add pb &lt;e.g. some github-repo-url&gt;</code></strong></li>
+<li>to remove a remote use <strong><code>git remote remove &lt;remote-name&gt;</code></strong></li>
+<li>fetching from a remote: <strong><code>git fetch</code></strong></li>
+<li>pulling from a remote: <strong><code>git pull</code></strong> (pull is a combination of <strong><code>git fetch</code></strong> and <strong><code>git merge</code></strong>)</li>
+<li>pushing to a remote: <strong><code>git push origin master</code></strong></li>
 </ul>
 </section>
 <section id="pull-request" class="level1">
 <h1>Pull-Request</h1>
-<p>https://git-scm.com/docs/git-request-pull
-https://www.atlassian.com/de/git/tutorials/making-a-pull-request</p>
+<blockquote>
+<p>“Generate a request asking your upstream project to pull changes into their tree.”</p>
+</blockquote>
+<p>Push: <strong><code>git push https://git.ko.xz/project master</code></strong></p>
+<p>vs.</p>
+<p>Pull-Request: <strong><code>git request-pull v1.0 https://git.ko.xz/project master</code></strong></p>
 </section>
 <section id="git-log" class="level1">
 <h1>Git log</h1>
 <p>https://www.atlassian.com/git/tutorials/git-log</p>
 <pre class="bash"><code>git log --decorate --graph --oneline --all</code></pre>
+<p>Filtering the history:</p>
+<ul>
+<li>by amount: <strong><code>git log -3</code></strong></li>
+<li>by date: <strong><code>git log --after="2014-7-1"</code></strong></li>
+<li>by author: <strong><code>git log --author="John"</code></strong></li>
+<li>by message: <strong><code>git log --grep="JRA-224:"</code></strong></li>
+<li>by file: <strong><code>git log -- foo.py bar.py</code></strong></li>
+<li>by content: <strong><code>git log -S"Hello, World!"</code></strong></li>
+<li>by range: <strong><code>git log main..feature</code></strong></li>
+<li>by merges: <strong><code>git log --merges</code></strong> or <strong><code>git log --no-merges</code></strong></li>
+</ul>
 </section>
 <section id="tagging" class="level1">
 <h1>Tagging</h1>
