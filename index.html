@@ -380,10 +380,9 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 </section>
 <section id="git-log" class="level1">
 <h1>Git log</h1>
-<p>https://www.atlassian.com/git/tutorials/git-log</p>
-<pre class="bash"><code>git log --decorate --graph --oneline --all</code></pre>
-<p>Filtering the history:</p>
+<p>Showing the history:</p>
 <ul>
+<li>all: <strong><code>git log --decorate --graph --oneline --all</code></strong></li>
 <li>by amount: <strong><code>git log -3</code></strong></li>
 <li>by date: <strong><code>git log --after="2014-7-1"</code></strong></li>
 <li>by author: <strong><code>git log --author="John"</code></strong></li>
@@ -413,7 +412,7 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 <p>“Can simplify your Git-experience by settig custom aliases that are easier/shorter”</p>
 </blockquote>
 <p><strong><code>git config --global alias.unstage 'reset HEAD --'</code></strong></p>
-<p>enables usage of <strong><code>git unstage fileA</code></strong> instead of <strong><code>git reset HEAD -- fileA</code></strong></p>
+<p>→ <strong><code>git unstage fileA</code></strong> instead of <strong><code>git reset HEAD -- fileA</code></strong></p>
 </section>
 <section id="submodules" class="level1">
 <h1>Submodules</h1>
@@ -431,10 +430,9 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 </section>
 <section id="subtrees" class="level1">
 <h1>Subtrees</h1>
-<blockquote>
-<p>Lets you nest one repository into anothers as sub-directory</p>
-</blockquote>
-<p><img src="assets/BeforeAfterGitSubtreeDiagram.png" style="width:80.0%;height:80.0%" /></p>
+<figure>
+<img src="assets/BeforeAfterGitSubtreeDiagram.png" style="width:80.0%;height:80.0%" alt="" /><figcaption>nests one repository into anothers as sub-dir</figcaption>
+</figure>
 </section>
 <section id="subtrees-1" class="level1">
 <h1>Subtrees</h1>
@@ -446,7 +444,7 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 <p><strong>Cons</strong></p>
 <ul>
 <li>you have to learn a new merging strategy (subtree merge)</li>
-<li>Contributing code back upstream for the sub-projects is slightly more complicated</li>
+<li>contributing code back to the sub-projects is more complicated</li>
 </ul>
 </section>
 <section id="merge-strategies" class="level1">
