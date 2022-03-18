@@ -218,6 +218,19 @@ https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
 - pulling from a remote: `git pull` (pull is a combination of `git fetch` and `git merge`)
 - pushing to a remote: `git push origin master`
 
+# Pull-Request
+
+https://git-scm.com/docs/git-request-pull
+https://www.atlassian.com/de/git/tutorials/making-a-pull-request
+
+# Git log
+
+https://www.atlassian.com/git/tutorials/git-log
+
+```bash
+git log --decorate --graph --oneline --all
+```
+
 # Tagging
 
 - list your existing tags with `git tag` or search with `git tag -l "v1.8.5*"`
@@ -397,6 +410,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 # Git-Hooks
 
+https://www.atlassian.com/git/tutorials/git-hooks
 https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 
 Enforcing Policies:
@@ -404,6 +418,16 @@ Enforcing Policies:
 https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
 
 Husky.NET
+
+# Handling large repositories
+
+https://www.atlassian.com/git/tutorials/big-repositories
+https://www.atlassian.com/git/tutorials/git-lfs
+
+# git gc && git prune
+
+https://www.atlassian.com/git/tutorials/git-prune
+https://www.atlassian.com/git/tutorials/git-gc
 
 # Best practices {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
@@ -416,9 +440,9 @@ Husky.NET
 - Use Branches: Enables developers to work in parallel on separate lines of product
 - Agree on a common workflow, e.g. Git-Flow -> otherwise overhead in merges
 
-# Important commands {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
+# Advanced stuff {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
-# Important commands: showing the history
+# Advanced stuff
 
 https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Basic-Snapshotting
 https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection
@@ -426,14 +450,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Rerere
 https://git-scm.com/book/en/v2/Git-Tools-Bundling
 https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 
-```bash
-git log --decorate --graph --oneline --all
-```
-
-- Blobs
-- Pull-Requests
 - Deletion von Elementen -> Teasern
-- Git-LFS
 
 # GitOps {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
