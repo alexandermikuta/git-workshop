@@ -461,8 +461,9 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 <li>Subtree</li>
 </ul>
 </section>
-<section id="merge-fast-forward-rebase" class="level1">
-<h1>Merge: Fast Forward (Rebase)</h1>
+<section id="merge-fast-forward" class="level1">
+<h1>Merge: Fast Forward</h1>
+<p><strong><code>git rebase</code></strong></p>
 <p><img src="assets/Fast-Forward-Merge.png" /></p>
 <ul>
 <li>most commonly used merge strategy. history is just one straight line.</li>
@@ -471,6 +472,7 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 </section>
 <section id="merge-recursive" class="level1">
 <h1>Merge: Recursive</h1>
+<p><strong><code>git merge--no-ff</code></strong></p>
 <p><img src="assets/Recursive-Merge.png" /></p>
 <ul>
 <li>New commits on master before branch is merged back to master</li>
@@ -485,16 +487,17 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 </section>
 <section id="merge-octopus" class="level1">
 <h1>Merge: Octopus</h1>
-<p><code>git merge -s octopus</code></p>
+<p><strong><code>git merge -s octopus</code></strong></p>
 <p><img src="assets/Octopus-Merge-Strategy.png" /></p>
 <ul>
-<li>Resolves cases with more than two heads. It is primarily used for bundling topic branch heads together</li>
-<li>Linus Torvalds was not happy about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&amp;m=139033182525831</li>
+<li>Resolves cases with more than two heads</li>
+<li>Primarily for bundling topic branch heads.</li>
+<li>Linus Torvalds got octopus merge of 66 branches: https://marc.info/?l=linux-kernel&amp;m=139033182525831</li>
 </ul>
 </section>
 <section id="merge-resolve" class="level1">
 <h1>Merge: Resolve</h1>
-<p><code>git merge -s resolve</code></p>
+<p><strong><code>git merge -s resolve</code></strong></p>
 <ul>
 <li>Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.</li>
 </ul>
@@ -502,7 +505,7 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 </section>
 <section id="merge-subtree" class="level1">
 <h1>Merge: Subtree</h1>
-<p><code>git merge -s subtree</code></p>
+<p><strong><code>git merge -s subtree</code></strong></p>
 <p><img src="assets/Subtree-Merge-Strategy.png" /></p>
 <ul>
 <li>Git is often smart enough to figure out that one is a subtree of the other and merge appropriately</li>

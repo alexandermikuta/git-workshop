@@ -336,7 +336,9 @@ Showing the history:
 - Resolve
 - Subtree
 
-# Merge: Fast Forward (Rebase)
+# Merge: Fast Forward
+
+**`git rebase`**
 
 ![](assets/Fast-Forward-Merge.png)
 
@@ -344,6 +346,8 @@ Showing the history:
 - No new merges on the master between branch creation and merge to master.
 
 # Merge: Recursive
+
+**`git merge--no-ff`**
 
 ![](assets/Recursive-Merge.png)
 
@@ -357,16 +361,17 @@ Showing the history:
 
 # Merge: Octopus
 
-`git merge -s octopus`
+**`git merge -s octopus`**
 
 ![](assets/Octopus-Merge-Strategy.png)
 
-- Resolves cases with more than two heads. It is primarily used for bundling topic branch heads together
-- Linus Torvalds was not happy about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
+- Resolves cases with more than two heads
+- Primarily for bundling topic branch heads.
+- Linus Torvalds got octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
 
 # Merge: Resolve
 
-`git merge -s resolve`
+**`git merge -s resolve`**
 
 - Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.
 
@@ -374,7 +379,7 @@ Showing the history:
 
 # Merge: Subtree
 
-`git merge -s subtree`
+**`git merge -s subtree`**
 
 ![](assets/Subtree-Merge-Strategy.png)
 
