@@ -521,6 +521,11 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 <section id="merging-vs.-rebasing-vs.-cherry-picking" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
 <h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">Merging vs. Rebasing vs. Cherry-Picking</h1>
 </section>
+<section id="rebasing" class="level1">
+<h1>Rebasing</h1>
+<p>https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History</p>
+</section>
 <section id="cherry-picking" class="level1">
 <h1>Cherry-Picking</h1>
 <blockquote>
@@ -536,7 +541,6 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 <li><p>Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users</p></li>
 </ul>
 <p>https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
-https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
 https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching</p>
 </section>
@@ -561,11 +565,17 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching</p>
 </section>
 <section id="signing-commitstags" class="level1">
 <h1>Signing Commits/Tags</h1>
-<p>https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work</p>
-</section>
-<section id="rewriting-history" class="level1">
-<h1>Rewriting History</h1>
-<p>https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History</p>
+<blockquote>
+<p>by signing you can verify that commits are actually from a trusted source</p>
+</blockquote>
+<p>Setup:</p>
+<p><strong><code>gpg --gen-key</code></strong>
+<strong><code>gpg --list-keys</code></strong>
+<strong><code>git config --global user.signingkey &lt;signingkey&gt;</code></strong></p>
+<ul>
+<li>add -s to your commit command: <strong><code>git commit -a -S -m 'Signed commit'</code></strong></li>
+<li>use -s instead of -a for tags: <strong><code>git tag -s v1.5 -m 'my signed 1.5 tag'</code></strong></li>
+</ul>
 </section>
 <section id="stashing" class="level1">
 <h1>Stashing</h1>

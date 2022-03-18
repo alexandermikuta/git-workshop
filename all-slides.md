@@ -500,13 +500,20 @@ Showing the history:
 
 <!-- section 55 -->
 
+# Rebasing
+
+https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+
+<!-- section 56 -->
+
 # Cherry-Picking
 
 > Cherry picking can cause duplicate commits → often merges are better
 
 Usage: `git cherry-pick commitSha`
 
-<!-- section 56 -->
+<!-- section 57 -->
 
 # Cherry-Picking
 
@@ -517,11 +524,10 @@ Use cases for Cherry-Picking:
 -   Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users
 
 https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
-https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
 https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching
 
-<!-- section 57 -->
+<!-- section 58 -->
 
 # Undoing commits
 
@@ -542,17 +548,20 @@ From public repository:
 
 If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
 
-<!-- section 58 -->
+<!-- section 59 -->
 
 # Signing Commits/Tags
 
-https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
+> by signing you can verify that commits are actually from a trusted source
 
-<!-- section 59 -->
+Setup:
 
-# Rewriting History
+**`gpg --gen-key`**
+**`gpg --list-keys`**
+**`git config --global user.signingkey <signingkey>`**
 
-https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+-   add -s to your commit command: **`git commit -a -S -m 'Signed commit'`**
+-   use -s instead of -a for tags: **`git tag -s v1.5 -m 'my signed 1.5 tag'`**
 
 <!-- section 60 -->
 
