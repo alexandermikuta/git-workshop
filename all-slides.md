@@ -166,7 +166,6 @@ Typical settings:
 -   Explorer-Integration: TortoiseGit
 -   Merge-Tools: meld, kdiff3
 -   Shells: ZSH+Plugin
--   Azure-Devops-Pipeline → Github-Action Converter
 -   Git LFS
 
 <!-- section 19 -->
@@ -219,23 +218,23 @@ with **`--merged`** or **`--no-merged`** option you can filter branches that you
 
 # Branching Strategies {#branching-strategies .light-on-dark rx="1" bgcss="sea-gradient"}
 
--   GitFlow
+-   Git-Flow
 
--   GithubFlow
+-   Github-Flow
 
--   GitlabFlow
+-   Gitlab-Flow
 
 -   Trunk-Based Development
 
 <!-- section 27 -->
 
-# GitFlow
+# Git-Flow
 
 ![](assets/gitflow.webp)
 
 <!-- section 28 -->
 
-# GitFlow
+# Git-Flow
 
 **Pros**
 
@@ -258,7 +257,7 @@ with **`--merged`** or **`--no-merged`** option you can filter branches that you
 
 <!-- section 30 -->
 
-# GithubFlow
+# Github-Flow
 
 https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
 https://docs.github.com/en/get-started/quickstart/github-flow
@@ -277,7 +276,7 @@ https://docs.github.com/en/get-started/quickstart/github-flow
 
 <!-- section 31 -->
 
-# GitlabFlow
+# Gitlab-Flow
 
 <!-- section 32 -->
 
@@ -285,8 +284,15 @@ https://docs.github.com/en/get-started/quickstart/github-flow
 
 ![](assets/trunk-based-development.jpg)
 
-https://www.atlassian.com/de/continuous-delivery/continuous-integration/trunk-based-development
-https://trunkbaseddevelopment.com/
+**Pros**
+
+-   Quicker releases
+-   enhances collaboration
+-   key enabler of CI/CD
+
+**Cons**
+
+-   suited more to senior developes as directly working on shared trunk
 
 <!-- section 33 -->
 
@@ -299,6 +305,20 @@ Trunk-Based-Development is recommended in this book
 <!-- section 34 -->
 
 # Comparison of Workflows
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Product type and its release method                                                                                                           Team Size    Collaboration maturity   Applicable mainstream branch mode
+  --------------------------------------------------------------------------------------------------------------------------------------------- ------------ ------------------------ ----------------------------------------------
+  All                                                                                                                                           Small team   High                     Trunk-Based Development (TBD)
+
+  Products that support continuous deployment and release, such as SaaS products                                                                Middle       Moderate                 GitHub-Flow and TBD
+
+  Products with a definite release window and a periodic version release cadence, such as iOS apps                                              Middle       Moderate                 Git-Flow and GitLab-Flow with release branch
+
+  Products that are demanding for product quality and support continuous deployment and release, such as basic platform products                Middle       Moderate                 GitLab-Flow
+
+  Products that are demanding for product quality and have a long maintenance cycle for released versions, such as 2B basic platform products   Large        Moderate                 Git-Flow
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
 https://www.flagship.io/git-branching-strategies/
@@ -694,3 +714,4 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   https://github.com/Gazler/githug
 -   https://learngitbranching.js.org
 -   https://docs.microsoft.com/de-de/learn/paths/intro-to-vc-git/
+-   https://trunkbaseddevelopment.com/

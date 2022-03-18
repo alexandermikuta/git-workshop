@@ -230,7 +230,6 @@
 <li>Explorer-Integration: TortoiseGit</li>
 <li>Merge-Tools: meld, kdiff3</li>
 <li>Shells: ZSH+Plugin</li>
-<li>Azure-Devops-Pipeline → Github-Action Converter</li>
 <li>Git LFS</li>
 </ul>
 </section>
@@ -280,18 +279,18 @@
 <section id="branching-strategies" class="level1 light-on-dark" data-rx="1" data-bgcss="sea-gradient" data-state="sea-gradient">
 <h1 class="light-on-dark" data-rx="1" data-bgcss="sea-gradient" data-state="sea-gradient">Branching Strategies</h1>
 <ul>
-<li><p>GitFlow</p></li>
-<li><p>GithubFlow</p></li>
-<li><p>GitlabFlow</p></li>
+<li><p>Git-Flow</p></li>
+<li><p>Github-Flow</p></li>
+<li><p>Gitlab-Flow</p></li>
 <li><p>Trunk-Based Development</p></li>
 </ul>
 </section>
-<section id="gitflow" class="level1">
-<h1>GitFlow</h1>
+<section id="git-flow" class="level1">
+<h1>Git-Flow</h1>
 <p><img src="assets/gitflow.webp" /></p>
 </section>
-<section id="gitflow-1" class="level1">
-<h1>GitFlow</h1>
+<section id="git-flow-1" class="level1">
+<h1>Git-Flow</h1>
 <p><strong>Pros</strong></p>
 <ul>
 <li>isolated features</li>
@@ -310,8 +309,8 @@
 <h1>Github-Flow</h1>
 <p><img src="assets/githubflow.webp" /></p>
 </section>
-<section id="githubflow" class="level1">
-<h1>GithubFlow</h1>
+<section id="github-flow-1" class="level1">
+<h1>Github-Flow</h1>
 <p>https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
 https://docs.github.com/en/get-started/quickstart/github-flow</p>
 <p><strong>Pros</strong></p>
@@ -327,14 +326,22 @@ https://docs.github.com/en/get-started/quickstart/github-flow</p>
 <li>release preparation and bug fixes happen both in master branch → requires attention</li>
 </ul>
 </section>
-<section id="gitlabflow" class="level1">
-<h1>GitlabFlow</h1>
+<section id="gitlab-flow" class="level1">
+<h1>Gitlab-Flow</h1>
 </section>
 <section id="trunk-based-development" class="level1">
 <h1>Trunk-Based-Development</h1>
 <p><img src="assets/trunk-based-development.jpg" /></p>
-<p>https://www.atlassian.com/de/continuous-delivery/continuous-integration/trunk-based-development
-https://trunkbaseddevelopment.com/</p>
+<p><strong>Pros</strong></p>
+<ul>
+<li>Quicker releases</li>
+<li>enhances collaboration</li>
+<li>key enabler of CI/CD</li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul>
+<li>suited more to senior developes as directly working on shared trunk</li>
+</ul>
 </section>
 <section id="trunk-based-development-1" class="level1">
 <h1>Trunk-Based-Development</h1>
@@ -343,6 +350,54 @@ https://trunkbaseddevelopment.com/</p>
 </section>
 <section id="comparison-of-workflows" class="level1">
 <h1>Comparison of Workflows</h1>
+<table>
+<colgroup>
+<col style="width: 64%" />
+<col style="width: 4%" />
+<col style="width: 10%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Product type and its release method</th>
+<th>Team Size</th>
+<th>Collaboration maturity</th>
+<th>Applicable mainstream branch mode</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All</td>
+<td>Small team</td>
+<td>High</td>
+<td>Trunk-Based Development (TBD)</td>
+</tr>
+<tr class="even">
+<td>Products that support continuous deployment and release, such as SaaS products</td>
+<td>Middle</td>
+<td>Moderate</td>
+<td>GitHub-Flow and TBD</td>
+</tr>
+<tr class="odd">
+<td>Products with a definite release window and a periodic version release cadence, such as iOS apps</td>
+<td>Middle</td>
+<td>Moderate</td>
+<td>Git-Flow and GitLab-Flow with release branch</td>
+</tr>
+<tr class="even">
+<td>Products that are demanding for product quality and support continuous deployment and release, such as basic platform products</td>
+<td>Middle</td>
+<td>Moderate</td>
+<td>GitLab-Flow</td>
+</tr>
+<tr class="odd">
+<td>Products that are demanding for product quality and have a long maintenance cycle for released versions, such as 2B basic platform products</td>
+<td>Large</td>
+<td>Moderate</td>
+<td>Git-Flow</td>
+</tr>
+</tbody>
+</table>
 <p>https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
 https://www.flagship.io/git-branching-strategies/
 https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/</p>
@@ -691,6 +746,7 @@ This live syncing pull request workflow is the core essence of GitOps</p>
 <li>https://github.com/Gazler/githug</li>
 <li>https://learngitbranching.js.org</li>
 <li>https://docs.microsoft.com/de-de/learn/paths/intro-to-vc-git/</li>
+<li>https://trunkbaseddevelopment.com/</li>
 </ul>
 </section>
 
