@@ -392,6 +392,11 @@ Showing the history:
 
 # Merging vs. Rebasing vs. Cherry-Picking {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
+# Rebasing
+
+https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+
 # Cherry-Picking
 
 > Cherry picking can cause duplicate commits &rarr; often merges are better
@@ -407,7 +412,6 @@ Use cases for Cherry-Picking:
 - Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users
 
 https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
-https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
 https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching
 
@@ -432,11 +436,16 @@ If you want to add e.g. additional files to your previous commit you can use `gi
 
 # Signing Commits/Tags
 
-https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
+> by signing you can verify that commits are actually from a trusted source
 
-# Rewriting History
+Setup:
 
-https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+**`gpg --gen-key`**
+**`gpg --list-keys`**
+**`git config --global user.signingkey <signingkey>`**
+
+- add -s to your commit command: **`git commit -a -S -m 'Signed commit'`**
+- use -s instead of -a for tags: **`git tag -s v1.5 -m 'my signed 1.5 tag'`**
 
 # Stashing
 
