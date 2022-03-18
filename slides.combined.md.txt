@@ -61,16 +61,6 @@ width: 1280
 
 ![HEAD is a reference to the checked out commit](assets/git-folder.png)
 
-https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain
-
-# Architecture - Git Objects
-
-https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
-
-# Architecture - Git References
-
-https://git-scm.com/book/en/v2/Git-Internals-Git-References
-
 # Differences to TFS
 
 > Git is recommended over TFS by Microsoft itself for new projects!
@@ -125,6 +115,45 @@ Pattern format:
 - `/**` matches everything inside, e.g. `foo/**`
 - `/**/` matches zero or more directories, e.g. `foo/**/foo`
 
+# Tooling
+
+# Tooling - IDEs
+
+- VisualStudio
+- VS-Code
+
+# Tooling - Other
+
+- Clients (Github Desktop, SourceTree, SmartGit, GitKraken, GitTower)
+- Explorer-Integration (TortoiseGit)
+- Merge-Tools (meld)
+- ZSH-Plugin
+- Azure Devops (mit Git)
+- Azure-Devops-Pipeline -> Github-Action Converter
+
+# Branching
+
+- list branches with `git branch` or `git branch -v`
+  - with `--merged` or `--no-merged` option you can filter branches that you have/not merged into the branch you are currently on
+- Creating a new branch: `git branch <branchname>`
+- to rename a branch use `git branch --move bad-branch-name corrected-branch-name`
+  - push it with `git push --set-upstream origin corrected-branch-name`
+  - delete bad branch on remote with `git push origin --delete bad-branch-name`
+
+# Branching
+
+![new branch "testing" created](assets/branch1.png)
+
+# Branching
+
+![added commit to branch "testing"](assets/branch2.png)
+
+# Branching
+
+![switched back to branch "master"](assets/branch3.png)
+
+https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+
 # Branching Strategies {rx=1 bgcss=sea-gradient .light-on-dark}
 
 - GitFlow
@@ -174,22 +203,6 @@ Pattern format:
 
 ![](assets/trunk-based-development.jpg)
 
-# Tooling
-
-# Tooling - IDEs
-
-- VisualStudio
-- VS-Code
-
-# Tooling - Other
-
-- Clients (Github Desktop, SourceTree, SmartGit, GitKraken, GitTower)
-- Explorer-Integration (TortoiseGit)
-- Merge-Tools (meld)
-- ZSH-Plugin
-- Azure Devops (mit Git)
-- Azure-Devops-Pipeline -> Github-Action Converter
-
 # Working with Git {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
 # Working with Remotes
@@ -222,18 +235,32 @@ Pattern format:
 
 e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git unstage fileA` instead of `git reset HEAD -- fileA`
 
-# Branching
+# Submodules
 
-- list branches with `git branch` or `git branch -v`
-  - with `--merged` or `--no-merged` option you can filter branches that you have/not merged into the branch you are currently on
-- Creating a new branch: `git branch <branchname>`
-- to rename a branch use `git branch --move bad-branch-name corrected-branch-name`
-  - push it with `git push --set-upstream origin corrected-branch-name`
-  - delete bad branch on remote with `git push origin --delete bad-branch-name`
+> A git submodule is a record within a host git repository that points to a specific commit in another external repository
 
-https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
-https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
-https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+- Submodules do not track git refs or branches and are not automatically updated when the host repository is updated
+- If you need to maintain a strict version management over your external dependencies, it can make sense to use git submodules
+- When an external component or subproject is changing too fast or upcoming changes will break the API, you can lock the code to a specific commit for your own safety
+- if code in the submodule-repo gets updated you have to take care to update your submodule-reference to the latest version
+
+`git submodule add https://bitbucket.org/somerepo/awesomelibrary`
+
+# Subtrees
+
+> Lets you nest one repository into anothers as sub-directory
+
+![](assets/BeforeAfterGitSubtreeDiagram.png)
+
+**Pros**
+
+- The sub-project’s code is available right after the clone of the super project is done
+- less overhead than Submodules (e.g. does not add new metadata files)
+
+**Cons**
+
+- you have to learn a new merging strategy (subtree merge)
+- Contributing code back upstream for the sub-projects is slightly more complicated
 
 # Merge strategies
 
@@ -268,7 +295,7 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 > Resolves cases with more than two heads. It is primarily used for bundling topic branch heads together
 
-> Linus Torvalds was no amused about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
+> Linus Torvalds was not happy about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
 
 # Merge: Resolve
 
@@ -390,11 +417,9 @@ git log --decorate --graph --oneline --all
 ```
 
 - Blobs
-- Referenzen
 - Pull-Requests
 - Squashing
 - Deletion von Elementen -> Teasern
-- Subtrees
 - Git-LFS
 
 # GitOps {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
@@ -430,165 +455,3 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 - Cheatsheet: https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
 - Githug
 - learngitbranching.js.org
-
-# cool looking {bg=white;assets/paperclip.gif .light-on-dark rx=-1 ry=0}
-
-leverages battle-proven</br>HTML5 presentation frameworks:
-
-revealjs • impressjs
-
-# asciiart (ditaa) {.ltr rx=0 ry=1}
-
-```{.render_ditaa args="--transparent --scale 1 --font 'Raleway'"}
-
-+-----------------------------+
-| Node A                      |
-|                             |
-| +----------+   +----------+ |
-| |          |   |          | |
-| | Frontend |   | Foo      | |
-| |          |   |          | |
-| |          |   | {s}      | |
-| +-----+----+   +----------+ |
-|       ^                     |
-|       |                     |
-|       \-service-\           |
-|                 |           |
-+-----------------|-----------+
-                  |
-+-----------------|-----------+
-| Node B          |           |
-|       /---------/           |
-|       |                     |
-|       v                     |
-| +-----+----+   +=---------+ |
-| |          |   |          | |
-| | Frontend |   | Bar      | |
-| |          |   |          | |
-| |          |   | {s}      | |
-| +----------+   +----------+ |
-+-----------------------------+
-
-```
-
-# asciiart (a2s) {.ltr}
-
-```render_a2s
-#--------------------.
-|[0]                 |
-| .---# .---# #---.  |
-| |[1]| |[1]| |[1]|  |
-| #---' #---' '---#  |
-|   ^     ^     ^    |
-#---+-----+-----+----#
-|   |     |     |    |
-|   a     2 sketch   |
-'--------------------#
-
-[0]: {"fill": "#933","a2s:delref":true}
-[1]: {"fill": "#bbb","a2s:delref":true,"a2s:type":"storage"}
-```
-
-# asciiart (sketchy) {.ltr}
-
-```render_a2sketch
-
-#-----------------------------#
-|[0]                          |
-| Node                        |
-|                             |
-| #----------#   #----------# |
-| |          |   |[1]       | |
-| |front     |   | foo      | |
-| |          |   |          | |
-| |  ^       |   |          | |
-| |  |       |   |          | |
-| #--|-------#   #----------# |
-|    |                ^       |
-|    |                |       |
-|    '-- service    --'       |
-|                             |
-#-----------------------------#
-[0]: {"fill":"#fff","fillStyle":"solid","a2s:delref":true}
-[1]: {"fill":"#eee","fillStyle":"solid","a2s:delref":true}
-```
-
-# asciiart (svgbob) {.ltr rx=-1 ry=0}
-
-```{.render_svgbob args="--scale 10 --font-family Raleway --font-size 24"}
-
-        P *
-           \
-            \
-       v0    \       v3
-         *----\-----*
-        /      v X   \
-       /        o     \
-      /                \
-  v1 *------------------* v2
-```
-
-# asciiart (mermaid) {.ltr}
-
-```{.render_mermaid args="-w 400" style="font-size: 100%;"}
-graph LR
-   a --> b & c--> d
-```
-
-# asciiart (plantuml) {.ltr}
-
-```{.render_plantuml args="-Sbackgroundcolor=transparent -SdefaultFontSize=24 -SdefaultFontName=Raleway"}
-@startuml
-Bob->Alice : hello
-Alice->Bob : oh, you again...
-Bob->Alice : ??
-@enduml
-```
-
-# asciiart (graphviz) {.ltr}
-
-```{.render_dot args="-Nfontname=Raleway"}
-digraph G {
-    bgcolor=transparent;
-    node [style=filled,color=white];
-
-    a -> b -> c;
-    a -> c;
-    b -> d;
-}
-```
-
-# charts (vega-lite) {.ltr rx=0 ry=-1}
-
-```render_vegalite
-{
-    "$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
-    "data": {
-        "values": [
-            {"a": "A","b": 28}, {"a": "B","b": 55}, {"a": "C","b": 43},
-            {"a": "D","b": 91}, {"a": "E","b": 81}, {"a": "F","b": 53},
-            {"a": "G","b": 19}, {"a": "H","b": 87}, {"a": "I","b": 52}
-        ]
-    },
-    "width": 250,
-    "height": 300,
-    "mark": "area",
-    "encoding": {
-        "x": {"field": "a", "type": "ordinal"},
-        "y": {"field": "b", "type": "quantitative", "scale": {"domain": [0, 100]}}
-    },
-    "config": {
-        "axis": {
-            "labelFont": "Raleway",
-            "labelFontSize": 18,
-            "titleFont": "Raleway",
-            "titleFontSize": 24,
-            "titleAngle": 0
-        },
-        "axisX": {
-            "labelAngle": 0
-        }
-    }
-}
-```
-
