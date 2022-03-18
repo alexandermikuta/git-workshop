@@ -473,9 +473,9 @@ Showing the history:
 
 **`git merge -s resolve`**
 
--   Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.
-
 ![](assets/Resolve-Merge-Strategy.png)
+
+-   Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.
 
 <!-- section 52 -->
 
@@ -513,6 +513,7 @@ Usage: `git cherry-pick commitSha`
 Use cases for Cherry-Picking:
 
 -   Team Collaboration, e.g. backend create data-structure and frontend-dev cherry-picks it
+
 -   Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users
 
 https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
@@ -543,45 +544,23 @@ If you want to add e.g. additional files to your previous commit you can use `g
 
 <!-- section 58 -->
 
-# Git Replace
-
-https://git-scm.com/book/en/v2/Git-Tools-Replace
-
-<!-- section 59 -->
-
 # Signing Commits/Tags
 
 https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
 
-<!-- section 60 -->
+<!-- section 59 -->
 
 # Rewriting History
 
 https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
 
-<!-- section 61 -->
-
-# Staging
-
-https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
-
-<!-- section 62 -->
+<!-- section 60 -->
 
 # Stashing
 
 https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
 
-<!-- section 63 -->
-
-# Squashing
-
-<!-- section 64 -->
-
-# Submodules
-
-https://git-scm.com/book/en/v2/Git-Tools-Submodules
-
-<!-- section 65 -->
+<!-- section 61 -->
 
 # Debugging with Git
 
@@ -594,7 +573,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
     -   when finished use `git bisect reset`
 -   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
-<!-- section 66 -->
+<!-- section 62 -->
 
 # Git-Hooks
 
@@ -607,25 +586,25 @@ https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
 
 Husky.NET
 
-<!-- section 67 -->
+<!-- section 63 -->
 
 # Handling large repositories
 
 https://www.atlassian.com/git/tutorials/big-repositories
 https://www.atlassian.com/git/tutorials/git-lfs
 
-<!-- section 68 -->
+<!-- section 64 -->
 
 # git gc && git prune
 
 https://www.atlassian.com/git/tutorials/git-prune
 https://www.atlassian.com/git/tutorials/git-gc
 
-<!-- section 69 -->
+<!-- section 65 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 70 -->
+<!-- section 66 -->
 
 # Best practices
 
@@ -636,11 +615,11 @@ https://www.atlassian.com/git/tutorials/git-gc
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow → otherwise overhead in merges
 
-<!-- section 71 -->
+<!-- section 67 -->
 
 # Advanced stuff {#advanced-stuff .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 72 -->
+<!-- section 68 -->
 
 # Advanced stuff
 
@@ -652,11 +631,11 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 
 -   Deletion von Elementen → Teasern
 
-<!-- section 73 -->
+<!-- section 69 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 74 -->
+<!-- section 70 -->
 
 # GitOps - What is GitOps?
 
@@ -667,7 +646,7 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 75 -->
+<!-- section 71 -->
 
 # GitOps - Pipeline
 
@@ -682,13 +661,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 76 -->
+<!-- section 72 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 77 -->
+<!-- section 73 -->
 
 # Ressources
 
