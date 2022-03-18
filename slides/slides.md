@@ -373,9 +373,9 @@ Showing the history:
 
 **`git merge -s resolve`**
 
-- Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.
-
 ![](assets/Resolve-Merge-Strategy.png)
+
+- Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.
 
 # Merge: Subtree
 
@@ -403,6 +403,7 @@ Usage: `git cherry-pick commitSha`
 Use cases for Cherry-Picking:
 
 - Team Collaboration, e.g. backend create data-structure and frontend-dev cherry-picks it
+
 - Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users
 
 https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
@@ -429,10 +430,6 @@ From public repository:
 
 If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
 
-# Git Replace
-
-https://git-scm.com/book/en/v2/Git-Tools-Replace
-
 # Signing Commits/Tags
 
 https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
@@ -441,19 +438,9 @@ https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
 
 https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
 
-# Staging
-
-https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
-
 # Stashing
 
 https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
-
-# Squashing
-
-# Submodules
-
-https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 # Debugging with Git
 
