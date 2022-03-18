@@ -223,13 +223,13 @@ with `--merged` or `--no-merged` option you can filter branches that you have/no
 
 <!-- section 26 -->
 
-# Branching Strategies: GitFlow
+# GitFlow
 
 ![](assets/gitflow.webp)
 
 <!-- section 27 -->
 
-# Branching Strategies: GitFlow
+# GitFlow
 
 https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
 
@@ -248,13 +248,13 @@ https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
 
 <!-- section 28 -->
 
-# Branching Strategies: Github-Flow
+# Github-Flow
 
 ![](assets/githubflow.webp)
 
 <!-- section 29 -->
 
-# Branching Strategies: GithubFlow
+# GithubFlow
 
 https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
 https://docs.github.com/en/get-started/quickstart/github-flow
@@ -273,14 +273,14 @@ https://docs.github.com/en/get-started/quickstart/github-flow
 
 <!-- section 30 -->
 
-# Branching Strategies: GitlabFlow and
+# GitlabFlow
 
 https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 https://www.flagship.io/git-branching-strategies/
 
 <!-- section 31 -->
 
-# Branching Strategies: Trunk-Based-Development
+# Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
@@ -289,11 +289,11 @@ https://trunkbaseddevelopment.com/
 
 <!-- section 32 -->
 
-# Branching Strategies: Trunk-Based-Development
+# Trunk-Based-Development
 
-Recommended in: Accerlate: Building and Scaling High Performing Technology Organizations (Gez Humble, Gene Kim)
+Trunk-Based-Development is recommended in this book
 
-![](assets/accelerate.jpg)
+![Accerlate: Building and Scaling High Performing Technology Organizations (Gez Humble, Gene Kim)](assets/accelerate.jpg)
 
 <!-- section 33 -->
 
@@ -303,7 +303,11 @@ Recommended in: Accerlate: Building and Scaling High Performing Technology Organ
 
 # Working with Remotes
 
-> "Remote repositories are versions of your project that are hosted on the Internet or network somewhere"
+> "Remote repositories are versions of your project hosted on Internet or network somewhere"
+
+<!-- section 35 -->
+
+# Working with Remotes
 
 -   to list the current remotes you can use `git remote -v`
 -   a remote can be inspected with `git remote show origin`
@@ -314,14 +318,14 @@ Recommended in: Accerlate: Building and Scaling High Performing Technology Organ
 -   pulling from a remote: `git pull` (pull is a combination of `git fetch` and `git merge`)
 -   pushing to a remote: `git push origin master`
 
-<!-- section 35 -->
+<!-- section 36 -->
 
 # Pull-Request
 
 https://git-scm.com/docs/git-request-pull
 https://www.atlassian.com/de/git/tutorials/making-a-pull-request
 
-<!-- section 36 -->
+<!-- section 37 -->
 
 # Git log
 
@@ -331,28 +335,30 @@ https://www.atlassian.com/git/tutorials/git-log
 git log --decorate --graph --oneline --all
 ```
 
-<!-- section 37 -->
+<!-- section 38 -->
 
 # Tagging
 
--   list your existing tags with `git tag` or search with `git tag -l "v1.8.5*"`
 -   you can create a tag with `git tag -a v1.9 -m "my version 1.9"`
--   to get the data of a tagged commit use `git show v1.9`
--   when tagging without -a, -m, -s option a lightweight tag is created only containing the commit checksum, e.g. `git tag v1.9-lw`
--   tagging later can be done by specifying the commit the should be tagged, e.g. `git tag -a v1.9 9fceb02`
--   by default `git push` does **not** transfer tags to the remote server, instead use `git push origin v1.9` or `git push origin --tags`
--   tags can be deleted by `git tag -d v1.9`
--   to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://git-scm.com/book/en/v2/Git-Basics-Tagging)
+-   list your existing tags with `git tag` or `git tag -l "v1.8.5*"`
+-   to get the data of a tagged commit use: `git show v1.9`
+-   without -a, -m, -s option a lightweight tag containing only checksum is created:`git tag v1.9-lw`
+-   tagging later can be done by specifying the commit the should be tagged: `git tag -a v1.9 9fceb02`
+-   by default `git push` does **not** transfer tags. instead use `git push origin v1.9` or `git push origin --tags`
+-   tags can be deleted with `git tag -d v1.9`
+-   to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
 
-<!-- section 38 -->
+<!-- section 39 -->
 
 # Git Aliases
 
 > "Can simplify your Git-experience by settig custom aliases that are easier/shorter"
 
-e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git unstage fileA` instead of `git reset HEAD -- fileA`
+**`git config --global alias.unstage 'reset HEAD --'`**
 
-<!-- section 39 -->
+enables usage of **`git unstage fileA`** instead of **`git reset HEAD -- fileA`**
+
+<!-- section 40 -->
 
 # Submodules
 
@@ -360,14 +366,14 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git 
 
 `git submodule add https://bitbucket.org/somerepo/awesomelibrary`
 
-<!-- section 40 -->
+<!-- section 41 -->
 
 # Submodules
 
 -   Submodules do not track git refs or branches and are not automatically updated when the host repository is updated
 -   If you need to maintain a strict version management over your external dependencies, it can make sense to use git submodules
 
-<!-- section 41 -->
+<!-- section 42 -->
 
 # Subtrees
 
@@ -375,7 +381,7 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git 
 
 ![](assets/BeforeAfterGitSubtreeDiagram.png){height="80%" width="80%"}
 
-<!-- section 42 -->
+<!-- section 43 -->
 
 # Subtrees
 
@@ -389,7 +395,7 @@ e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git 
 -   you have to learn a new merging strategy (subtree merge)
 -   Contributing code back upstream for the sub-projects is slightly more complicated
 
-<!-- section 43 -->
+<!-- section 44 -->
 
 # Merge strategies
 
@@ -404,25 +410,25 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 -   Resolve
 -   Subtree
 
-<!-- section 44 -->
+<!-- section 45 -->
 
 # Merge: Fast Forward (Rebase)
 
 ![](assets/Fast-Forward-Merge.png)
 
-<!-- section 45 -->
+<!-- section 46 -->
 
 # Merge: Recursive
 
 ![](assets/Recursive-Merge.png)
 
-<!-- section 46 -->
+<!-- section 47 -->
 
 # Merge: Ours
 
 ![](assets/Ours-Merge.png)
 
-<!-- section 47 -->
+<!-- section 48 -->
 
 # Merge: Octopus
 
@@ -434,7 +440,7 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 > Linus Torvalds was not happy about a pull-request containing an octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
 
-<!-- section 48 -->
+<!-- section 49 -->
 
 # Merge: Resolve
 
@@ -444,7 +450,7 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 ![](assets/Resolve-Merge-Strategy.png)
 
-<!-- section 49 -->
+<!-- section 50 -->
 
 # Merge: Subtree
 
@@ -454,18 +460,18 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 > Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
-<!-- section 50 -->
+<!-- section 51 -->
 
 # Mergetool & Difftool
 
 -   `git mergetool` opens the merge tool defined in git-config (e.g. meld)
 -   `git diff Commit1sha Commit2sha` opens the diff tool defined in git-config
 
-<!-- section 51 -->
+<!-- section 52 -->
 
 # Merging vs. Rebasing vs. Cherry-Picking {#merging-vs.-rebasing-vs.-cherry-picking .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 52 -->
+<!-- section 53 -->
 
 # Cherry-Picking
 
@@ -473,7 +479,7 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 Usage: `git cherry-pick commitSha`
 
-<!-- section 53 -->
+<!-- section 54 -->
 
 # Cherry-Picking
 
@@ -487,7 +493,7 @@ https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
 https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching
 
-<!-- section 54 -->
+<!-- section 55 -->
 
 # Undoing commits
 
@@ -508,47 +514,47 @@ From public repository:
 
 If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
 
-<!-- section 55 -->
+<!-- section 56 -->
 
 # Git Replace
 
 https://git-scm.com/book/en/v2/Git-Tools-Replace
 
-<!-- section 56 -->
+<!-- section 57 -->
 
 # Signing Commits/Tags
 
 https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
 
-<!-- section 57 -->
+<!-- section 58 -->
 
 # Rewriting History
 
 https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
 
-<!-- section 58 -->
+<!-- section 59 -->
 
 # Staging
 
 https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
 
-<!-- section 59 -->
+<!-- section 60 -->
 
 # Stashing
 
 https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
 
-<!-- section 60 -->
+<!-- section 61 -->
 
 # Squashing
 
-<!-- section 61 -->
+<!-- section 62 -->
 
 # Submodules
 
 https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
-<!-- section 62 -->
+<!-- section 63 -->
 
 # Debugging with Git
 
@@ -561,7 +567,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
     -   when finished use `git bisect reset`
 -   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
-<!-- section 63 -->
+<!-- section 64 -->
 
 # Git-Hooks
 
@@ -574,25 +580,25 @@ https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
 
 Husky.NET
 
-<!-- section 64 -->
+<!-- section 65 -->
 
 # Handling large repositories
 
 https://www.atlassian.com/git/tutorials/big-repositories
 https://www.atlassian.com/git/tutorials/git-lfs
 
-<!-- section 65 -->
+<!-- section 66 -->
 
 # git gc && git prune
 
 https://www.atlassian.com/git/tutorials/git-prune
 https://www.atlassian.com/git/tutorials/git-gc
 
-<!-- section 66 -->
+<!-- section 67 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 67 -->
+<!-- section 68 -->
 
 # Best practices
 
@@ -603,11 +609,11 @@ https://www.atlassian.com/git/tutorials/git-gc
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
 
-<!-- section 68 -->
+<!-- section 69 -->
 
 # Advanced stuff {#advanced-stuff .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 69 -->
+<!-- section 70 -->
 
 # Advanced stuff
 
@@ -619,11 +625,11 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 
 -   Deletion von Elementen -\> Teasern
 
-<!-- section 70 -->
+<!-- section 71 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 71 -->
+<!-- section 72 -->
 
 # GitOps - What is GitOps?
 
@@ -634,7 +640,7 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 72 -->
+<!-- section 73 -->
 
 # GitOps - Pipeline
 
@@ -649,13 +655,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 73 -->
+<!-- section 74 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 74 -->
+<!-- section 75 -->
 
 # Ressources
 
