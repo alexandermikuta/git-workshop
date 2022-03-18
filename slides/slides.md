@@ -173,11 +173,11 @@ with `--merged` or `--no-merged` option you can filter branches that you have/no
 
 - Trunk-Based Development
 
-# Branching Strategies: GitFlow
+# GitFlow
 
 ![](assets/gitflow.webp)
 
-# Branching Strategies: GitFlow
+# GitFlow
 
 https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
 
@@ -194,11 +194,11 @@ https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
 - Heavy maintenance workload for released versions
 - structured and specific development path conflict with agile iterative approach
 
-# Branching Strategies: Github-Flow
+# Github-Flow
 
 ![](assets/githubflow.webp)
 
-# Branching Strategies: GithubFlow
+# GithubFlow
 
 https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
 https://docs.github.com/en/get-started/quickstart/github-flow
@@ -215,29 +215,31 @@ https://docs.github.com/en/get-started/quickstart/github-flow
 - This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
 - release preparation and bug fixes happen both in master branch -> requires attention
 
-# Branching Strategies: GitlabFlow and
+# GitlabFlow
 
 https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 https://www.flagship.io/git-branching-strategies/
 
-# Branching Strategies: Trunk-Based-Development
+# Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
 
 https://www.atlassian.com/de/continuous-delivery/continuous-integration/trunk-based-development
 https://trunkbaseddevelopment.com/
 
-# Branching Strategies: Trunk-Based-Development
+# Trunk-Based-Development
 
-Recommended in: Accerlate: Building and Scaling High Performing Technology Organizations (Gez Humble, Gene Kim)
+Trunk-Based-Development is recommended in this book
 
-![](assets/accelerate.jpg)
+![Accerlate: Building and Scaling High Performing Technology Organizations (Gez Humble, Gene Kim)](assets/accelerate.jpg)
 
 # Working with Git {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
 # Working with Remotes
 
-> "Remote repositories are versions of your project that are hosted on the Internet or network somewhere"
+> "Remote repositories are versions of your project hosted on Internet or network somewhere"
+
+# Working with Remotes
 
 - to list the current remotes you can use `git remote -v`
 - a remote can be inspected with `git remote show origin`
@@ -263,20 +265,22 @@ git log --decorate --graph --oneline --all
 
 # Tagging
 
-- list your existing tags with `git tag` or search with `git tag -l "v1.8.5*"`
 - you can create a tag with `git tag -a v1.9 -m "my version 1.9"`
-- to get the data of a tagged commit use `git show v1.9`
-- when tagging without -a, -m, -s option a lightweight tag is created only containing the commit checksum, e.g. `git tag v1.9-lw`
-- tagging later can be done by specifying the commit the should be tagged, e.g. `git tag -a v1.9 9fceb02`
-- by default `git push` does **not** transfer tags to the remote server, instead use `git push origin v1.9` or `git push origin --tags`
-- tags can be deleted by `git tag -d v1.9`
-- to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://git-scm.com/book/en/v2/Git-Basics-Tagging)
+- list your existing tags with `git tag` or `git tag -l "v1.8.5*"`
+- to get the data of a tagged commit use: `git show v1.9`
+- without -a, -m, -s option a lightweight tag containing only checksum is created:`git tag v1.9-lw`
+- tagging later can be done by specifying the commit the should be tagged: `git tag -a v1.9 9fceb02`
+- by default `git push` does **not** transfer tags. instead use `git push origin v1.9` or `git push origin --tags`
+- tags can be deleted with `git tag -d v1.9`
+- to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
 
 # Git Aliases
 
 > "Can simplify your Git-experience by settig custom aliases that are easier/shorter"
 
-e.g. `git config --global alias.unstage 'reset HEAD --'` enables usage of `git unstage fileA` instead of `git reset HEAD -- fileA`
+**`git config --global alias.unstage 'reset HEAD --'`**
+
+enables usage of **`git unstage fileA`** instead of **`git reset HEAD -- fileA`**
 
 # Submodules
 
