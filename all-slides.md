@@ -389,9 +389,10 @@ https://www.geeksforgeeks.org/merge-strategies-in-git/
 
 <!-- section 39 -->
 
-# Mergetool
+# Mergetool & Difftool
 
-https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Branching-and-Merging
+-   `git mergetool` opens the merge tool defined in git-config (e.g. meld)
+-   `git diff Commit1sha Commit2sha` opens the diff tool defined in git-config
 
 <!-- section 40 -->
 
@@ -470,11 +471,15 @@ https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
 
 <!-- section 48 -->
 
+# Squashing
+
+<!-- section 49 -->
+
 # Submodules
 
 https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
-<!-- section 49 -->
+<!-- section 50 -->
 
 # Debugging with Git
 
@@ -487,7 +492,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
     -   when finished use `git bisect reset`
 -   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
-<!-- section 50 -->
+<!-- section 51 -->
 
 # Git-Hooks
 
@@ -499,11 +504,11 @@ https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
 
 Husky.NET
 
-<!-- section 51 -->
+<!-- section 52 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 52 -->
+<!-- section 53 -->
 
 # Best practices
 
@@ -514,11 +519,11 @@ Husky.NET
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow -\> otherwise overhead in merges
 
-<!-- section 53 -->
+<!-- section 54 -->
 
 # Important commands {#important-commands .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 54 -->
+<!-- section 55 -->
 
 # Important commands: showing the history
 
@@ -534,15 +539,14 @@ git log --decorate --graph --oneline --all
 
 -   Blobs
 -   Pull-Requests
--   Squashing
 -   Deletion von Elementen -\> Teasern
 -   Git-LFS
 
-<!-- section 55 -->
+<!-- section 56 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 56 -->
+<!-- section 57 -->
 
 # GitOps - What is GitOps?
 
@@ -553,7 +557,7 @@ git log --decorate --graph --oneline --all
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 57 -->
+<!-- section 58 -->
 
 # GitOps - Pipeline
 
@@ -568,13 +572,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 58 -->
+<!-- section 59 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 59 -->
+<!-- section 60 -->
 
 # Ressources
 

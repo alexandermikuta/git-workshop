@@ -447,9 +447,12 @@
 When you specify a subtree merge, Git is often smart enough to figure out that one is a subtree of the other and merge appropriately</p>
 </blockquote>
 </section>
-<section id="mergetool" class="level1">
-<h1>Mergetool</h1>
-<p>https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Branching-and-Merging</p>
+<section id="mergetool-difftool" class="level1">
+<h1>Mergetool &amp; Difftool</h1>
+<ul>
+<li><code>git mergetool</code> opens the merge tool defined in git-config (e.g. meld)</li>
+<li><code>git diff Commit1sha Commit2sha</code> opens the diff tool defined in git-config</li>
+</ul>
 </section>
 <section id="merging-vs.-rebasing-vs.-cherry-picking" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
 <h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">Merging vs. Rebasing vs. Cherry-Picking</h1>
@@ -510,6 +513,9 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching</p>
 <h1>Stashing</h1>
 <p>https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning</p>
 </section>
+<section id="squashing" class="level1">
+<h1>Squashing</h1>
+</section>
 <section id="submodules-1" class="level1">
 <h1>Submodules</h1>
 <p>https://git-scm.com/book/en/v2/Git-Tools-Submodules</p>
@@ -564,7 +570,6 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes</p>
 <ul>
 <li>Blobs</li>
 <li>Pull-Requests</li>
-<li>Squashing</li>
 <li>Deletion von Elementen -&gt; Teasern</li>
 <li>Git-LFS</li>
 </ul>
