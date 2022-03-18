@@ -565,9 +565,19 @@ Setup:
 
 <!-- section 60 -->
 
-# Stashing
+# Stashing/Cleaning
 
-https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
+> If you want switching branches, but not commit half-done work you can use stashing
+
+-   **`git stash`**
+
+-   **`git stash list`**
+
+-   **`git stash apply`**
+
+-   New branch from stash: **`git stash branch testchanges`**
+
+-   clean working dir without stashing: **`git clean`**
 
 <!-- section 61 -->
 

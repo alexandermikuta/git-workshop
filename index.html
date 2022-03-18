@@ -577,9 +577,18 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching</p>
 <li>use -s instead of -a for tags: <strong><code>git tag -s v1.5 -m 'my signed 1.5 tag'</code></strong></li>
 </ul>
 </section>
-<section id="stashing" class="level1">
-<h1>Stashing</h1>
-<p>https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning</p>
+<section id="stashingcleaning" class="level1">
+<h1>Stashing/Cleaning</h1>
+<blockquote>
+<p>If you want switching branches, but not commit half-done work you can use stashing</p>
+</blockquote>
+<ul>
+<li><p><strong><code>git stash</code></strong></p></li>
+<li><p><strong><code>git stash list</code></strong></p></li>
+<li><p><strong><code>git stash apply</code></strong></p></li>
+<li><p>New branch from stash: <strong><code>git stash branch testchanges</code></strong></p></li>
+<li><p>clean working dir without stashing: <strong><code>git clean</code></strong></p></li>
+</ul>
 </section>
 <section id="debugging-with-git" class="level1">
 <h1>Debugging with Git</h1>
