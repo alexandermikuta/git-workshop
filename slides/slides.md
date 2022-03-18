@@ -267,14 +267,9 @@ Pull-Request: **`git request-pull v1.0 https://git.ko.xz/project master`**
 
 # Git log
 
-https://www.atlassian.com/git/tutorials/git-log
+Showing the history:
 
-```bash
-git log --decorate --graph --oneline --all
-```
-
-Filtering the history:
-
+- all: **`git log --decorate --graph --oneline --all`**
 - by amount: **`git log -3`**
 - by date: **`git log --after="2014-7-1"`**
 - by author: **`git log --author="John"`**
@@ -301,7 +296,7 @@ Filtering the history:
 
 **`git config --global alias.unstage 'reset HEAD --'`**
 
-enables usage of **`git unstage fileA`** instead of **`git reset HEAD -- fileA`**
+&rarr; **`git unstage fileA`** instead of **`git reset HEAD -- fileA`**
 
 # Submodules
 
@@ -316,9 +311,7 @@ enables usage of **`git unstage fileA`** instead of **`git reset HEAD -- fileA`*
 
 # Subtrees
 
-> Lets you nest one repository into anothers as sub-directory
-
-![](assets/BeforeAfterGitSubtreeDiagram.png){ height=80% width=80% }
+![nests one repository into anothers as sub-dir](assets/BeforeAfterGitSubtreeDiagram.png){ height=80% width=80% }
 
 # Subtrees
 
@@ -330,7 +323,7 @@ enables usage of **`git unstage fileA`** instead of **`git reset HEAD -- fileA`*
 **Cons**
 
 - you have to learn a new merging strategy (subtree merge)
-- Contributing code back upstream for the sub-projects is slightly more complicated
+- contributing code back to the sub-projects is more complicated
 
 # Merge strategies
 
