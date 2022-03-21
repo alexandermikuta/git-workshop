@@ -149,16 +149,16 @@ Typical settings:
 
 # .gitignore - Patterns
 
--   **`#`** serves as a comment
--   **`!`** negates a pattern
--   **`/`** directory separator
+-   **\#** serves as a comment
+-   **!** negates a pattern
+-   **/** directory separator
     -   slash at beginning → relative to the .gitignore-directory, otherwise any level
     -   slash at end → matches only directories, otherwise also files
--   **`*`** matches anything except slash
--   **`?`** like **`*`** but only one character
--   **`**`** match in all directories, e.g. **`**/foo`**
--   **`/**`** matches everything inside, e.g. **`foo/**`**
--   **`/**/`** matches zero or more directories, e.g. **`foo/**/foo`**
+-   **\*** matches anything except slash
+-   **?** like **\*** but only one character
+-   **\*\*** match in all directories, e.g. **\*\*/foo**
+-   **/\*\*** matches everything inside, e.g. **foo/\*\***
+-   **/\*\*/** matches zero or more directories, e.g. **foo/\*\*/foo**
 
 <!-- section 17 -->
 
