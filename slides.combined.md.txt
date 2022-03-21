@@ -71,11 +71,17 @@ Recommended sequence: commit &rarr; pull &rarr; push
 
 # Migration form TFS to Git
 
-- history not needed: **`git init`** on current files
+When history is not needed in Git:
 
-- history is needed: http://git-tfs.com/
-  - **`git tfs clone ...`** instead of the usual **`git clone ...`**
-  - git-tfs works as two-way bridge so changes can also be pushed to TFS: **`git tfs checkintool`**
+- `git init`
+
+When history is not needed in Git: [http://git-tfs.com/](http://git-tfs.com/)
+
+`git tfs clone ...`
+
+git-tfs works as two-way bridge so changes can also be pushed to TFS
+
+`git tfs checkintool`
 
 # Migration form TFS to Git
 
