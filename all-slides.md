@@ -61,7 +61,9 @@ Recommended sequence: commit → pull → push
 
 # Architecture - Creating a new repository
 
-> When you run **`git init`** Git creates the **`.git`** directory which contains your local repository data
+`git init`
+
+Creates the **.git** directory which contains your local repository data
 
 ![](assets/file-tree.png)
 
@@ -91,7 +93,7 @@ Recommended sequence: commit → pull → push
 
 When history is not needed in Git:
 
--   `git init`
+`git init`
 
 When history is not needed in Git: <http://git-tfs.com/>
 
