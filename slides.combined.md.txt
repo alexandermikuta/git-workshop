@@ -1,9 +1,10 @@
 ---
 title: Github-Workshop
+variant: reveal
 highlight_style: github-gist
 themes: mytheme
-theme: mono
 width: 1280
+asciinema: false
 ---
 
 # Git Workshop {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}

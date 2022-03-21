@@ -51,7 +51,12 @@ body.impress-enabled {
     text-align: center; }
     body.impress-enabled #impress .step .line-block {
       font-family: "Raleway", sans-serif; }
-    body.impress-enabled #impress .step h1, body.impress-enabled #impress .step h2, body.impress-enabled #impress .step h3, body.impress-enabled #impress .step h4, body.impress-enabled #impress .step h5, body.impress-enabled #impress .step h6 {
+    body.impress-enabled #impress .step h1,
+    body.impress-enabled #impress .step h2,
+    body.impress-enabled #impress .step h3,
+    body.impress-enabled #impress .step h4,
+    body.impress-enabled #impress .step h5,
+    body.impress-enabled #impress .step h6 {
       font-family: "EB Garamond Bold", serif; }
     body.impress-enabled #impress .step .hljs {
       text-align: left; }
@@ -64,7 +69,10 @@ body.impress-enabled {
   body.impress-enabled #impress .step.radialbg {
     background: #00d4ff;
     background: radial-gradient(circle, #00d4ff 0%, #090979 90%, #020024 100%); }
-  body.impress-enabled #impress .step.right, body.impress-enabled #impress .step.left, body.impress-enabled #impress .step.bottom, body.impress-enabled #impress .step.top {
+  body.impress-enabled #impress .step.right,
+  body.impress-enabled #impress .step.left,
+  body.impress-enabled #impress .step.bottom,
+  body.impress-enabled #impress .step.top {
     padding: 1ex;
     margin: 0; }
   body.impress-enabled #impress .step.right {
@@ -95,7 +103,8 @@ body.impress-enabled {
     overflow: auto;
     max-height: 400px;
     word-wrap: normal; }
-  body.impress-enabled #impress .step.ltr pre, body.impress-enabled #impress .step.ltr p {
+  body.impress-enabled #impress .step.ltr pre,
+  body.impress-enabled #impress .step.ltr p {
     display: inline-block; }
   body.impress-enabled #impress img.emoji {
     width: 2rem;
@@ -103,7 +112,7 @@ body.impress-enabled {
   body.impress-enabled #impress .substep {
     opacity: 0;
     visibility: hidden;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     will-change: opacity; }
     body.impress-enabled #impress .substep.substep-visible {
       opacity: 1;

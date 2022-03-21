@@ -16,7 +16,6 @@
 
     <link rel="stylesheet" href="assets/markdeck/styles/github-gist.css" />
 
-        <link rel="stylesheet" type="text/css" href="assets/3rdparty/asciinema-player.css" />
     
             <link rel="stylesheet" href="themes/mytheme/css/slides.css" />
         
@@ -32,7 +31,7 @@
 
     <link href="assets/css/rerendering.css" rel="stylesheet"></link>
 
-<link rel="stylesheet" href="themes/example/css/slides.css" />
+<link rel="stylesheet" href="themes/mytheme/css/slides.css" />
 
 </head>
 <body>
@@ -807,7 +806,7 @@ This live syncing pull request workflow is the core essence of GitOps</p>
             parallaxBackgroundHorizontal: (null != null && Number(null) >= 0) ? Number(null) : null,
             parallaxBackgroundVertical: (null != null && Number(null) >= 0) ? Number(null) : null,
 
-            theme: 'mono',
+            theme: '',
 
             plugins: [ Markdown, Notes ]
         });
@@ -860,7 +859,6 @@ This live syncing pull request workflow is the core essence of GitOps</p>
         hljs.initLineNumbersOnLoad();
     </script>
 
-        <script src="assets/3rdparty/asciinema-player.js"></script>
     
     <script>
         jQuery("pre.render_mermaid").each(function(i, old) {
