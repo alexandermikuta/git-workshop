@@ -36,6 +36,13 @@
 p {
   text-align: left; }
 
+p img {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; }
+
 .reveal ul {
   display: block !important; }
 
