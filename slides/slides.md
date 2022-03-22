@@ -54,12 +54,10 @@ Recommended sequence: commit &rarr; pull &rarr; push
 
 `git init`
 
-Creates the **.git** directory which contains your local repository data
-<img src="assets/file-tree.png">
-
-Content of **.git** directory:
-
-<figure><img src="assets/git-folder.png"><figcaption>HEAD is a reference to the checked out commit</figcaption></figure>
+| Project directory                                        | **.git** directory                            |
+| -------------------------------------------------------- | --------------------------------------------- |
+| <img src="assets/file-tree.png">                         | <img src="assets/git-folder.png">             |
+| contains **.git** directory and current checked out data | HEAD is a reference to the checked out commit |
 
 # GIT/TFS {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
