@@ -355,15 +355,18 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 - by range: `git log main..feature`
 
-- by merges: `git log --merges` or `git log --no-merges`
+- by merges: `git log --merges` `git log --no-merges`
 
 # Tagging
 
 - you can create a tag with `git tag -a v1.9 -m "my version 1.9"`
 - list your existing tags with `git tag` `git tag -l "v1.8.5*"`
 - to get the data of a tagged commit use: `git show v1.9`
-- tagging later can be done by specifying the commit the should be tagged: `git tag -a v1.9 9fceb02`
-- by default `git push` does **not** transfer tags. instead use `git push origin v1.9` `git push origin --tags`
+- tag later by specifying the commit to tag: `git tag -a v1.9 9fceb02`
+
+# Tagging
+
+- by default **git push** does **not** transfer tags. instead use `git push origin v1.9` `git push origin --tags`
 - tags can be deleted with `git tag -d v1.9`
 - to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
 
