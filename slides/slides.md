@@ -642,6 +642,7 @@ clone only branch: `git clone [remote url] --branch [branch_name] --single-branc
 
 [Attributes](https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes): Can be used for diffing binary files by modifying **.gitattributes**
 `*.png diff=exif`
+`git config diff.exif.textconv exiftool`
 
 - Deletion von Elementen &rarr; Teasern
 
