@@ -366,7 +366,7 @@ Trunk-Based-Development is recommended in this book
   ---------------------------------------------- -------- --------------- -----------------------
   all                                            Small    High            TBD
   CI/CD: SaaS                                    Middle   Moderate        GitHub-Flow, TBD
-  fixed+periodic release: iOS                    Middle   Moderate        Git-Flow, GitLab-Flow
+  fixed+periodic: iOS                            Middle   Moderate        Git-Flow, GitLab-Flow
   quality + CI/CD: platform product              Middle   Moderate        GitLab-Flow
   quality + long maintenance: platform product   Large    Moderate        Git-Flow
 
