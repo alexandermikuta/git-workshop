@@ -459,7 +459,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 -   by default **git push** does **not** transfer tags. instead use `git push origin v1.9` `git push origin --tags`
 -   tags can be deleted with `git tag -d v1.9`
--   to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
+-   to checkout a tagged commit use `git checkout v1.9` [be aware of detached HEAD!](https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
 
 <!-- section 47 -->
 
