@@ -510,9 +510,9 @@ Usage: `git cherry-pick commitSha`
 
 Use cases for Cherry-Picking:
 
-- Team Collaboration, e.g. backend create data-structure and frontend-dev cherry-picks it
+- **Team Collaboration:** backend creates data-structure and frontend-dev cherry-picks it
 
-- Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users
+- **Bug-Fixing:** hotfix can be cherry-picked to main branch before it affects more users
 
 # Undoing commits
 
