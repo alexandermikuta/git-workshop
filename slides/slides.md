@@ -32,12 +32,6 @@ asciinema: false
 
 ![](assets/directed_acyclic_graph.png)
 
-# Architecture - Git-Workflow
-
-![](assets/git-workflow.png){ height=45% width=45% }
-
-Recommended sequence: commit &rarr; pull &rarr; push
-
 # Architecture - Distributed Development
 
 ![](assets/distributed_dev.svg){ height=50% width=50% }
@@ -48,7 +42,13 @@ Recommended sequence: commit &rarr; pull &rarr; push
 
 - Advantage: No network connection needed for commits.
 
-- Checkins in local repository also work if production branch in SVN is broken.
+- Checkins in local repository also work if production branch is broken.
+
+# Architecture - Git-Workflow
+
+![](assets/git-workflow.png){ height=45% width=45% }
+
+Recommended sequence: commit &rarr; pull &rarr; push
 
 # Architecture - Creating a new repository
 
@@ -56,9 +56,9 @@ Recommended sequence: commit &rarr; pull &rarr; push
 
 Creates the **.git** directory which contains your local repository data
 
-![](assets/file-tree.png)
-
-![HEAD is a reference to the checked out commit](assets/git-folder.png)
+| Project directory         | .git- irectory                                                          |
+| ------------------------- | ----------------------------------------------------------------------- |
+| ![](assets/file-tree.png) | ![HEAD is a reference to the checked out commit](assets/git-folder.png) |
 
 # GIT/TFS {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
@@ -95,11 +95,11 @@ Plan your migration carefully:
 
 # Git-Configuration
 
-- can be local for git-repository within **`.git/config`**
+- can be local for git-repository within `.git/config`
 
-- can be global via global flag **`git config --global ...`**
+- can be global via global flag `git config --global ...`
 
-- can be accessed via **`git config --list`**
+- can be accessed via `git config --list`
 
 # Git-Configuration
 
@@ -113,7 +113,7 @@ Typical settings:
 
 # .gitignore
 
-- .gitinore-File specifies files that Git should ignore
+- .gitignore-File specifies files that Git should ignore
 
 - files already track are not affected!
 
@@ -153,15 +153,24 @@ Creating a new branch: **`git branch <branchname>`**
 
 # Branching
 
-list branches with **`git branch`** or **`git branch -v`**
+list branches:
 
-with **`--merged`** or **`--no-merged`** option you can filter branches that you have/not merged into the branch you are currently on
+`git branch`** or **`git branch -v`
+
+add option to filter branches (not) merged into the branch you are currently on:
+
+`--merged`
+`--no-merged`
 
 # Branching
 
-- rename branch with **`git branch --move bad-branch-name corrected-branch-name`**
-  - push it with **`git push --set-upstream origin corrected-branch-name`**
-  - delete bad branch on remote with **`git push origin --delete bad-branch-name`**
+rename branch:
+
+`git branch --move bad-branch-name corrected-branch-name`
+
+`git push --set-upstream origin corrected-branch-name`
+
+`git push origin --delete bad-branch-name`
 
 # Branching
 
@@ -187,7 +196,7 @@ with **`--merged`** or **`--no-merged`** option you can filter branches that you
 
 # Git-Flow
 
-![](assets/gitflow.webp)
+![[https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow](https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow)](assets/gitflow.webp)
 
 # Git-Flow
 
@@ -206,12 +215,9 @@ with **`--merged`** or **`--no-merged`** option you can filter branches that you
 
 # Github-Flow
 
-![](assets/githubflow.webp)
+![[https://docs.github.com/en/get-started/quickstart/github-flow](https://docs.github.com/en/get-started/quickstart/github-flow)](github-flow.png)
 
 # Github-Flow
-
-https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
-https://docs.github.com/en/get-started/quickstart/github-flow
 
 **Pros**
 
@@ -221,7 +227,7 @@ https://docs.github.com/en/get-started/quickstart/github-flow
 
 **Cons**
 
-- Speed comes at cost of less organized workflow in comparison to Git-Flow
+- Fast, but less organized in comparison to Git-Flow
 - This branching stratey emphasizes constant deployment. Limitation for teams that tent to make larger releases or test several features together
 - release preparation and bug fixes happen both in master branch &rarr; requires attention
 
