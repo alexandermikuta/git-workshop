@@ -690,29 +690,27 @@
 <p>by signing you can verify that commits are actually from a trusted source</p>
 </blockquote>
 <p>Setup:</p>
-<p><strong><code>gpg --gen-key</code></strong>
-<strong><code>gpg --list-keys</code></strong>
-<strong><code>git config --global user.signingkey &lt;signingkey&gt;</code></strong></p>
+<p><code>gpg --gen-key</code>
+<code>gpg --list-keys</code>
+<code>git config --global user.signingkey &lt;signingkey&gt;</code></p>
 </section>
 <section id="signing-commitstags-1" class="level1">
 <h1>Signing Commits/Tags</h1>
 <ul>
-<li><p>add -s to your commit command: <strong><code>git commit -a -S -m 'Signed commit'</code></strong></p></li>
-<li><p>use -s instead of -a for tags: <strong><code>git tag -s v1.5 -m 'my signed 1.5 tag'</code></strong></p></li>
+<li><p>add -s to your commit command: <code>git commit -a -S -m 'Signed commit'</code></p></li>
+<li><p>use -s instead of -a for tags: <code>git tag -s v1.5 -m 'my signed 1.5 tag'</code></p></li>
 </ul>
 </section>
 <section id="stashingcleaning" class="level1">
 <h1>Stashing/Cleaning</h1>
-<blockquote>
-<p>If you want switching branches, but not commit half-done work you can use stashing</p>
-</blockquote>
-<ul>
-<li><p><strong><code>git stash</code></strong></p></li>
-<li><p><strong><code>git stash list</code></strong></p></li>
-<li><p><strong><code>git stash apply</code></strong></p></li>
-<li><p>New branch from stash: <strong><code>git stash branch testchanges</code></strong></p></li>
-<li><p>clean working dir without stashing: <strong><code>git clean</code></strong></p></li>
-</ul>
+<p>Switching branches without commiting unfinished work:</p>
+<p><code>git stash</code>
+<code>git stash list</code>
+<code>git stash apply</code></p>
+<p>New branch from stash:
+<code>git stash branch testchanges</code></p>
+<p>Clean working dir without stashing:
+<code>git clean</code></p>
 </section>
 <section id="debugging-with-git" class="level1">
 <h1>Debugging with Git</h1>

@@ -534,26 +534,29 @@ add additional files to your previous commit
 
 Setup:
 
-**`gpg --gen-key`**
-**`gpg --list-keys`**
-**`git config --global user.signingkey <signingkey>`**
+`gpg --gen-key`
+`gpg --list-keys`
+`git config --global user.signingkey <signingkey>`
 
 # Signing Commits/Tags
 
-- add -s to your commit command: **`git commit -a -S -m 'Signed commit'`**
+- add -s to your commit command: `git commit -a -S -m 'Signed commit'`
 
-- use -s instead of -a for tags: **`git tag -s v1.5 -m 'my signed 1.5 tag'`**
+- use -s instead of -a for tags: `git tag -s v1.5 -m 'my signed 1.5 tag'`
 
 # Stashing/Cleaning
 
-> If you want switching branches, but not commit half-done work you can use stashing
+Switching branches without commiting unfinished work:
 
-- **`git stash`**
-- **`git stash list`**
-- **`git stash apply`**
+`git stash`
+`git stash list`
+`git stash apply`
 
-- New branch from stash: **`git stash branch testchanges`**
-- clean working dir without stashing: **`git clean`**
+New branch from stash:
+`git stash branch testchanges`
+
+Clean working dir without stashing:
+`git clean`
 
 # Debugging with Git
 
