@@ -727,8 +727,11 @@
 <section id="git-hooks" class="level1">
 <h1>Git-Hooks</h1>
 <blockquote>
-<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Git</a> hooks are scripts that run automatically every time a particular event occurs in a Git repository. They let you customize Git’s internal behavior and trigger customizable actions at key points in the development life cycle.</p>
+<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Git hooks</a> are scripts that run automatically every time a particular event occurs in a Git repository. They let you customize Git’s internal behavior and trigger customizable actions at key points in the development life cycle.</p>
 </blockquote>
+</section>
+<section id="git-hooks-1" class="level1">
+<h1>Git-Hooks</h1>
 <ul>
 <li>Examples can be found at folder: <strong>.git/hooks</strong></li>
 <li>Git hooks have to be executable (chmod!)</li>
@@ -736,10 +739,9 @@
 <li>hooks are repository specific and are <strong>not</strong> copied over when a repository is cloned</li>
 </ul>
 </section>
-<section id="git-hooks-1" class="level1">
+<section id="git-hooks-2" class="level1">
 <h1>Git-Hooks</h1>
-<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy">Enforcing Policies:</a></p>
-<p>Pre-Rebase-Hook to disallow rebasing:</p>
+<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy">Enforcing Policies:</a> Pre-Rebase-Hook to disallow rebasing</p>
 <pre><code>#!/bin/sh
 
 # Disallow all rebasing
@@ -750,7 +752,7 @@ exit 1</code></pre>
 <li>Enforcing specific commit-message format</li>
 <li>Enforing a User-Based ACL System</li>
 </ul>
-<p><a href="https://alirezanet.github.io/Husky.Net/">Husky.NET</a></p>
+<p>Worth a look: <a href="https://alirezanet.github.io/Husky.Net/">Husky.NET</a></p>
 </section>
 <section id="handling-large-repositories" class="level1">
 <h1>Handling large repositories</h1>

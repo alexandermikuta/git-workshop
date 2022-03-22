@@ -574,7 +574,9 @@ find strings/regex in your files:
 
 # Git-Hooks
 
-> [Git](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) hooks are scripts that run automatically every time a particular event occurs in a Git repository. They let you customize Git’s internal behavior and trigger customizable actions at key points in the development life cycle.
+> [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) are scripts that run automatically every time a particular event occurs in a Git repository. They let you customize Git’s internal behavior and trigger customizable actions at key points in the development life cycle.
+
+# Git-Hooks
 
 - Examples can be found at folder: **.git/hooks**
 - Git hooks have to be executable (chmod!)
@@ -583,9 +585,7 @@ find strings/regex in your files:
 
 # Git-Hooks
 
-[Enforcing Policies:](https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy)
-
-Pre-Rebase-Hook to disallow rebasing:
+[Enforcing Policies:](https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy) Pre-Rebase-Hook to disallow rebasing
 
 ```
 #!/bin/sh
@@ -600,7 +600,7 @@ Other use cases:
 - Enforcing specific commit-message format
 - Enforing a User-Based ACL System
 
-[Husky.NET](https://alirezanet.github.io/Husky.Net/)
+Worth a look: [Husky.NET](https://alirezanet.github.io/Husky.Net/)
 
 # Handling large repositories
 

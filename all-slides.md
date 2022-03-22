@@ -715,20 +715,22 @@ find strings/regex in your files:
 
 # Git-Hooks
 
-> [Git](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) hooks are scripts that run automatically every time a particular event occurs in a Git repository. They let you customize Git's internal behavior and trigger customizable actions at key points in the development life cycle.
+> [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) are scripts that run automatically every time a particular event occurs in a Git repository. They let you customize Git's internal behavior and trigger customizable actions at key points in the development life cycle.
+
+<!-- section 72 -->
+
+# Git-Hooks
 
 -   Examples can be found at folder: **.git/hooks**
 -   Git hooks have to be executable (chmod!)
 -   built-in scripts are mostly shell and PERL scripts, but you can use any scripting language as long as it is executable
 -   hooks are repository specific and are **not** copied over when a repository is cloned
 
-<!-- section 72 -->
+<!-- section 73 -->
 
 # Git-Hooks
 
-[Enforcing Policies:](https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy)
-
-Pre-Rebase-Hook to disallow rebasing:
+[Enforcing Policies:](https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy) Pre-Rebase-Hook to disallow rebasing
 
     #!/bin/sh
 
@@ -741,27 +743,27 @@ Other use cases:
 -   Enforcing specific commit-message format
 -   Enforing a User-Based ACL System
 
-[Husky.NET](https://alirezanet.github.io/Husky.Net/)
+Worth a look: [Husky.NET](https://alirezanet.github.io/Husky.Net/)
 
-<!-- section 73 -->
+<!-- section 74 -->
 
 # Handling large repositories
 
 https://www.atlassian.com/git/tutorials/big-repositories
 https://www.atlassian.com/git/tutorials/git-lfs
 
-<!-- section 74 -->
+<!-- section 75 -->
 
 # git gc && git prune
 
 https://www.atlassian.com/git/tutorials/git-prune
 https://www.atlassian.com/git/tutorials/git-gc
 
-<!-- section 75 -->
+<!-- section 76 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 76 -->
+<!-- section 77 -->
 
 # Best practices
 
@@ -772,11 +774,11 @@ https://www.atlassian.com/git/tutorials/git-gc
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow → otherwise overhead in merges
 
-<!-- section 77 -->
+<!-- section 78 -->
 
 # Advanced stuff {#advanced-stuff .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 78 -->
+<!-- section 79 -->
 
 # Advanced stuff
 
@@ -788,11 +790,11 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 
 -   Deletion von Elementen → Teasern
 
-<!-- section 79 -->
+<!-- section 80 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 80 -->
+<!-- section 81 -->
 
 # GitOps - What is GitOps?
 
@@ -803,7 +805,7 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 81 -->
+<!-- section 82 -->
 
 # GitOps - Pipeline
 
@@ -818,13 +820,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 82 -->
+<!-- section 83 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 83 -->
+<!-- section 84 -->
 
 # Ressources
 
