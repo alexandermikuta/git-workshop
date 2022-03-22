@@ -756,12 +756,15 @@ exit 1</code></pre>
 </section>
 <section id="handling-large-repositories" class="level1">
 <h1>Handling large repositories</h1>
-<p>very long accumulated history:</p>
+<p><strong>Very long accumulated history:</strong></p>
 <p>shallow clone: <code>git clone --depth [depth] [remote-url]</code>
 clone only branch: <code>git clone [remote url] --branch [branch_name] --single-branch [folder]</code></p>
-<p>huge binary assets that need to be tracked together with code:</p>
+</section>
+<section id="handling-large-repositories-1" class="level1">
+<h1>Handling large repositories</h1>
+<p><strong>Huge binary assets that need to be tracked together with code:</strong></p>
 <ul>
-<li><a href="https://www.atlassian.com/git/tutorials/git-lfs">GIT-LFS</a>: Extension that lazy loads big files at checkout instead of cloning/fetching</li>
+<li><strong><a href="https://www.atlassian.com/git/tutorials/git-lfs">GIT-LFS</a>:</strong> lazy loads big files at checkout instead of cloning/fetching</li>
 <li><strong><a href="https://www.atlassian.com/git/tutorials/git-gc">git gc</a></strong></li>
 <li><strong><a href="https://www.atlassian.com/git/tutorials/git-prune">git prune</a></strong></li>
 </ul>
