@@ -560,14 +560,17 @@ Clean working dir without stashing:
 
 # Debugging with Git
 
-- File annotations: `git blame -L 3,5 <somefilename>`
-- git bisect:
-  - start with `git bisect start`
-  - use `git bisect bad` to tell the system that current commit is broken
-  - use `git bisect good <good_commit>` when the last known good state was
-  - goes to middle of possibly broken commits &rarr; check &rarr; git bisect bad/good
-  - when finished use `git bisect reset`
-- git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
+get File annotations:
+`git blame -L 3,5 <somefilename>`
+
+git bisect (helps identifiying last good commit):
+`git bisect start`
+`git bisect bad`
+`git bisect good <good_commit>`
+`git bisect reset`
+
+find strings/regex in your files:
+`git grep -n <search-text>`
 
 # Git-Hooks
 
