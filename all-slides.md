@@ -64,11 +64,10 @@ Recommended sequence: commit → pull → push
 `git init`
 
 Creates the **.git** directory which contains your local repository data
+`<img src="assets/file-tree.png">`{=html}
 
-  Project directory   .git- irectory
-  ------------------- ----------------
+Content of **.git** directory:
 
-\| `<img src="assets/file-tree.png">`{=html} \|
 ```{=html}
 <figure>
 ```
@@ -83,8 +82,6 @@ HEAD is a reference to the checked out commit
 ```{=html}
 </figure>
 ```
-\|
-
 <!-- section 9 -->
 
 # GIT/TFS {#gittfs .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
