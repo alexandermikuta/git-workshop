@@ -714,18 +714,15 @@
 </section>
 <section id="debugging-with-git" class="level1">
 <h1>Debugging with Git</h1>
-<ul>
-<li>File annotations: <code>git blame -L 3,5 &lt;somefilename&gt;</code></li>
-<li>git bisect:
-<ul>
-<li>start with <code>git bisect start</code></li>
-<li>use <code>git bisect bad</code> to tell the system that current commit is broken</li>
-<li>use <code>git bisect good &lt;good_commit&gt;</code> when the last known good state was</li>
-<li>goes to middle of possibly broken commits → check → git bisect bad/good</li>
-<li>when finished use <code>git bisect reset</code></li>
-</ul></li>
-<li>git grep can help you strings/regex in your files, e.g. <code>git grep -n &lt;search-text&gt;</code></li>
-</ul>
+<p>get File annotations:
+<code>git blame -L 3,5 &lt;somefilename&gt;</code></p>
+<p>git bisect (helps identifiying last good commit):
+<code>git bisect start</code>
+<code>git bisect bad</code>
+<code>git bisect good &lt;good_commit&gt;</code>
+<code>git bisect reset</code></p>
+<p>find strings/regex in your files:
+<code>git grep -n &lt;search-text&gt;</code></p>
 </section>
 <section id="git-hooks" class="level1">
 <h1>Git-Hooks</h1>
