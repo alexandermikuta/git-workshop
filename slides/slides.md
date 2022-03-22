@@ -644,7 +644,7 @@ clone only branch: `git clone [remote url] --branch [branch_name] --single-branc
 `*.png diff=exif`
 `git config diff.exif.textconv exiftool`
 
-- Deletion von Elementen &rarr; Teasern
+[Delete completely from Git](https://itextpdf.com/de/blog/technical-notes/how-completely-remove-file-git-repository)
 
 # GitOps {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
