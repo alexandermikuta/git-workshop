@@ -752,6 +752,7 @@ Worth a look: [Husky.NET](https://alirezanet.github.io/Husky.Net/)
 **Very long accumulated history:**
 
 shallow clone: `git clone --depth [depth] [remote-url]`
+
 clone only branch: `git clone [remote url] --branch [branch_name] --single-branch [folder]`
 
 <!-- section 75 -->
@@ -772,8 +773,8 @@ clone only branch: `git clone [remote url] --branch [branch_name] --single-branc
 
 # Best practices
 
--   commit often: Each commit is a snapshot that can be reverted to. Commits can be combined using `rebase`.
--   work from latest version with `git pull` to avoid merge conflicts
+-   commit often: Each commit is a snapshot that can be reverted to
+-   work from latest version with **pull** to avoid merge conflicts
 -   commit notes should contain "why" and "what" of change
 -   review changes before commiting
 -   Use Branches: Enables developers to work in parallel on separate lines of product
