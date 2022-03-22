@@ -317,7 +317,7 @@ The GitLab Flow is based on 11 rules:
 
 -   Use feature branches, no direct commits on master
 -   Test all commits, not only ones on master
--   Run all the tests on all commits (if your tests run longer than 5 minutes have them run in parallel).
+-   Run all tests on all commits (parallel if \>5 minutes)
 -   Perform code reviews before merges into master, not afterwards.
 -   Deployments are automatic, based on branches or tags.
 -   Tags are set by the user, not by CI.
