@@ -337,8 +337,6 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 # Git log
 
-Showing the history:
-
 - all: `git log --decorate --graph --oneline --all`
 
 - by amount: `git log -3`
@@ -350,8 +348,6 @@ Showing the history:
 - by message: `git log --grep="JRA-224:"`
 
 # Git log
-
-Showing the history:
 
 - by file: `git log -- foo.py bar.py`
 
