@@ -634,10 +634,22 @@
 <section id="merging-vs.-rebasing-vs.-cherry-picking" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
 <h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">Merging vs. Rebasing vs. Cherry-Picking</h1>
 </section>
+<section id="merging" class="level1">
+<h1>Merging</h1>
+<ul>
+<li><p>Easiest way to merge one branch into another</p></li>
+<li><p>non destructive: does not change existing branches</p></li>
+<li><p>a lot of merge commits if main branch changes often</p></li>
+</ul>
+</section>
 <section id="rebasing" class="level1">
 <h1>Rebasing</h1>
-<p>https://git-scm.com/book/en/v2/Git-Branching-Rebasing
-https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History</p>
+<p><a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History">https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History</a></p>
+<ul>
+<li><p>no unneccessary merge commits → history easy readable</p></li>
+<li><p>Readability, but less secure and trackable</p></li>
+<li><p>Context lost → hard to see wenn upstream-changes are integrated into feature</p></li>
+</ul>
 </section>
 <section id="cherry-picking" class="level1">
 <h1>Cherry-Picking</h1>
@@ -653,13 +665,9 @@ https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History</p>
 <li><p>Team Collaboration, e.g. backend create data-structure and frontend-dev cherry-picks it</p></li>
 <li><p>Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users</p></li>
 </ul>
-<p>https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
-https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
-https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching</p>
 </section>
 <section id="undoing-commits" class="level1">
 <h1>Undoing commits</h1>
-<p>https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified</p>
 <p>From local repository:</p>
 <ul>
 <li>keeping your local changes: <code>git reset --soft HEAD</code></li>
@@ -667,6 +675,9 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching</p>
 <li>unstage staged file: <code>git restore --staged &lt;filename&gt;</code></li>
 <li>unmodifying a file: <code>git restore &lt;filename&gt;</code></li>
 </ul>
+</section>
+<section id="undoing-commits-1" class="level1">
+<h1>Undoing commits</h1>
 <p>From public repository:</p>
 <ul>
 <li><code>git revert HEAD</code> and <code>git commit -m "reverted last commit"</code></li>

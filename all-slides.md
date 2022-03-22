@@ -604,12 +604,27 @@ open diff tool defined in git-config:
 
 <!-- section 60 -->
 
-# Rebasing
+# Merging
 
-https://git-scm.com/book/en/v2/Git-Branching-Rebasing
-https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+-   Easiest way to merge one branch into another
+
+-   non destructive: does not change existing branches
+
+-   a lot of merge commits if main branch changes often
 
 <!-- section 61 -->
+
+# Rebasing
+
+<https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History>
+
+-   no unneccessary merge commits → history easy readable
+
+-   Readability, but less secure and trackable
+
+-   Context lost → hard to see wenn upstream-changes are integrated into feature
+
+<!-- section 62 -->
 
 # Cherry-Picking
 
@@ -617,7 +632,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
 
 Usage: `git cherry-pick commitSha`
 
-<!-- section 62 -->
+<!-- section 63 -->
 
 # Cherry-Picking
 
@@ -627,15 +642,9 @@ Use cases for Cherry-Picking:
 
 -   Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users
 
-https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
-https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
-https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching
-
-<!-- section 63 -->
+<!-- section 64 -->
 
 # Undoing commits
-
-https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified
 
 From local repository:
 
@@ -643,6 +652,10 @@ From local repository:
 -   discarding your local changes: `git reset --hard HEAD`
 -   unstage staged file: `git restore --staged <filename>`
 -   unmodifying a file: `git restore <filename>`
+
+<!-- section 65 -->
+
+# Undoing commits
 
 From public repository:
 
@@ -652,7 +665,7 @@ From public repository:
 
 If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
 
-<!-- section 64 -->
+<!-- section 66 -->
 
 # Signing Commits/Tags
 
@@ -667,7 +680,7 @@ Setup:
 -   add -s to your commit command: **`git commit -a -S -m 'Signed commit'`**
 -   use -s instead of -a for tags: **`git tag -s v1.5 -m 'my signed 1.5 tag'`**
 
-<!-- section 65 -->
+<!-- section 67 -->
 
 # Stashing/Cleaning
 
@@ -683,7 +696,7 @@ Setup:
 
 -   clean working dir without stashing: **`git clean`**
 
-<!-- section 66 -->
+<!-- section 68 -->
 
 # Debugging with Git
 
@@ -696,7 +709,7 @@ Setup:
     -   when finished use `git bisect reset`
 -   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
-<!-- section 67 -->
+<!-- section 69 -->
 
 # Git-Hooks
 
@@ -709,25 +722,25 @@ https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
 
 Husky.NET
 
-<!-- section 68 -->
+<!-- section 70 -->
 
 # Handling large repositories
 
 https://www.atlassian.com/git/tutorials/big-repositories
 https://www.atlassian.com/git/tutorials/git-lfs
 
-<!-- section 69 -->
+<!-- section 71 -->
 
 # git gc && git prune
 
 https://www.atlassian.com/git/tutorials/git-prune
 https://www.atlassian.com/git/tutorials/git-gc
 
-<!-- section 70 -->
+<!-- section 72 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 71 -->
+<!-- section 73 -->
 
 # Best practices
 
@@ -738,11 +751,11 @@ https://www.atlassian.com/git/tutorials/git-gc
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow → otherwise overhead in merges
 
-<!-- section 72 -->
+<!-- section 74 -->
 
 # Advanced stuff {#advanced-stuff .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 73 -->
+<!-- section 75 -->
 
 # Advanced stuff
 
@@ -754,11 +767,11 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 
 -   Deletion von Elementen → Teasern
 
-<!-- section 74 -->
+<!-- section 76 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 75 -->
+<!-- section 77 -->
 
 # GitOps - What is GitOps?
 
@@ -769,7 +782,7 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 76 -->
+<!-- section 78 -->
 
 # GitOps - Pipeline
 
@@ -784,13 +797,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 77 -->
+<!-- section 79 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 78 -->
+<!-- section 80 -->
 
 # Ressources
 
