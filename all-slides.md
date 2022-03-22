@@ -362,19 +362,19 @@ Trunk-Based-Development is recommended in this book
 
 # Comparison of Workflows
 
-  -------------------------------------------------------------------------------------------------------------
-  release method                                                Team     Collaboration   Workflow
-  ------------------------------------------------------------- -------- --------------- ----------------------
-  all                                                           Small    High            TBD
+  ------------------------------------------------------------------------------------------------------
+  release method                                         Team     Collaboration   Workflow
+  ------------------------------------------------------ -------- --------------- ----------------------
+  all                                                    Small    High            TBD
 
-  continuous deployment/release: SaaS                           Middle   Moderate        GitHub-Flow/TBD
+  cont. deployment/release: SaaS                         Middle   Moderate        GitHub-Flow/TBD
 
-  fixed+periodic release: iOS                                   Middle   Moderate        Git-Flow/GitLab-Flow
+  fixed+periodic release: iOS                            Middle   Moderate        Git-Flow/GitLab-Flow
 
-  quality demand + cont. deployment/release: platform product   Middle   Moderate        GitLab-Flow
+  quality + cont. deployment/release: platform product   Middle   Moderate        GitLab-Flow
 
-  quality demand + long maintained versions: platform product   Large    Moderate        Git-Flow
-  -------------------------------------------------------------------------------------------------------------
+  quality + long maintained versions: platform product   Large    Moderate        Git-Flow
+  ------------------------------------------------------------------------------------------------------
 
 <https://www.flagship.io/git-branching-strategies/>
 
