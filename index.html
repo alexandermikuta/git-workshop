@@ -316,7 +316,7 @@
 <section id="github-flow" class="level1">
 <h1>Github-Flow</h1>
 <figure>
-<img src="github-flow.png" alt="" /><figcaption><a href="https://docs.github.com/en/get-started/quickstart/github-flow">https://docs.github.com/en/get-started/quickstart/github-flow</a></figcaption>
+<img src="assets/github-flow.png" alt="" /><figcaption><a href="https://docs.github.com/en/get-started/quickstart/github-flow">https://docs.github.com/en/get-started/quickstart/github-flow</a></figcaption>
 </figure>
 </section>
 <section id="github-flow-1" class="level1">
@@ -336,10 +336,50 @@
 </section>
 <section id="gitlab-flow" class="level1">
 <h1>Gitlab-Flow</h1>
+<figure>
+<img src="assets/gitlab_flow_release_branches.png" alt="" /><figcaption><a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html">https://docs.gitlab.com/ee/topics/gitlab_flow.html</a></figcaption>
+</figure>
+</section>
+<section id="gitlab-flow-1" class="level1">
+<h1>Gitlab-Flow</h1>
+<p><strong>Pros</strong></p>
+<ul>
+<li>similar advantages as Github-Flow</li>
+<li>Additionaly enables time releases to production, e.g. when only few customers are on platform</li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul>
+<li>more complex than Github-Flow</li>
+<li>could become more complex than Git-Flow when maintaining multiple versions is needed</li>
+</ul>
+</section>
+<section id="gitlab-flow-2" class="level1">
+<h1>Gitlab-Flow</h1>
+<p>The GitLab Flow is based on 11 rules:</p>
+<ul>
+<li>Use feature branches, no direct commits on master</li>
+<li>Test all commits, not only ones on master</li>
+<li>Run all the tests on all commits (if your tests run longer than 5 minutes have them run in parallel).</li>
+<li>Perform code reviews before merges into master, not afterwards.</li>
+<li>Deployments are automatic, based on branches or tags.</li>
+<li>Tags are set by the user, not by CI.</li>
+<li>Releases are based on tags.</li>
+<li>Pushed commits are never rebased.</li>
+<li>Everyone starts from master, and targets master.</li>
+<li>Fix bugs in master first and release branches second.</li>
+<li>Commit messages reflect intent.</li>
+</ul>
 </section>
 <section id="trunk-based-development" class="level1">
 <h1>Trunk-Based-Development</h1>
 <p><img src="assets/trunk-based-development.jpg" /></p>
+<ul>
+<li>pure TBD has only master branch</li>
+<li>scaled TBD: additional short-lived feature branches to have isolation in bigger teams</li>
+</ul>
+</section>
+<section id="trunk-based-development-1" class="level1">
+<h1>Trunk-Based-Development</h1>
 <p><strong>Pros</strong></p>
 <ul>
 <li>Quicker releases</li>
@@ -351,19 +391,19 @@
 <li>suited more to senior developes as directly working on shared trunk</li>
 </ul>
 </section>
-<section id="trunk-based-development-1" class="level1">
+<section id="trunk-based-development-2" class="level1">
 <h1>Trunk-Based-Development</h1>
 <p>Trunk-Based-Development is recommended in this book</p>
 <p><img src="assets/accelerate.jpg" /></p>
 </section>
 <section id="comparison-of-workflows" class="level1">
 <h1>Comparison of Workflows</h1>
-<table>
+<table style="width:100%;">
 <colgroup>
-<col style="width: 64%" />
+<col style="width: 63%" />
 <col style="width: 4%" />
 <col style="width: 10%" />
-<col style="width: 20%" />
+<col style="width: 21%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -376,39 +416,37 @@
 <tbody>
 <tr class="odd">
 <td>All</td>
-<td>Small team</td>
+<td>Small</td>
 <td>High</td>
-<td>Trunk-Based Development (TBD)</td>
+<td>TBD</td>
 </tr>
 <tr class="even">
-<td>Products that support continuous deployment and release, such as SaaS products</td>
+<td>Products that support continuous deployment and release (SaaS products)</td>
 <td>Middle</td>
 <td>Moderate</td>
 <td>GitHub-Flow and TBD</td>
 </tr>
 <tr class="odd">
-<td>Products with a definite release window and a periodic version release cadence, such as iOS apps</td>
+<td>Products with a definite release window and a periodic version release cadence (iOS apps )</td>
 <td>Middle</td>
 <td>Moderate</td>
 <td>Git-Flow and GitLab-Flow with release branch</td>
 </tr>
 <tr class="even">
-<td>Products that are demanding for product quality and support continuous deployment and release, such as basic platform products</td>
+<td>Products that are demanding for product quality and support continuous deployment and release (basic platform products)</td>
 <td>Middle</td>
 <td>Moderate</td>
 <td>GitLab-Flow</td>
 </tr>
 <tr class="odd">
-<td>Products that are demanding for product quality and have a long maintenance cycle for released versions, such as 2B basic platform products</td>
+<td>Products that are demanding for product quality and have a long maintenance cycle for released versions (basic platform products)</td>
 <td>Large</td>
 <td>Moderate</td>
 <td>Git-Flow</td>
 </tr>
 </tbody>
 </table>
-<p>https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
-https://www.flagship.io/git-branching-strategies/
-https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/</p>
+<p><a href="https://www.flagship.io/git-branching-strategies/">https://www.flagship.io/git-branching-strategies/</a></p>
 </section>
 <section id="working-with-git" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
 <h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">Working with Git</h1>
@@ -422,14 +460,19 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 <section id="working-with-remotes-1" class="level1">
 <h1>Working with Remotes</h1>
 <ul>
-<li>to list the current remotes you can use <strong><code>git remote -v</code></strong></li>
-<li>a remote can be inspected with <strong><code>git remote show origin</code></strong></li>
-<li>when cloning a repo the origin is already set to the repo you cloned from</li>
-<li>remotes can be added with <strong><code>git remote add pb &lt;e.g. some github-repo-url&gt;</code></strong></li>
-<li>to remove a remote use <strong><code>git remote remove &lt;remote-name&gt;</code></strong></li>
-<li>fetching from a remote: <strong><code>git fetch</code></strong></li>
-<li>pulling from a remote: <strong><code>git pull</code></strong> (pull is a combination of <strong><code>git fetch</code></strong> and <strong><code>git merge</code></strong>)</li>
-<li>pushing to a remote: <strong><code>git push origin master</code></strong></li>
+<li><p>to list the current remotes you can use <code>git remote -v</code></p></li>
+<li><p>a remote can be inspected with <code>git remote show origin</code></p></li>
+<li><p>remotes can be added with <code>git remote add pb &lt;e.g. some github-repo-url&gt;</code></p></li>
+<li><p>to remove a remote use <code>git remote remove &lt;remote-name&gt;</code></p></li>
+</ul>
+</section>
+<section id="working-with-remotes-2" class="level1">
+<h1>Working with Remotes</h1>
+<ul>
+<li><p>on a cloned repo the origin is already set</p></li>
+<li><p>fetching from a remote: <code>git fetch</code></p></li>
+<li><p>pulling from a remote: <code>git pull</code> (pull is a combination of <code>git fetch</code> and <code>git merge</code>)</p></li>
+<li><p>pushing to a remote: <code>git push origin master</code></p></li>
 </ul>
 </section>
 <section id="pull-request" class="level1">
@@ -437,34 +480,39 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 <blockquote>
 <p>“Generate a request asking your upstream project to pull changes into their tree.”</p>
 </blockquote>
-<p>Push: <strong><code>git push https://git.ko.xz/project master</code></strong></p>
+<p>Push: <code>git push https://git.ko.xz/project master</code></p>
 <p>vs.</p>
-<p>Pull-Request: <strong><code>git request-pull v1.0 https://git.ko.xz/project master</code></strong></p>
+<p>Pull-Request: <code>git request-pull v1.0 https://git.ko.xz/project master</code></p>
 </section>
 <section id="git-log" class="level1">
 <h1>Git log</h1>
 <p>Showing the history:</p>
 <ul>
-<li>all: <strong><code>git log --decorate --graph --oneline --all</code></strong></li>
-<li>by amount: <strong><code>git log -3</code></strong></li>
-<li>by date: <strong><code>git log --after="2014-7-1"</code></strong></li>
-<li>by author: <strong><code>git log --author="John"</code></strong></li>
-<li>by message: <strong><code>git log --grep="JRA-224:"</code></strong></li>
-<li>by file: <strong><code>git log -- foo.py bar.py</code></strong></li>
-<li>by content: <strong><code>git log -S"Hello, World!"</code></strong></li>
-<li>by range: <strong><code>git log main..feature</code></strong></li>
-<li>by merges: <strong><code>git log --merges</code></strong> or <strong><code>git log --no-merges</code></strong></li>
+<li><p>all: <code>git log --decorate --graph --oneline --all</code></p></li>
+<li><p>by amount: <code>git log -3</code></p></li>
+<li><p>by date: <code>git log --after="2014-7-1"</code></p></li>
+<li><p>by author: <code>git log --author="John"</code></p></li>
+<li><p>by message: <code>git log --grep="JRA-224:"</code></p></li>
+</ul>
+</section>
+<section id="git-log-1" class="level1">
+<h1>Git log</h1>
+<p>Showing the history:</p>
+<ul>
+<li><p>by file: <code>git log -- foo.py bar.py</code></p></li>
+<li><p>by content: <code>git log -S"Hello, World!"</code></p></li>
+<li><p>by range: <code>git log main..feature</code></p></li>
+<li><p>by merges: <code>git log --merges</code> or <code>git log --no-merges</code></p></li>
 </ul>
 </section>
 <section id="tagging" class="level1">
 <h1>Tagging</h1>
 <ul>
 <li>you can create a tag with <code>git tag -a v1.9 -m "my version 1.9"</code></li>
-<li>list your existing tags with <code>git tag</code> or <code>git tag -l "v1.8.5*"</code></li>
+<li>list your existing tags with <code>git tag</code> <code>git tag -l "v1.8.5*"</code></li>
 <li>to get the data of a tagged commit use: <code>git show v1.9</code></li>
-<li>without -a, -m, -s option a lightweight tag containing only checksum is created:<code>git tag v1.9-lw</code></li>
 <li>tagging later can be done by specifying the commit the should be tagged: <code>git tag -a v1.9 9fceb02</code></li>
-<li>by default <code>git push</code> does <strong>not</strong> transfer tags. instead use <code>git push origin v1.9</code> or <code>git push origin --tags</code></li>
+<li>by default <code>git push</code> does <strong>not</strong> transfer tags. instead use <code>git push origin v1.9</code> <code>git push origin --tags</code></li>
 <li>tags can be deleted with <code>git tag -d v1.9</code></li>
 <li>to checkout a tagged commit use <code>git checkout v1.9</code> (be aware of detached HEAD. Details: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)</li>
 </ul>
@@ -474,21 +522,22 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 <blockquote>
 <p>“Can simplify your Git-experience by settig custom aliases that are easier/shorter”</p>
 </blockquote>
-<p><strong><code>git config --global alias.unstage 'reset HEAD --'</code></strong></p>
-<p>→ <strong><code>git unstage fileA</code></strong> instead of <strong><code>git reset HEAD -- fileA</code></strong></p>
+<p><code>git config --global alias.unstage 'reset HEAD --'</code></p>
+<p>→</p>
+<p><code>git unstage fileA</code> instead of <code>git reset HEAD -- fileA</code></p>
 </section>
 <section id="submodules" class="level1">
 <h1>Submodules</h1>
 <blockquote>
-<p>A git submodule is a record within a host git repository that points to a specific commit in another external repository</p>
+<p>“A git submodule is a record within a host git repository that points to a <strong>specific commit</strong> in another external repository.”</p>
 </blockquote>
 <p><code>git submodule add https://bitbucket.org/somerepo/awesomelibrary</code></p>
 </section>
 <section id="submodules-1" class="level1">
 <h1>Submodules</h1>
 <ul>
-<li>Submodules do not track git refs or branches and are not automatically updated when the host repository is updated</li>
-<li>If you need to maintain a strict version management over your external dependencies, it can make sense to use git submodules</li>
+<li><p>Submodules do not track git refs or branches and are not automatically updated when the host repository is updated</p></li>
+<li><p>If you need to maintain a strict version management over your external dependencies, it can make sense to use git submodules</p></li>
 </ul>
 </section>
 <section id="subtrees" class="level1">
@@ -501,7 +550,7 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 <h1>Subtrees</h1>
 <p><strong>Pros</strong></p>
 <ul>
-<li>The sub-project’s code is available right after the clone of the super project is done</li>
+<li>The sub-projects code is available right after the clone of the super project is done</li>
 <li>less overhead than Submodules (e.g. does not add new metadata files)</li>
 </ul>
 <p><strong>Cons</strong></p>
@@ -526,16 +575,16 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 </section>
 <section id="merge-fast-forward" class="level1">
 <h1>Merge: Fast Forward</h1>
-<p><strong><code>git rebase</code></strong></p>
+<p><code>git rebase</code></p>
 <p><img src="assets/Fast-Forward-Merge.png" /></p>
 <ul>
-<li>most commonly used merge strategy. history is just one straight line.</li>
-<li>No new merges on the master between branch creation and merge to master.</li>
+<li>most common merge strategy: history is just one straight line</li>
+<li>No new merges on master between branch creation and merge</li>
 </ul>
 </section>
 <section id="merge-recursive" class="level1">
 <h1>Merge: Recursive</h1>
-<p><strong><code>git merge--no-ff</code></strong></p>
+<p><code>git merge--no-ff</code></p>
 <p><img src="assets/Recursive-Merge.png" /></p>
 <ul>
 <li>New commits on master before branch is merged back to master</li>

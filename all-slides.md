@@ -269,7 +269,7 @@ rename branch:
 
 # Github-Flow
 
-![<https://docs.github.com/en/get-started/quickstart/github-flow>](github-flow.png)
+![<https://docs.github.com/en/get-started/quickstart/github-flow>](assets/github-flow.png)
 
 <!-- section 30 -->
 
@@ -291,11 +291,52 @@ rename branch:
 
 # Gitlab-Flow
 
+![<https://docs.gitlab.com/ee/topics/gitlab_flow.html>](assets/gitlab_flow_release_branches.png)
+
 <!-- section 32 -->
+
+# Gitlab-Flow
+
+**Pros**
+
+-   similar advantages as Github-Flow
+-   Additionaly enables time releases to production, e.g. when only few customers are on platform
+
+**Cons**
+
+-   more complex than Github-Flow
+-   could become more complex than Git-Flow when maintaining multiple versions is needed
+
+<!-- section 33 -->
+
+# Gitlab-Flow
+
+The GitLab Flow is based on 11 rules:
+
+-   Use feature branches, no direct commits on master
+-   Test all commits, not only ones on master
+-   Run all the tests on all commits (if your tests run longer than 5 minutes have them run in parallel).
+-   Perform code reviews before merges into master, not afterwards.
+-   Deployments are automatic, based on branches or tags.
+-   Tags are set by the user, not by CI.
+-   Releases are based on tags.
+-   Pushed commits are never rebased.
+-   Everyone starts from master, and targets master.
+-   Fix bugs in master first and release branches second.
+-   Commit messages reflect intent.
+
+<!-- section 34 -->
 
 # Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
+
+-   pure TBD has only master branch
+-   scaled TBD: additional short-lived feature branches to have isolation in bigger teams
+
+<!-- section 35 -->
+
+# Trunk-Based-Development
 
 **Pros**
 
@@ -307,7 +348,7 @@ rename branch:
 
 -   suited more to senior developes as directly working on shared trunk
 
-<!-- section 33 -->
+<!-- section 36 -->
 
 # Trunk-Based-Development
 
@@ -315,130 +356,155 @@ Trunk-Based-Development is recommended in this book
 
 ![](assets/accelerate.jpg)
 
-<!-- section 34 -->
+<!-- section 37 -->
 
 # Comparison of Workflows
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Product type and its release method                                                                                                           Team Size    Collaboration maturity   Applicable mainstream branch mode
-  --------------------------------------------------------------------------------------------------------------------------------------------- ------------ ------------------------ ----------------------------------------------
-  All                                                                                                                                           Small team   High                     Trunk-Based Development (TBD)
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Product type and its release method                                                                                                 Team Size   Collaboration maturity   Applicable mainstream branch mode
+  ----------------------------------------------------------------------------------------------------------------------------------- ----------- ------------------------ ----------------------------------------------
+  All                                                                                                                                 Small       High                     TBD
 
-  Products that support continuous deployment and release, such as SaaS products                                                                Middle       Moderate                 GitHub-Flow and TBD
+  Products that support continuous deployment and release (SaaS products)                                                             Middle      Moderate                 GitHub-Flow and TBD
 
-  Products with a definite release window and a periodic version release cadence, such as iOS apps                                              Middle       Moderate                 Git-Flow and GitLab-Flow with release branch
+  Products with a definite release window and a periodic version release cadence (iOS apps )                                          Middle      Moderate                 Git-Flow and GitLab-Flow with release branch
 
-  Products that are demanding for product quality and support continuous deployment and release, such as basic platform products                Middle       Moderate                 GitLab-Flow
+  Products that are demanding for product quality and support continuous deployment and release (basic platform products)             Middle      Moderate                 GitLab-Flow
 
-  Products that are demanding for product quality and have a long maintenance cycle for released versions, such as 2B basic platform products   Large        Moderate                 Git-Flow
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Products that are demanding for product quality and have a long maintenance cycle for released versions (basic platform products)   Large       Moderate                 Git-Flow
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
-https://www.flagship.io/git-branching-strategies/
-https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
+<https://www.flagship.io/git-branching-strategies/>
 
-<!-- section 35 -->
+<!-- section 38 -->
 
 # Working with Git {#working-with-git .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 36 -->
+<!-- section 39 -->
 
 # Working with Remotes
 
 > "Remote repositories are versions of your project hosted on Internet or network somewhere"
 
-<!-- section 37 -->
+<!-- section 40 -->
 
 # Working with Remotes
 
--   to list the current remotes you can use **`git remote -v`**
--   a remote can be inspected with **`git remote show origin`**
--   when cloning a repo the origin is already set to the repo you cloned from
--   remotes can be added with **`git remote add pb <e.g. some github-repo-url>`**
--   to remove a remote use **`git remote remove <remote-name>`**
--   fetching from a remote: **`git fetch`**
--   pulling from a remote: **`git pull`** (pull is a combination of **`git fetch`** and **`git merge`**)
--   pushing to a remote: **`git push origin master`**
+-   to list the current remotes you can use `git remote -v`
 
-<!-- section 38 -->
+-   a remote can be inspected with `git remote show origin`
+
+-   remotes can be added with `git remote add pb <e.g. some github-repo-url>`
+
+-   to remove a remote use `git remote remove <remote-name>`
+
+<!-- section 41 -->
+
+# Working with Remotes
+
+-   on a cloned repo the origin is already set
+
+-   fetching from a remote: `git fetch`
+
+-   pulling from a remote: `git pull` (pull is a combination of `git fetch` and `git merge`)
+
+-   pushing to a remote: `git push origin master`
+
+<!-- section 42 -->
 
 # Pull-Request
 
 > "Generate a request asking your upstream project to pull changes into their tree."
 
-Push: **`git push https://git.ko.xz/project master`**
+Push: `git push https://git.ko.xz/project master`
 
 vs.
 
-Pull-Request: **`git request-pull v1.0 https://git.ko.xz/project master`**
+Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
-<!-- section 39 -->
+<!-- section 43 -->
 
 # Git log
 
 Showing the history:
 
--   all: **`git log --decorate --graph --oneline --all`**
--   by amount: **`git log -3`**
--   by date: **`git log --after="2014-7-1"`**
--   by author: **`git log --author="John"`**
--   by message: **`git log --grep="JRA-224:"`**
--   by file: **`git log -- foo.py bar.py`**
--   by content: **`git log -S"Hello, World!"`**
--   by range: **`git log main..feature`**
--   by merges: **`git log --merges`** or **`git log --no-merges`**
+-   all: `git log --decorate --graph --oneline --all`
 
-<!-- section 40 -->
+-   by amount: `git log -3`
+
+-   by date: `git log --after="2014-7-1"`
+
+-   by author: `git log --author="John"`
+
+-   by message: `git log --grep="JRA-224:"`
+
+<!-- section 44 -->
+
+# Git log
+
+Showing the history:
+
+-   by file: `git log -- foo.py bar.py`
+
+-   by content: `git log -S"Hello, World!"`
+
+-   by range: `git log main..feature`
+
+-   by merges: `git log --merges` or `git log --no-merges`
+
+<!-- section 45 -->
 
 # Tagging
 
 -   you can create a tag with `git tag -a v1.9 -m "my version 1.9"`
--   list your existing tags with `git tag` or `git tag -l "v1.8.5*"`
+-   list your existing tags with `git tag` `git tag -l "v1.8.5*"`
 -   to get the data of a tagged commit use: `git show v1.9`
--   without -a, -m, -s option a lightweight tag containing only checksum is created:`git tag v1.9-lw`
 -   tagging later can be done by specifying the commit the should be tagged: `git tag -a v1.9 9fceb02`
--   by default `git push` does **not** transfer tags. instead use `git push origin v1.9` or `git push origin --tags`
+-   by default `git push` does **not** transfer tags. instead use `git push origin v1.9` `git push origin --tags`
 -   tags can be deleted with `git tag -d v1.9`
 -   to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
 
-<!-- section 41 -->
+<!-- section 46 -->
 
 # Git Aliases
 
 > "Can simplify your Git-experience by settig custom aliases that are easier/shorter"
 
-**`git config --global alias.unstage 'reset HEAD --'`**
+`git config --global alias.unstage 'reset HEAD --'`
 
-→ **`git unstage fileA`** instead of **`git reset HEAD -- fileA`**
+→
 
-<!-- section 42 -->
+`git unstage fileA` instead of `git reset HEAD -- fileA`
+
+<!-- section 47 -->
 
 # Submodules
 
-> A git submodule is a record within a host git repository that points to a specific commit in another external repository
+> "A git submodule is a record within a host git repository that points to a **specific commit** in another external repository."
 
 `git submodule add https://bitbucket.org/somerepo/awesomelibrary`
 
-<!-- section 43 -->
+<!-- section 48 -->
 
 # Submodules
 
 -   Submodules do not track git refs or branches and are not automatically updated when the host repository is updated
+
 -   If you need to maintain a strict version management over your external dependencies, it can make sense to use git submodules
 
-<!-- section 44 -->
+<!-- section 49 -->
 
 # Subtrees
 
 ![nests one repository into anothers as sub-dir](assets/BeforeAfterGitSubtreeDiagram.png){height="80%" width="80%"}
 
-<!-- section 45 -->
+<!-- section 50 -->
 
 # Subtrees
 
 **Pros**
 
--   The sub-project's code is available right after the clone of the super project is done
+-   The sub-projects code is available right after the clone of the super project is done
 -   less overhead than Submodules (e.g. does not add new metadata files)
 
 **Cons**
@@ -446,7 +512,7 @@ Showing the history:
 -   you have to learn a new merging strategy (subtree merge)
 -   contributing code back to the sub-projects is more complicated
 
-<!-- section 46 -->
+<!-- section 51 -->
 
 # Merge strategies
 
@@ -459,28 +525,28 @@ Showing the history:
 -   Resolve
 -   Subtree
 
-<!-- section 47 -->
+<!-- section 52 -->
 
 # Merge: Fast Forward
 
-**`git rebase`**
+`git rebase`
 
 ![](assets/Fast-Forward-Merge.png)
 
--   most commonly used merge strategy. history is just one straight line.
--   No new merges on the master between branch creation and merge to master.
+-   most common merge strategy: history is just one straight line
+-   No new merges on master between branch creation and merge
 
-<!-- section 48 -->
+<!-- section 53 -->
 
 # Merge: Recursive
 
-**`git merge--no-ff`**
+`git merge--no-ff`
 
 ![](assets/Recursive-Merge.png)
 
 -   New commits on master before branch is merged back to master
 
-<!-- section 49 -->
+<!-- section 54 -->
 
 # Merge: Ours
 
@@ -488,7 +554,7 @@ Showing the history:
 
 -   resolves any number of heads → resulting tree of merge is that of the current branch head ignoring all changes from other branches
 
-<!-- section 50 -->
+<!-- section 55 -->
 
 # Merge: Octopus
 
@@ -500,7 +566,7 @@ Showing the history:
 -   Primarily for bundling topic branch heads.
 -   Linus Torvalds got octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
 
-<!-- section 51 -->
+<!-- section 56 -->
 
 # Merge: Resolve
 
@@ -510,7 +576,7 @@ Showing the history:
 
 -   Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.
 
-<!-- section 52 -->
+<!-- section 57 -->
 
 # Merge: Subtree
 
@@ -520,25 +586,25 @@ Showing the history:
 
 -   Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
-<!-- section 53 -->
+<!-- section 58 -->
 
 # Mergetool & Difftool
 
 -   `git mergetool` opens the merge tool defined in git-config (e.g. meld)
 -   `git diff Commit1sha Commit2sha` opens the diff tool defined in git-config
 
-<!-- section 54 -->
+<!-- section 59 -->
 
 # Merging vs. Rebasing vs. Cherry-Picking {#merging-vs.-rebasing-vs.-cherry-picking .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 55 -->
+<!-- section 60 -->
 
 # Rebasing
 
 https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
 
-<!-- section 56 -->
+<!-- section 61 -->
 
 # Cherry-Picking
 
@@ -546,7 +612,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
 
 Usage: `git cherry-pick commitSha`
 
-<!-- section 57 -->
+<!-- section 62 -->
 
 # Cherry-Picking
 
@@ -560,7 +626,7 @@ https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
 https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
 https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching
 
-<!-- section 58 -->
+<!-- section 63 -->
 
 # Undoing commits
 
@@ -581,7 +647,7 @@ From public repository:
 
 If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
 
-<!-- section 59 -->
+<!-- section 64 -->
 
 # Signing Commits/Tags
 
@@ -596,7 +662,7 @@ Setup:
 -   add -s to your commit command: **`git commit -a -S -m 'Signed commit'`**
 -   use -s instead of -a for tags: **`git tag -s v1.5 -m 'my signed 1.5 tag'`**
 
-<!-- section 60 -->
+<!-- section 65 -->
 
 # Stashing/Cleaning
 
@@ -612,7 +678,7 @@ Setup:
 
 -   clean working dir without stashing: **`git clean`**
 
-<!-- section 61 -->
+<!-- section 66 -->
 
 # Debugging with Git
 
@@ -625,7 +691,7 @@ Setup:
     -   when finished use `git bisect reset`
 -   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
-<!-- section 62 -->
+<!-- section 67 -->
 
 # Git-Hooks
 
@@ -638,25 +704,25 @@ https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
 
 Husky.NET
 
-<!-- section 63 -->
+<!-- section 68 -->
 
 # Handling large repositories
 
 https://www.atlassian.com/git/tutorials/big-repositories
 https://www.atlassian.com/git/tutorials/git-lfs
 
-<!-- section 64 -->
+<!-- section 69 -->
 
 # git gc && git prune
 
 https://www.atlassian.com/git/tutorials/git-prune
 https://www.atlassian.com/git/tutorials/git-gc
 
-<!-- section 65 -->
+<!-- section 70 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 66 -->
+<!-- section 71 -->
 
 # Best practices
 
@@ -667,11 +733,11 @@ https://www.atlassian.com/git/tutorials/git-gc
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow → otherwise overhead in merges
 
-<!-- section 67 -->
+<!-- section 72 -->
 
 # Advanced stuff {#advanced-stuff .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 68 -->
+<!-- section 73 -->
 
 # Advanced stuff
 
@@ -683,11 +749,11 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 
 -   Deletion von Elementen → Teasern
 
-<!-- section 69 -->
+<!-- section 74 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 70 -->
+<!-- section 75 -->
 
 # GitOps - What is GitOps?
 
@@ -698,7 +764,7 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 71 -->
+<!-- section 76 -->
 
 # GitOps - Pipeline
 
@@ -713,13 +779,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 72 -->
+<!-- section 77 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 73 -->
+<!-- section 78 -->
 
 # Ressources
 
