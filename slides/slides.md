@@ -215,7 +215,7 @@ rename branch:
 
 # Github-Flow
 
-![[https://docs.github.com/en/get-started/quickstart/github-flow](https://docs.github.com/en/get-started/quickstart/github-flow)](github-flow.png)
+![[https://docs.github.com/en/get-started/quickstart/github-flow](https://docs.github.com/en/get-started/quickstart/github-flow)](assets/github-flow.png)
 
 # Github-Flow
 
@@ -233,9 +233,44 @@ rename branch:
 
 # Gitlab-Flow
 
+![[https://docs.gitlab.com/ee/topics/gitlab_flow.html](https://docs.gitlab.com/ee/topics/gitlab_flow.html)](assets/gitlab_flow_release_branches.png)
+
+# Gitlab-Flow
+
+**Pros**
+
+- similar advantages as Github-Flow
+- Additionaly enables time releases to production, e.g. when only few customers are on platform
+
+**Cons**
+
+- more complex than Github-Flow
+- could become more complex than Git-Flow when maintaining multiple versions is needed
+
+# Gitlab-Flow
+
+The GitLab Flow is based on 11 rules:
+
+- Use feature branches, no direct commits on master
+- Test all commits, not only ones on master
+- Run all the tests on all commits (if your tests run longer than 5 minutes have them run in parallel).
+- Perform code reviews before merges into master, not afterwards.
+- Deployments are automatic, based on branches or tags.
+- Tags are set by the user, not by CI.
+- Releases are based on tags.
+- Pushed commits are never rebased.
+- Everyone starts from master, and targets master.
+- Fix bugs in master first and release branches second.
+- Commit messages reflect intent.
+
 # Trunk-Based-Development
 
 ![](assets/trunk-based-development.jpg)
+
+- pure TBD has only master branch
+- scaled TBD: additional short-lived feature branches to have isolation in bigger teams
+
+# Trunk-Based-Development
 
 **Pros**
 
@@ -255,17 +290,15 @@ Trunk-Based-Development is recommended in this book
 
 # Comparison of Workflows
 
-| Product type and its release method                                                                                                         | Team Size  | Collaboration maturity | Applicable mainstream branch mode            |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------------------- | -------------------------------------------- |
-| All                                                                                                                                         | Small team | High                   | Trunk-Based Development (TBD)                |
-| Products that support continuous deployment and release, such as SaaS products                                                              | Middle     | Moderate               | GitHub-Flow and TBD                          |
-| Products with a definite release window and a periodic version release cadence, such as iOS apps                                            | Middle     | Moderate               | Git-Flow and GitLab-Flow with release branch |
-| Products that are demanding for product quality and support continuous deployment and release, such as basic platform products              | Middle     | Moderate               | GitLab-Flow                                  |
-| Products that are demanding for product quality and have a long maintenance cycle for released versions, such as 2B basic platform products | Large      | Moderate               | Git-Flow                                     |
+| Product type and its release method                                                                                               | Team Size | Collaboration maturity | Applicable mainstream branch mode            |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------- | -------------------------------------------- |
+| All                                                                                                                               | Small     | High                   | TBD                                          |
+| Products that support continuous deployment and release (SaaS products)                                                           | Middle    | Moderate               | GitHub-Flow and TBD                          |
+| Products with a definite release window and a periodic version release cadence (iOS apps )                                        | Middle    | Moderate               | Git-Flow and GitLab-Flow with release branch |
+| Products that are demanding for product quality and support continuous deployment and release (basic platform products)           | Middle    | Moderate               | GitLab-Flow                                  |
+| Products that are demanding for product quality and have a long maintenance cycle for released versions (basic platform products) | Large     | Moderate               | Git-Flow                                     |
 
-https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
-https://www.flagship.io/git-branching-strategies/
-https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
+[https://www.flagship.io/git-branching-strategies/](https://www.flagship.io/git-branching-strategies/)
 
 # Working with Git {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
@@ -275,47 +308,67 @@ https://reviewpad.com/blog/github-flow-trunk-based-development-and-code-reviews/
 
 # Working with Remotes
 
-- to list the current remotes you can use **`git remote -v`**
-- a remote can be inspected with **`git remote show origin`**
-- when cloning a repo the origin is already set to the repo you cloned from
-- remotes can be added with **`git remote add pb <e.g. some github-repo-url>`**
-- to remove a remote use **`git remote remove <remote-name>`**
-- fetching from a remote: **`git fetch`**
-- pulling from a remote: **`git pull`** (pull is a combination of **`git fetch`** and **`git merge`**)
-- pushing to a remote: **`git push origin master`**
+- to list the current remotes you can use `git remote -v`
+
+- a remote can be inspected with `git remote show origin`
+
+- remotes can be added with `git remote add pb <e.g. some github-repo-url>`
+
+- to remove a remote use `git remote remove <remote-name>`
+
+# Working with Remotes
+
+- on a cloned repo the origin is already set
+
+- fetching from a remote: `git fetch`
+
+- pulling from a remote: `git pull` (pull is a combination of `git fetch` and `git merge`)
+
+- pushing to a remote: `git push origin master`
 
 # Pull-Request
 
 > "Generate a request asking your upstream project to pull changes into their tree."
 
-Push: **`git push https://git.ko.xz/project master`**
+Push: `git push https://git.ko.xz/project master`
 
 vs.
 
-Pull-Request: **`git request-pull v1.0 https://git.ko.xz/project master`**
+Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 # Git log
 
 Showing the history:
 
-- all: **`git log --decorate --graph --oneline --all`**
-- by amount: **`git log -3`**
-- by date: **`git log --after="2014-7-1"`**
-- by author: **`git log --author="John"`**
-- by message: **`git log --grep="JRA-224:"`**
-- by file: **`git log -- foo.py bar.py`**
-- by content: **`git log -S"Hello, World!"`**
-- by range: **`git log main..feature`**
-- by merges: **`git log --merges`** or **`git log --no-merges`**
+- all: `git log --decorate --graph --oneline --all`
+
+- by amount: `git log -3`
+
+- by date: `git log --after="2014-7-1"`
+
+- by author: `git log --author="John"`
+
+- by message: `git log --grep="JRA-224:"`
+
+# Git log
+
+Showing the history:
+
+- by file: `git log -- foo.py bar.py`
+
+- by content: `git log -S"Hello, World!"`
+
+- by range: `git log main..feature`
+
+- by merges: `git log --merges` or `git log --no-merges`
 
 # Tagging
 
 - you can create a tag with `git tag -a v1.9 -m "my version 1.9"`
-- list your existing tags with `git tag` or `git tag -l "v1.8.5*"`
+- list your existing tags with `git tag` `git tag -l "v1.8.5*"`
 - to get the data of a tagged commit use: `git show v1.9`
-- without -a, -m, -s option a lightweight tag containing only checksum is created:`git tag v1.9-lw`
 - tagging later can be done by specifying the commit the should be tagged: `git tag -a v1.9 9fceb02`
-- by default `git push` does **not** transfer tags. instead use `git push origin v1.9` or `git push origin --tags`
+- by default `git push` does **not** transfer tags. instead use `git push origin v1.9` `git push origin --tags`
 - tags can be deleted with `git tag -d v1.9`
 - to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
 
@@ -323,19 +376,22 @@ Showing the history:
 
 > "Can simplify your Git-experience by settig custom aliases that are easier/shorter"
 
-**`git config --global alias.unstage 'reset HEAD --'`**
+`git config --global alias.unstage 'reset HEAD --'`
 
-&rarr; **`git unstage fileA`** instead of **`git reset HEAD -- fileA`**
+&rarr;
+
+`git unstage fileA` instead of `git reset HEAD -- fileA`
 
 # Submodules
 
-> A git submodule is a record within a host git repository that points to a specific commit in another external repository
+> "A git submodule is a record within a host git repository that points to a **specific commit** in another external repository."
 
 `git submodule add https://bitbucket.org/somerepo/awesomelibrary`
 
 # Submodules
 
 - Submodules do not track git refs or branches and are not automatically updated when the host repository is updated
+
 - If you need to maintain a strict version management over your external dependencies, it can make sense to use git submodules
 
 # Subtrees
@@ -346,7 +402,7 @@ Showing the history:
 
 **Pros**
 
-- The sub-project’s code is available right after the clone of the super project is done
+- The sub-projects code is available right after the clone of the super project is done
 - less overhead than Submodules (e.g. does not add new metadata files)
 
 **Cons**
@@ -367,16 +423,16 @@ Showing the history:
 
 # Merge: Fast Forward
 
-**`git rebase`**
+`git rebase`
 
 ![](assets/Fast-Forward-Merge.png)
 
-- most commonly used merge strategy. history is just one straight line.
-- No new merges on the master between branch creation and merge to master.
+- most common merge strategy: history is just one straight line
+- No new merges on master between branch creation and merge
 
 # Merge: Recursive
 
-**`git merge--no-ff`**
+`git merge--no-ff`
 
 ![](assets/Recursive-Merge.png)
 
