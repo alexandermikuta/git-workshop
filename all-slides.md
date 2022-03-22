@@ -654,11 +654,10 @@ From local repository:
 
 From public repository:
 
--   `git revert HEAD` and `git commit -m "reverted last commit"`
+`git revert HEAD` `git commit -m "reverted last commit"`
 
-HEAD points to last commit in branch: `git reset HEAD~<no-of-commits>`
-
-add additional files to your previous commit `git commit --amend`
+add additional files to your previous commit
+`git commit --amend`
 
 <!-- section 67 -->
 
