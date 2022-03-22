@@ -604,14 +604,16 @@ Worth a look: [Husky.NET](https://alirezanet.github.io/Husky.Net/)
 
 # Handling large repositories
 
-very long accumulated history:
+**Very long accumulated history:**
 
 shallow clone: `git clone --depth [depth] [remote-url]`
 clone only branch: `git clone [remote url] --branch [branch_name] --single-branch [folder]`
 
-huge binary assets that need to be tracked together with code:
+# Handling large repositories
 
-- [GIT-LFS](https://www.atlassian.com/git/tutorials/git-lfs): Extension that lazy loads big files at checkout instead of cloning/fetching
+**Huge binary assets that need to be tracked together with code:**
+
+- **[GIT-LFS](https://www.atlassian.com/git/tutorials/git-lfs):** lazy loads big files at checkout instead of cloning/fetching
 - **[git gc](https://www.atlassian.com/git/tutorials/git-gc)**
 - **[git prune](https://www.atlassian.com/git/tutorials/git-prune)**
 
