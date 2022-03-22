@@ -656,9 +656,9 @@ From public repository:
 
 -   `git revert HEAD` and `git commit -m "reverted last commit"`
 
-> HEAD points to last commit in branch: `git reset HEAD~<no-of-commits>`
+HEAD points to last commit in branch: `git reset HEAD~<no-of-commits>`
 
-If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
+add additional files to your previous commit `git commit --amend`
 
 <!-- section 67 -->
 
