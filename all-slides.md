@@ -442,7 +442,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 -   by range: `git log main..feature`
 
--   by merges: `git log --merges` or `git log --no-merges`
+-   by merges: `git log --merges` `git log --no-merges`
 
 <!-- section 45 -->
 
@@ -451,12 +451,17 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 -   you can create a tag with `git tag -a v1.9 -m "my version 1.9"`
 -   list your existing tags with `git tag` `git tag -l "v1.8.5*"`
 -   to get the data of a tagged commit use: `git show v1.9`
--   tagging later can be done by specifying the commit the should be tagged: `git tag -a v1.9 9fceb02`
--   by default `git push` does **not** transfer tags. instead use `git push origin v1.9` `git push origin --tags`
+-   tag later by specifying the commit to tag: `git tag -a v1.9 9fceb02`
+
+<!-- section 46 -->
+
+# Tagging
+
+-   by default **git push** does **not** transfer tags. instead use `git push origin v1.9` `git push origin --tags`
 -   tags can be deleted with `git tag -d v1.9`
 -   to checkout a tagged commit use `git checkout v1.9` (be aware of detached HEAD. Details: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
 
-<!-- section 46 -->
+<!-- section 47 -->
 
 # Git Aliases
 
@@ -468,7 +473,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 `git unstage fileA` instead of `git reset HEAD -- fileA`
 
-<!-- section 47 -->
+<!-- section 48 -->
 
 # Submodules
 
@@ -476,7 +481,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 `git submodule add https://bitbucket.org/somerepo/awesomelibrary`
 
-<!-- section 48 -->
+<!-- section 49 -->
 
 # Submodules
 
@@ -484,13 +489,13 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 -   If you need to maintain a strict version management over your external dependencies, it can make sense to use git submodules
 
-<!-- section 49 -->
+<!-- section 50 -->
 
 # Subtrees
 
 ![nests one repository into anothers as sub-dir](assets/BeforeAfterGitSubtreeDiagram.png){height="80%" width="80%"}
 
-<!-- section 50 -->
+<!-- section 51 -->
 
 # Subtrees
 
@@ -504,7 +509,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 -   you have to learn a new merging strategy (subtree merge)
 -   contributing code back to the sub-projects is more complicated
 
-<!-- section 51 -->
+<!-- section 52 -->
 
 # Merge strategies
 
@@ -517,7 +522,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 -   Resolve
 -   Subtree
 
-<!-- section 52 -->
+<!-- section 53 -->
 
 # Merge: Fast Forward
 
@@ -528,7 +533,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 -   most common merge strategy: history is just one straight line
 -   No new merges on master between branch creation and merge
 
-<!-- section 53 -->
+<!-- section 54 -->
 
 # Merge: Recursive
 
@@ -538,7 +543,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 -   New commits on master before branch is merged back to master
 
-<!-- section 54 -->
+<!-- section 55 -->
 
 # Merge: Ours
 
@@ -548,7 +553,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 -   resolves any number of heads → resulting tree of merge is that of the current branch head ignoring all changes from other branches
 
-<!-- section 55 -->
+<!-- section 56 -->
 
 # Merge: Octopus
 
@@ -560,7 +565,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 -   Primarily for bundling topic branch heads.
 -   [Linus Torvalds not happy about octopus merge of 66 branches](https://marc.info/?l=linux-kernel&m=139033182525831)
 
-<!-- section 56 -->
+<!-- section 57 -->
 
 # Merge: Resolve
 
@@ -570,7 +575,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 -   Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.
 
-<!-- section 57 -->
+<!-- section 58 -->
 
 # Merge: Subtree
 
@@ -580,7 +585,7 @@ Pull-Request: `git request-pull v1.0 https://git.ko.xz/project master`
 
 -   Git is often smart enough to figure out that one is a subtree of the other and merge appropriately
 
-<!-- section 58 -->
+<!-- section 59 -->
 
 # Mergetool & Difftool
 
@@ -590,11 +595,11 @@ open merge tool defined in git-config (e.g. meld):
 open diff tool defined in git-config:
 `git diff Commit1sha Commit2sha`
 
-<!-- section 59 -->
+<!-- section 60 -->
 
 # Merging vs. Rebasing vs. Cherry-Picking {#merging-vs.-rebasing-vs.-cherry-picking .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 60 -->
+<!-- section 61 -->
 
 # Merging
 
@@ -604,7 +609,7 @@ open diff tool defined in git-config:
 
 -   a lot of merge commits if main branch changes often
 
-<!-- section 61 -->
+<!-- section 62 -->
 
 # Rebasing
 
@@ -614,7 +619,7 @@ open diff tool defined in git-config:
 
 -   Context lost → hard to see wenn upstream-changes are integrated into feature
 
-<!-- section 62 -->
+<!-- section 63 -->
 
 # Cherry-Picking
 
@@ -622,7 +627,7 @@ open diff tool defined in git-config:
 
 Usage: `git cherry-pick commitSha`
 
-<!-- section 63 -->
+<!-- section 64 -->
 
 # Cherry-Picking
 
@@ -632,7 +637,7 @@ Use cases for Cherry-Picking:
 
 -   **Bug-Fixing:** hotfix can be cherry-picked to main branch before it affects more users
 
-<!-- section 64 -->
+<!-- section 65 -->
 
 # Undoing commits
 
@@ -643,7 +648,7 @@ From local repository:
 -   unstage staged file: `git restore --staged <filename>`
 -   unmodifying a file: `git restore <filename>`
 
-<!-- section 65 -->
+<!-- section 66 -->
 
 # Undoing commits
 
@@ -655,7 +660,7 @@ From public repository:
 
 If you want to add e.g. additional files to your previous commit you can use `git commit --amend` instead of creating an additional changeset
 
-<!-- section 66 -->
+<!-- section 67 -->
 
 # Signing Commits/Tags
 
@@ -670,7 +675,7 @@ Setup:
 -   add -s to your commit command: **`git commit -a -S -m 'Signed commit'`**
 -   use -s instead of -a for tags: **`git tag -s v1.5 -m 'my signed 1.5 tag'`**
 
-<!-- section 67 -->
+<!-- section 68 -->
 
 # Stashing/Cleaning
 
@@ -686,7 +691,7 @@ Setup:
 
 -   clean working dir without stashing: **`git clean`**
 
-<!-- section 68 -->
+<!-- section 69 -->
 
 # Debugging with Git
 
@@ -699,7 +704,7 @@ Setup:
     -   when finished use `git bisect reset`
 -   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
-<!-- section 69 -->
+<!-- section 70 -->
 
 # Git-Hooks
 
@@ -712,25 +717,25 @@ https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
 
 Husky.NET
 
-<!-- section 70 -->
+<!-- section 71 -->
 
 # Handling large repositories
 
 https://www.atlassian.com/git/tutorials/big-repositories
 https://www.atlassian.com/git/tutorials/git-lfs
 
-<!-- section 71 -->
+<!-- section 72 -->
 
 # git gc && git prune
 
 https://www.atlassian.com/git/tutorials/git-prune
 https://www.atlassian.com/git/tutorials/git-gc
 
-<!-- section 72 -->
+<!-- section 73 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 73 -->
+<!-- section 74 -->
 
 # Best practices
 
@@ -741,11 +746,11 @@ https://www.atlassian.com/git/tutorials/git-gc
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow → otherwise overhead in merges
 
-<!-- section 74 -->
+<!-- section 75 -->
 
 # Advanced stuff {#advanced-stuff .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 75 -->
+<!-- section 76 -->
 
 # Advanced stuff
 
@@ -757,11 +762,11 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 
 -   Deletion von Elementen → Teasern
 
-<!-- section 76 -->
+<!-- section 77 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 77 -->
+<!-- section 78 -->
 
 # GitOps - What is GitOps?
 
@@ -772,7 +777,7 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 78 -->
+<!-- section 79 -->
 
 # GitOps - Pipeline
 
@@ -787,13 +792,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 79 -->
+<!-- section 80 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 80 -->
+<!-- section 81 -->
 
 # Ressources
 
