@@ -317,13 +317,13 @@ Trunk-Based-Development is recommended in this book
 
 # Working with Remotes
 
-- on a cloned repo the origin is already set
+on a cloned repo the origin is already set
 
-- fetching from a remote: `git fetch`
+fetching from a remote: `git fetch`
 
-- pulling from a remote: `git pull` (pull is a combination of `git fetch` and `git merge`)
+pulling (combination of **git fetch** and **git merge**) from a remote: `git pull`
 
-- pushing to a remote: `git push origin master`
+pushing to a remote: `git push origin master`
 
 # Pull-Request
 
