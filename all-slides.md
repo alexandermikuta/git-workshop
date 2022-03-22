@@ -362,19 +362,19 @@ Trunk-Based-Development is recommended in this book
 
 # Comparison of Workflows
 
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Product type and its release method                                                                                                 Team Size   Collaboration maturity   Applicable mainstream branch mode
-  ----------------------------------------------------------------------------------------------------------------------------------- ----------- ------------------------ ----------------------------------------------
-  All                                                                                                                                 Small       High                     TBD
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Product type/release method                                                     Team Size   Collaboration maturity   Workflow
+  ------------------------------------------------------------------------------- ----------- ------------------------ ----------------------------------------------
+  All                                                                             Small       High                     TBD
 
-  Products that support continuous deployment and release (SaaS products)                                                             Middle      Moderate                 GitHub-Flow and TBD
+  continuous deployment/release (SaaS products)                                   Middle      Moderate                 GitHub-Flow and TBD
 
-  Products with a definite release window and a periodic version release cadence (iOS apps )                                          Middle      Moderate                 Git-Flow and GitLab-Flow with release branch
+  definite release window/periodic version release (iOS apps )                    Middle      Moderate                 Git-Flow and GitLab-Flow with release branch
 
-  Products that are demanding for product quality and support continuous deployment and release (basic platform products)             Middle      Moderate                 GitLab-Flow
+  demand for quality and continuous deployment/release (platform products)        Middle      Moderate                 GitLab-Flow
 
-  Products that are demanding for product quality and have a long maintenance cycle for released versions (basic platform products)   Large       Moderate                 Git-Flow
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  demand for quality/long maintenance for released versions (platform products)   Large       Moderate                 Git-Flow
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <https://www.flagship.io/git-branching-strategies/>
 
