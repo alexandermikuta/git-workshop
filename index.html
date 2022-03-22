@@ -117,15 +117,28 @@
 <section id="architecture---creating-a-new-repository" class="level1">
 <h1>Architecture - Creating a new repository</h1>
 <p><code>git init</code></p>
-<p>Creates the <strong>.git</strong> directory which contains your local repository data
-<img src="assets/file-tree.png"></p>
-<p>Content of <strong>.git</strong> directory:</p>
-<figure>
-<img src="assets/git-folder.png">
-<figcaption>
-HEAD is a reference to the checked out commit
-</figcaption>
-</figure>
+<table>
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Project directory</th>
+<th><strong>.git</strong> directory</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="assets/file-tree.png"></td>
+<td><img src="assets/git-folder.png"></td>
+</tr>
+<tr class="even">
+<td>contains <strong>.git</strong> directory and current checked out data</td>
+<td>HEAD is a reference to the checked out commit</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="gittfs" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
 <h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">GIT/TFS</h1>
