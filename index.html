@@ -584,7 +584,7 @@
 </section>
 <section id="merge-recursive" class="level1">
 <h1>Merge: Recursive</h1>
-<p><code>git merge--no-ff</code></p>
+<p><code>git merge --no-ff</code></p>
 <p><img src="assets/Recursive-Merge.png" /></p>
 <ul>
 <li>New commits on master before branch is merged back to master</li>
@@ -592,6 +592,7 @@
 </section>
 <section id="merge-ours" class="level1">
 <h1>Merge: Ours</h1>
+<p><code>git merge -s ours</code></p>
 <p><img src="assets/Ours-Merge.png" /></p>
 <ul>
 <li>resolves any number of heads → resulting tree of merge is that of the current branch head ignoring all changes from other branches</li>
@@ -599,17 +600,17 @@
 </section>
 <section id="merge-octopus" class="level1">
 <h1>Merge: Octopus</h1>
-<p><strong><code>git merge -s octopus</code></strong></p>
+<p><code>git merge -s octopus</code></p>
 <p><img src="assets/Octopus-Merge-Strategy.png" /></p>
 <ul>
 <li>Resolves cases with more than two heads</li>
 <li>Primarily for bundling topic branch heads.</li>
-<li>Linus Torvalds got octopus merge of 66 branches: https://marc.info/?l=linux-kernel&amp;m=139033182525831</li>
+<li><a href="https://marc.info/?l=linux-kernel&amp;m=139033182525831">Linus Torvalds not happy about octopus merge of 66 branches</a></li>
 </ul>
 </section>
 <section id="merge-resolve" class="level1">
 <h1>Merge: Resolve</h1>
-<p><strong><code>git merge -s resolve</code></strong></p>
+<p><code>git merge -s resolve</code></p>
 <p><img src="assets/Resolve-Merge-Strategy.png" /></p>
 <ul>
 <li>Resolve two heads by using a 3-way-merge. Complex conflicts have to be solved manually.</li>
@@ -617,7 +618,7 @@
 </section>
 <section id="merge-subtree" class="level1">
 <h1>Merge: Subtree</h1>
-<p><strong><code>git merge -s subtree</code></strong></p>
+<p><code>git merge -s subtree</code></p>
 <p><img src="assets/Subtree-Merge-Strategy.png" /></p>
 <ul>
 <li>Git is often smart enough to figure out that one is a subtree of the other and merge appropriately</li>
@@ -625,10 +626,10 @@
 </section>
 <section id="mergetool-difftool" class="level1">
 <h1>Mergetool &amp; Difftool</h1>
-<ul>
-<li><code>git mergetool</code> opens the merge tool defined in git-config (e.g. meld)</li>
-<li><code>git diff Commit1sha Commit2sha</code> opens the diff tool defined in git-config</li>
-</ul>
+<p>open merge tool defined in git-config (e.g. meld):
+<code>git mergetool</code></p>
+<p>open diff tool defined in git-config:
+<code>git diff Commit1sha Commit2sha</code></p>
 </section>
 <section id="merging-vs.-rebasing-vs.-cherry-picking" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
 <h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">Merging vs. Rebasing vs. Cherry-Picking</h1>

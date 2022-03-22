@@ -432,7 +432,7 @@ Showing the history:
 
 # Merge: Recursive
 
-`git merge--no-ff`
+`git merge --no-ff`
 
 ![](assets/Recursive-Merge.png)
 
@@ -440,23 +440,25 @@ Showing the history:
 
 # Merge: Ours
 
+`git merge -s ours`
+
 ![](assets/Ours-Merge.png)
 
 - resolves any number of heads &rarr; resulting tree of merge is that of the current branch head ignoring all changes from other branches
 
 # Merge: Octopus
 
-**`git merge -s octopus`**
+`git merge -s octopus`
 
 ![](assets/Octopus-Merge-Strategy.png)
 
 - Resolves cases with more than two heads
 - Primarily for bundling topic branch heads.
-- Linus Torvalds got octopus merge of 66 branches: https://marc.info/?l=linux-kernel&m=139033182525831
+- [Linus Torvalds not happy about octopus merge of 66 branches](https://marc.info/?l=linux-kernel&m=139033182525831)
 
 # Merge: Resolve
 
-**`git merge -s resolve`**
+`git merge -s resolve`
 
 ![](assets/Resolve-Merge-Strategy.png)
 
@@ -464,7 +466,7 @@ Showing the history:
 
 # Merge: Subtree
 
-**`git merge -s subtree`**
+`git merge -s subtree`
 
 ![](assets/Subtree-Merge-Strategy.png)
 
@@ -472,8 +474,11 @@ Showing the history:
 
 # Mergetool & Difftool
 
-- `git mergetool` opens the merge tool defined in git-config (e.g. meld)
-- `git diff Commit1sha Commit2sha` opens the diff tool defined in git-config
+open merge tool defined in git-config (e.g. meld):
+`git mergetool`
+
+open diff tool defined in git-config:
+`git diff Commit1sha Commit2sha`
 
 # Merging vs. Rebasing vs. Cherry-Picking {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
