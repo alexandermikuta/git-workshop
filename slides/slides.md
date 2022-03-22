@@ -640,7 +640,7 @@ clone only branch: `git clone [remote url] --branch [branch_name] --single-branc
 `git bundle create repo.bundle HEAD master`
 `git clone repo.bundle repo`
 
-[Attributes](https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes): Can be used for diffing binary files by modifying **.gitattributes**
+[Attributes](https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes): Can be used for diffing binary files by modifying **.gitattributes** file
 `*.png diff=exif`
 `git config diff.exif.textconv exiftool`
 
