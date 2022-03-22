@@ -604,13 +604,16 @@ Worth a look: [Husky.NET](https://alirezanet.github.io/Husky.Net/)
 
 # Handling large repositories
 
-https://www.atlassian.com/git/tutorials/big-repositories
-https://www.atlassian.com/git/tutorials/git-lfs
+very long accumulated history:
 
-# git gc && git prune
+shallow clone: `git clone --depth [depth] [remote-url]`
+clone only branch: `git clone [remote url] --branch [branch_name] --single-branch [folder]`
 
-https://www.atlassian.com/git/tutorials/git-prune
-https://www.atlassian.com/git/tutorials/git-gc
+huge binary assets that need to be tracked together with code:
+
+- [GIT-LFS](https://www.atlassian.com/git/tutorials/git-lfs): Extension that lazy loads big files at checkout instead of cloning/fetching
+- **[git gc](https://www.atlassian.com/git/tutorials/git-gc)**
+- **[git prune](https://www.atlassian.com/git/tutorials/git-prune)**
 
 # Best practices {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 

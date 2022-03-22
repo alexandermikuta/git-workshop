@@ -756,13 +756,15 @@ exit 1</code></pre>
 </section>
 <section id="handling-large-repositories" class="level1">
 <h1>Handling large repositories</h1>
-<p>https://www.atlassian.com/git/tutorials/big-repositories
-https://www.atlassian.com/git/tutorials/git-lfs</p>
-</section>
-<section id="git-gc-git-prune" class="level1">
-<h1>git gc &amp;&amp; git prune</h1>
-<p>https://www.atlassian.com/git/tutorials/git-prune
-https://www.atlassian.com/git/tutorials/git-gc</p>
+<p>very long accumulated history:</p>
+<p>shallow clone: <code>git clone --depth [depth] [remote-url]</code>
+clone only branch: <code>git clone [remote url] --branch [branch_name] --single-branch [folder]</code></p>
+<p>huge binary assets that need to be tracked together with code:</p>
+<ul>
+<li><a href="https://www.atlassian.com/git/tutorials/git-lfs">GIT-LFS</a>: Extension that lazy loads big files at checkout instead of cloning/fetching</li>
+<li><strong><a href="https://www.atlassian.com/git/tutorials/git-gc">git gc</a></strong></li>
+<li><strong><a href="https://www.atlassian.com/git/tutorials/git-prune">git prune</a></strong></li>
+</ul>
 </section>
 <section id="best-practices" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
 <h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">Best practices</h1>
