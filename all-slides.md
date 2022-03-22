@@ -632,9 +632,7 @@ open diff tool defined in git-config:
 
 # Rebasing
 
-<https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History>
-
--   no unneccessary merge commits → history easy readable
+-   no unneccessary merge commits (e.g. by squashing) → history easy readable
 
 -   Readability, but less secure and trackable
 
