@@ -671,10 +671,15 @@ Setup:
 **`gpg --list-keys`**
 **`git config --global user.signingkey <signingkey>`**
 
+<!-- section 68 -->
+
+# Signing Commits/Tags
+
 -   add -s to your commit command: **`git commit -a -S -m 'Signed commit'`**
+
 -   use -s instead of -a for tags: **`git tag -s v1.5 -m 'my signed 1.5 tag'`**
 
-<!-- section 68 -->
+<!-- section 69 -->
 
 # Stashing/Cleaning
 
@@ -690,7 +695,7 @@ Setup:
 
 -   clean working dir without stashing: **`git clean`**
 
-<!-- section 69 -->
+<!-- section 70 -->
 
 # Debugging with Git
 
@@ -703,7 +708,7 @@ Setup:
     -   when finished use `git bisect reset`
 -   git grep can help you strings/regex in your files, e.g. `git grep -n <search-text>`
 
-<!-- section 70 -->
+<!-- section 71 -->
 
 # Git-Hooks
 
@@ -716,25 +721,25 @@ https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy
 
 Husky.NET
 
-<!-- section 71 -->
+<!-- section 72 -->
 
 # Handling large repositories
 
 https://www.atlassian.com/git/tutorials/big-repositories
 https://www.atlassian.com/git/tutorials/git-lfs
 
-<!-- section 72 -->
+<!-- section 73 -->
 
 # git gc && git prune
 
 https://www.atlassian.com/git/tutorials/git-prune
 https://www.atlassian.com/git/tutorials/git-gc
 
-<!-- section 73 -->
+<!-- section 74 -->
 
 # Best practices {#best-practices .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 74 -->
+<!-- section 75 -->
 
 # Best practices
 
@@ -745,11 +750,11 @@ https://www.atlassian.com/git/tutorials/git-gc
 -   Use Branches: Enables developers to work in parallel on separate lines of product
 -   Agree on a common workflow, e.g. Git-Flow → otherwise overhead in merges
 
-<!-- section 75 -->
+<!-- section 76 -->
 
 # Advanced stuff {#advanced-stuff .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 76 -->
+<!-- section 77 -->
 
 # Advanced stuff
 
@@ -761,11 +766,11 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 
 -   Deletion von Elementen → Teasern
 
-<!-- section 77 -->
+<!-- section 78 -->
 
 # GitOps {#gitops .light-on-dark bgcss="sea-gradient" x="0" y="0" rz="-.1"}
 
-<!-- section 78 -->
+<!-- section 79 -->
 
 # GitOps - What is GitOps?
 
@@ -776,7 +781,7 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 > Once approved and merged, the pull requests will automatically reconfigure and sync the live infrastructure to the state of the repository.
 > This live syncing pull request workflow is the core essence of GitOps
 
-<!-- section 79 -->
+<!-- section 80 -->
 
 # GitOps - Pipeline
 
@@ -791,13 +796,13 @@ To achieve a full GitOps install, a pipeline platform is required, e.g.:
 -   Flux
 -   Tekton Pipelines
 
-<!-- section 80 -->
+<!-- section 81 -->
 
 # GitOps - Example Pipeline
 
 ![](assets/gitops_cd_pipeline.png)
 
-<!-- section 81 -->
+<!-- section 82 -->
 
 # Ressources
 

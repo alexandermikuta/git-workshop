@@ -538,7 +538,10 @@ Setup:
 **`gpg --list-keys`**
 **`git config --global user.signingkey <signingkey>`**
 
+# Signing Commits/Tags
+
 - add -s to your commit command: **`git commit -a -S -m 'Signed commit'`**
+
 - use -s instead of -a for tags: **`git tag -s v1.5 -m 'my signed 1.5 tag'`**
 
 # Stashing/Cleaning
