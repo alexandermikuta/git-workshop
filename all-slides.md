@@ -65,9 +65,25 @@ Recommended sequence: commit → pull → push
 
 Creates the **.git** directory which contains your local repository data
 
-  Project directory           .git- irectory
-  --------------------------- -------------------------------------------------------------------------
-  ![](assets/file-tree.png)   ![HEAD is a reference to the checked out commit](assets/git-folder.png)
+  Project directory   .git- irectory
+  ------------------- ----------------
+
+\| `<img src="assets/file-tree.png">`{=html} \|
+```{=html}
+<figure>
+```
+`<img src="assets/git-folder.png">`{=html}
+```{=html}
+<figcaption>
+```
+HEAD is a reference to the checked out commit
+```{=html}
+</figcaption>
+```
+```{=html}
+</figure>
+```
+\|
 
 <!-- section 9 -->
 
