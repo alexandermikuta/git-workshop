@@ -482,10 +482,23 @@ open diff tool defined in git-config:
 
 # Merging vs. Rebasing vs. Cherry-Picking {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
+# Merging
+
+- Easiest way to merge one branch into another
+
+- non destructive: does not change existing branches
+
+- a lot of merge commits if main branch changes often
+
 # Rebasing
 
-https://git-scm.com/book/en/v2/Git-Branching-Rebasing
-https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+[https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+
+- no unneccessary merge commits &rarr; history easy readable
+
+- Readability, but less secure and trackable
+
+- Context lost &rarr; hard to see wenn upstream-changes are integrated into feature
 
 # Cherry-Picking
 
@@ -501,13 +514,7 @@ Use cases for Cherry-Picking:
 
 - Bug-Fixing: hotfix can be cherry-picked to main branch before it affects more users
 
-https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing
-https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project
-https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Patching
-
 # Undoing commits
-
-https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified
 
 From local repository:
 
@@ -515,6 +522,8 @@ From local repository:
 - discarding your local changes: `git reset --hard HEAD`
 - unstage staged file: `git restore --staged <filename>`
 - unmodifying a file: `git restore <filename>`
+
+# Undoing commits
 
 From public repository:
 
