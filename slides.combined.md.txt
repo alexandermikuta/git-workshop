@@ -622,12 +622,12 @@ clone only branch: `git clone [remote url] --branch [branch_name] --single-branc
 
 # Best practices
 
-- commit often: Each commit is a snapshot that can be reverted to
-- work from latest version with **pull** to avoid merge conflicts
-- commit notes should contain "why" and "what" of change
-- review changes before commiting
-- Use Branches: Enables developers to work in parallel on separate lines of product
-- Agree on a common workflow, e.g. Git-Flow &rarr; otherwise overhead in merges
+- **commit often:** Each commit is a snapshot that can be reverted to
+- **work from latest version** with **pull** to avoid merge conflicts
+- commit notes should contain **"why" and "what" of change**
+- **review changes** before commiting
+- **Use Branches:** Enables developers to work in parallel on separate lines of product
+- Agree on a **common workflow**, e.g. Git-Flow &rarr; otherwise overhead in merges
 
 # Advanced stuff {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
