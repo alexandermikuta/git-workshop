@@ -362,19 +362,19 @@ Trunk-Based-Development is recommended in this book
 
 # Comparison of Workflows
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Product type/release method                                                     Team Size   Collaboration maturity   Workflow
-  ------------------------------------------------------------------------------- ----------- ------------------------ ----------------------------------------------
-  All                                                                             Small       High                     TBD
+  --------------------------------------------------------------------------------------------------------------------------------
+  Product type/release method                                          Team Size   Collaboration maturity   Workflow
+  -------------------------------------------------------------------- ----------- ------------------------ ----------------------
+  All                                                                  Small       High                     TBD
 
-  continuous deployment/release (SaaS products)                                   Middle      Moderate                 GitHub-Flow and TBD
+  continuous deployment/release (SaaS products)                        Middle      Moderate                 GitHub-Flow/TBD
 
-  definite release window/periodic version release (iOS apps )                    Middle      Moderate                 Git-Flow and GitLab-Flow with release branch
+  fixed+periodic release (iOS apps )                                   Middle      Moderate                 Git-Flow/GitLab-Flow
 
-  demand for quality and continuous deployment/release (platform products)        Middle      Moderate                 GitLab-Flow
+  quality demand + continuous deployment/release (platform products)   Middle      Moderate                 GitLab-Flow
 
-  demand for quality/long maintenance for released versions (platform products)   Large       Moderate                 Git-Flow
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  quality demand + long maintenance for versions (platform products)   Large       Moderate                 Git-Flow
+  --------------------------------------------------------------------------------------------------------------------------------
 
 <https://www.flagship.io/git-branching-strategies/>
 
