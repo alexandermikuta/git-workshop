@@ -726,11 +726,31 @@
 </section>
 <section id="git-hooks" class="level1">
 <h1>Git-Hooks</h1>
-<p>https://www.atlassian.com/git/tutorials/git-hooks
-https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks</p>
-<p>Enforcing Policies:</p>
-<p>https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy</p>
-<p>Husky.NET</p>
+<blockquote>
+<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Git</a> hooks are scripts that run automatically every time a particular event occurs in a Git repository. They let you customize Git’s internal behavior and trigger customizable actions at key points in the development life cycle.</p>
+</blockquote>
+<ul>
+<li>Examples can be found at folder: <strong>.git/hooks</strong></li>
+<li>Git hooks have to be executable (chmod!)</li>
+<li>built-in scripts are mostly shell and PERL scripts, but you can use any scripting language as long as it is executable</li>
+<li>hooks are repository specific and are <strong>not</strong> copied over when a repository is cloned</li>
+</ul>
+</section>
+<section id="git-hooks-1" class="level1">
+<h1>Git-Hooks</h1>
+<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy">Enforcing Policies:</a></p>
+<p>Pre-Rebase-Hook to disallow rebasing:</p>
+<pre><code>#!/bin/sh
+
+# Disallow all rebasing
+echo &quot;pre-rebase: Rebasing is dangerous. Don&#39;t do it.&quot;
+exit 1</code></pre>
+<p>Other use cases:</p>
+<ul>
+<li>Enforcing specific commit-message format</li>
+<li>Enforing a User-Based ACL System</li>
+</ul>
+<p><a href="https://alirezanet.github.io/Husky.Net/">Husky.NET</a></p>
 </section>
 <section id="handling-large-repositories" class="level1">
 <h1>Handling large repositories</h1>
