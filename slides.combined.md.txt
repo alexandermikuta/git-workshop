@@ -633,13 +633,18 @@ clone only branch: `git clone [remote url] --branch [branch_name] --single-branc
 
 # Advanced stuff
 
-https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Basic-Snapshotting
-https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection
-https://git-scm.com/book/en/v2/Git-Tools-Rerere
-https://git-scm.com/book/en/v2/Git-Tools-Bundling
-https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
+[Rerere](https://git-scm.com/book/en/v2/Git-Tools-Rerere): “reuse recorded resolution”
+`git config --global rerere.enabled true`
 
-- Deletion von Elementen &rarr; Teasern
+[Bundling](https://git-scm.com/book/en/v2/Git-Tools-Bundling): Useful when offline. Bundles data that would be pushed &rarr; send by mail &rarr; unbundle
+`git bundle create repo.bundle HEAD master`
+`git clone repo.bundle repo`
+
+[Attributes](https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes): Can be used for diffing binary files by modifying **.gitattributes** file
+`*.png diff=exif`
+`git config diff.exif.textconv exiftool`
+
+[Delete completely from Git](https://itextpdf.com/de/blog/technical-notes/how-completely-remove-file-git-repository)
 
 # GitOps {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 

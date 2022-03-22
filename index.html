@@ -788,14 +788,15 @@ exit 1</code></pre>
 </section>
 <section id="advanced-stuff-1" class="level1">
 <h1>Advanced stuff</h1>
-<p>https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Basic-Snapshotting
-https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection
-https://git-scm.com/book/en/v2/Git-Tools-Rerere
-https://git-scm.com/book/en/v2/Git-Tools-Bundling
-https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes</p>
-<ul>
-<li>Deletion von Elementen → Teasern</li>
-</ul>
+<p><a href="https://git-scm.com/book/en/v2/Git-Tools-Rerere">Rerere</a>: “reuse recorded resolution”
+<code>git config --global rerere.enabled true</code></p>
+<p><a href="https://git-scm.com/book/en/v2/Git-Tools-Bundling">Bundling</a>: Useful when offline. Bundles data that would be pushed → send by mail → unbundle
+<code>git bundle create repo.bundle HEAD master</code>
+<code>git clone repo.bundle repo</code></p>
+<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes">Attributes</a>: Can be used for diffing binary files by modifying <strong>.gitattributes</strong> file
+<code>*.png diff=exif</code>
+<code>git config diff.exif.textconv exiftool</code></p>
+<p><a href="https://itextpdf.com/de/blog/technical-notes/how-completely-remove-file-git-repository">Delete completely from Git</a></p>
 </section>
 <section id="gitops" class="level1 light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">
 <h1 class="light-on-dark" data-bgcss="sea-gradient" data-x="0" data-y="0" data-rz="-.1" data-state="sea-gradient">GitOps</h1>
