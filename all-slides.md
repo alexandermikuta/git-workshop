@@ -170,11 +170,11 @@ Typical settings:
 
 # Tooling
 
--   IDEs: VisualStudio, VS-Code
--   Clients: Github Desktop, SourceTree, SmartGit, GitKraken, GitTower
--   Explorer-Integration: TortoiseGit
--   Merge-Tools: meld, kdiff3
--   Shells: ZSH+Plugin
+-   **IDEs:** VisualStudio, VS-Code
+-   **Clients:** Github Desktop, SourceTree, SmartGit, GitKraken, GitTower
+-   **Explorer-Integration:** TortoiseGit
+-   **Merge-Tools:** meld, kdiff3
+-   **Shells:** ZSH+Plugin
 -   Git LFS
 
 <!-- section 19 -->
