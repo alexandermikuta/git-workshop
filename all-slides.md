@@ -376,7 +376,7 @@ Trunk-Based-Development is recommended in this book
 
 # Current Workflow
 
-![](Branches.drawio.svg)
+![](assets/Branches.drawio.svg)
 
 <!-- section 39 -->
 

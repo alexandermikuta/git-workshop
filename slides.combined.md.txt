@@ -301,7 +301,7 @@ Trunk-Based-Development is recommended in this book
 
 # Current Workflow
 
-![](Branches.drawio.svg)
+![](assets/Branches.drawio.svg)
 
 # Working with Git {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
 
