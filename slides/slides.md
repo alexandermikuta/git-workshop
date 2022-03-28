@@ -135,11 +135,11 @@ Typical settings:
 
 # Tooling
 
-- IDEs: VisualStudio, VS-Code
-- Clients: Github Desktop, SourceTree, SmartGit, GitKraken, GitTower
-- Explorer-Integration: TortoiseGit
-- Merge-Tools: meld, kdiff3
-- Shells: ZSH+Plugin
+- **IDEs:** VisualStudio, VS-Code
+- **Clients:** Github Desktop, SourceTree, SmartGit, GitKraken, GitTower
+- **Explorer-Integration:** TortoiseGit
+- **Merge-Tools:** meld, kdiff3
+- **Shells:** ZSH+Plugin
 - Git LFS
 
 # Branching {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
