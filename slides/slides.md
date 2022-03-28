@@ -139,7 +139,7 @@ Typical settings:
 - **Clients:** Github Desktop, SourceTree, SmartGit, GitKraken, GitTower
 - **Explorer-Integration:** TortoiseGit
 - **Merge-Tools:** meld, kdiff3
-- **Shells:** ZSH+Plugin
+- **Shells:** ZSH+Plugin (for Windows: https://ohmyposh.dev/)
 - Git LFS
 
 # Branching {bgcss=sea-gradient x=0 y=0 rz=-.1 .light-on-dark}
