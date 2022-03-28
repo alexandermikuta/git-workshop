@@ -794,14 +794,14 @@ clone only branch: `git clone [remote url] --branch [branch_name] --single-branc
 
 # Advanced stuff
 
-[Rerere](https://git-scm.com/book/en/v2/Git-Tools-Rerere): "reuse recorded resolution"
+**[Rerere](https://git-scm.com/book/en/v2/Git-Tools-Rerere):** "reuse recorded resolution"
 `git config --global rerere.enabled true`
 
-[Bundling](https://git-scm.com/book/en/v2/Git-Tools-Bundling): Useful when offline. Bundles data that would be pushed → send by mail → unbundle
+**[Bundling](https://git-scm.com/book/en/v2/Git-Tools-Bundling):** Useful when offline. Bundles data that would be pushed → send by mail → unbundle
 `git bundle create repo.bundle HEAD master`
 `git clone repo.bundle repo`
 
-[Attributes](https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes): Can be used to diff binary files by modifying **.gitattributes**
+**[Attributes](https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes):** Can be used to diff binary files by modifying **.gitattributes**
 `*.png diff=exif`
 `git config diff.exif.textconv exiftool`
 

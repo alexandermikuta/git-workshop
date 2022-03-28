@@ -795,12 +795,12 @@ exit 1</code></pre>
 </section>
 <section id="advanced-stuff-1" class="level1">
 <h1>Advanced stuff</h1>
-<p><a href="https://git-scm.com/book/en/v2/Git-Tools-Rerere">Rerere</a>: “reuse recorded resolution”
+<p><strong><a href="https://git-scm.com/book/en/v2/Git-Tools-Rerere">Rerere</a>:</strong> “reuse recorded resolution”
 <code>git config --global rerere.enabled true</code></p>
-<p><a href="https://git-scm.com/book/en/v2/Git-Tools-Bundling">Bundling</a>: Useful when offline. Bundles data that would be pushed → send by mail → unbundle
+<p><strong><a href="https://git-scm.com/book/en/v2/Git-Tools-Bundling">Bundling</a>:</strong> Useful when offline. Bundles data that would be pushed → send by mail → unbundle
 <code>git bundle create repo.bundle HEAD master</code>
 <code>git clone repo.bundle repo</code></p>
-<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes">Attributes</a>: Can be used to diff binary files by modifying <strong>.gitattributes</strong>
+<p><strong><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes">Attributes</a>:</strong> Can be used to diff binary files by modifying <strong>.gitattributes</strong>
 <code>*.png diff=exif</code>
 <code>git config diff.exif.textconv exiftool</code></p>
 <p><a href="https://itextpdf.com/de/blog/technical-notes/how-completely-remove-file-git-repository">Delete completely from Git</a></p>
